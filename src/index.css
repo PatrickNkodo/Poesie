@@ -1,0 +1,110 @@
+*{margin: 0;}
+nav{
+  height:10vh;
+}
+body {
+  margin: 0;
+  font-family:'Times New Roman', Times, serif;
+    user-select: none;
+}
+.wrapper{
+  height:90vh;
+  display:flex;
+  background-color: rgb(0, 0, 0);
+  color:white;
+  font-size:20px;
+  position: relative;
+}
+.welcome{
+  text-align: justify;
+  align-self: center;
+  padding:1rem;
+}
+
+input,button{
+  box-shadow: none !important;
+}
+.form{
+  margin: auto;
+
+}
+form>label>span{
+  font-size:15px;
+}
+.fadeout{
+  display: none;
+}
+.poem{
+  align-self:center;
+  margin: auto;
+  font-size:18px;
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+}
+.poem .bg{
+  margin: auto;
+  background-size: cover;
+  background-position: center;
+  /* z-index:10; */
+  background-color: red;
+  height:90vh;
+}
+.poem span{
+  font-weight:700;
+  color: yellow;
+}
+.add-bg{
+  display: flex;
+  padding:5px;
+  background-color: coral;
+}
+/* .overlay-bg{
+  position: relative;
+  top:0;
+  left: 0;
+  height:90vh;
+  background-color: rgb(208, 255, 0);
+  opacity:.5;
+} */
+.backgrounds{
+  /* visibility: hidden; */
+  position: absolute;
+  top:0;
+  left: 0;
+  height:90vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  background-color:skyblue;
+  z-index:10;
+}
+.modifications{
+  /* visibility: hidden; */
+  position: absolute;
+  top:0;
+  right: 0;
+  height:90vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  background-color:black;
+  z-index:10;
+}
+.image{
+  margin:4px;
+  border:2px solid white;
+}
+.a{
+  white-space:pre;
+  background-color: yellow;
+}
+@media only screen and (max-width: 276px) {
+  .poem{
+    font-size:20px;
+    background-color: red;
+  }
+}
