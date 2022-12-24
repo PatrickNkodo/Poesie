@@ -9,8 +9,8 @@ import './index.css';
 import images from './images';
 
 function App() {
-	const { formOpen, setFormOpen, poem, setPoem, getPoem, openForm, name, welcome, bg,overlay,setOverlay, changeBg,setTextColor,textColor,bgColor,setBgColor,backgroundColor} = useGlobalContext();
-	console.log(textColor);
+	const { formOpen,colorPresent, setFormOpen, poem, setPoem, getPoem, openForm, name, welcome, bg,overlay,setOverlay,align,setAlign,gradient,direction,setDirection,size,setSize,changeBg,setTextColor,textColor,bgColor,setBgColor,backgroundColor,color1,color2} = useGlobalContext();
+	console.log(colorPresent);
 	return (
 		<div className="App">
 			<Mainnav />
@@ -47,17 +47,37 @@ function App() {
 						<span>Overlay:</span>
 							<input type=''type="range" min="0" max="1" step="any" onChange={(e)=>setOverlay(e.target.value)} value={overlay}/>
 						</div>
+						<div className="overlay">
+						<span>Font-Size:</span>
+							<input type=''type="range" min="5" max="30" step="1" onChange={(e)=>setSize(e.target.value)} value={size}/>
+						</div>
 						<div className="colors">
 							<span>Backround Color</span>
 							<input type="color" className='form-control' onChange={(e)=>backgroundColor(e.target.value)} value={bgColor}/>
 
 						</div>
+						<div className="Gradient">
+							<span>Backround Gradient</span><br/>
+							<label htmlFor="">Color1 </label>
+							<input type="color" className='form-control' onChange={(e)=>gradient(e.target.value,color2)} value={color1}/>
+							<label htmlFor="">Color2 </label>
+							<input type="color" className='form-control' onChange={(e)=>gradient(color1,e.target.value)} value={color2}/>
+							<span>Direction </span>
+							<select name="" id="direction"onChange={(e)=>setDirection(e.target.value)} value={direction}>
+								<option value="left" >Right-Left</option>
+								<option value="right">Left-Right</option>
+								<option value="top">Bottom-Top</option>
+								<option value="bottom">Top-Bottom</option>
+							</select>
+
+						</div>
 						<div className="align">
 							<span>Align Text </span>
-							<select name="" id="">
+							<select name="" id="aligh"onChange={(e)=>setAlign(e.target.value)} value={align}>
 								<option value="left" >Left</option>
 								<option value="center">Center</option>
-								<option value="right" selected>Right</option>
+								<option value="right">Right</option>
+								<option value="justify">Justify</option>
 							</select>
 						</div>
 						<div className="colors">

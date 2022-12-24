@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
+import logo from '../logo.png';
 function Mainnav() {
     return(
         <header>
        <nav className="navbar navbar-expand-sm navbar-light bg-light">
                 <a className="navbar-brand" href="#">
-                <img src="logo192.png" alt="Avatar Logo" width='40px' className="rounded-pill"/> 
+                <img src={logo} alt="Avatar Logo" width='100px' className="p-1"/> 
                 </a>
                 <button className='navbar-toggler' data-bs-toggle='collapse' data-bs-target='nav'>
                     <span className='navbar-toggler-icon'></span>

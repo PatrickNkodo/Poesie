@@ -40,22 +40,28 @@ form>label>span{
 .poem{
   align-self:center;
   margin: auto;
-  background-color: red;
+  background-color: rgb(207, 207, 207);
   width:60%;
   font-size:20px;
   color: rgb(255, 255, 255);
   font-weight: bolder;
+  border-radius: 3px;
 }
 .poem .bg{
   margin: auto;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height:90vh;
   position: relative;
+  /* overflow: hidden; */
 }
 .poem span{
   font-weight:700;
-  color: yellow;
+  /* color: yellow; */
 }
 .poem p ,span{z-index:40;position: relative;}
 /* .add-bg{
@@ -120,7 +126,7 @@ input[type=range]{
    height:7px;
    /* width:100px; */
    border-radius:10px;
-   background:linear-gradient(to right,rgb(0, 0, 0) 5%, blue 70%,red)
+   background:black
 }
 input[type=range]::-webkit-slider-thumb{
   appearance:none;
