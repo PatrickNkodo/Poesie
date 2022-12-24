@@ -6,14 +6,14 @@ const AppProvider=({children})=>{
     const [bg, setBg]=useState('')
     const [formOpen, setFormOpen]=useState(false)
 	const [poem, setPoem]=useState(false)
-	const [name, setName]=useState('')
-	const [reciever, setReciever]=useState('');
-	const [overlay, setOverlay]=useState('');
-	const [textColor, setTextColor]=useState('');
-	const [bgColor, setBgColor]=useState('');
+	const [name, setName]=useState('My Name')
+	const [reciever, setReciever]=useState('Reciever');
+	const [overlay, setOverlay]=useState(0.5);
+	const [textColor, setTextColor]=useState('#ffffff');
+	const [bgColor, setBgColor]=useState('#000000');
 	const openForm=(e)=>{
 		console.log('ok');
-		e.preventDefault()
+		// e.preventDefault()
 		setWelcome(false)
 		setFormOpen(true);
 	}
@@ -27,7 +27,7 @@ const AppProvider=({children})=>{
 		setBg('')
 	}
 	const getPoem=(e)=>{
-		e.preventDefault()
+		// e.preventDefault()
 		setFormOpen(false)
 		// setWelcome(false)
 		setPoem(true)

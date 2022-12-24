@@ -9,7 +9,7 @@ import './index.css';
 import images from './images';
 
 function App() {
-	const { formOpen, setFormOpen, poem, setPoem, getPoem, openForm, name, welcome, bg, changeBg,setTextColor,textColor,bgColor,setBgColor,backgroundColor} = useGlobalContext();
+	const { formOpen, setFormOpen, poem, setPoem, getPoem, openForm, name, welcome, bg,overlay,setOverlay, changeBg,setTextColor,textColor,bgColor,setBgColor,backgroundColor} = useGlobalContext();
 	console.log(textColor);
 	return (
 		<div className="App">
@@ -26,7 +26,7 @@ function App() {
 					</div>
 				)}
 				{poem && (
-					<div className="poem col-lg-8 col-md-8 col-sm-12">
+					<div className="poem">
 						<Poem />
 					</div>
 				)}
@@ -45,7 +45,7 @@ function App() {
 					<div className="modifications">
 						<div className="overlay">
 						<span>Overlay:</span>
-							<input type=''type="range" min="0" max="1" step="any"/>
+							<input type=''type="range" min="0" max="1" step="any" onChange={(e)=>setOverlay(e.target.value)} value={overlay}/>
 						</div>
 						<div className="colors">
 							<span>Backround Color</span>
@@ -53,7 +53,7 @@ function App() {
 
 						</div>
 						<div className="align">
-							<span>Align Text</span>
+							<span>Align Text </span>
 							<select name="" id="">
 								<option value="left" >Left</option>
 								<option value="center">Center</option>
