@@ -1,11 +1,11 @@
 import React from 'react';
 import {useGlobalContext} from '../context'
 const Poem = () => {
-  const {name,reciever,bg,setBg,target}=useGlobalContext();
-  console.log(bg);
+  const {name,reciever,bg,textColor,bgColor,setBg,target}=useGlobalContext();
+  console.log(bgColor);
 	return (
 		<div className="">
-      <div className="bg col-sm-8" style={{backgroundImage:`url('${bg}')`}}>
+      <div className="bg col-sm-8" style={{backgroundImage:`url('${bg}')`,color:`${textColor}`,backgroundColor:`${bgColor}`}}>
       <div className="overlay-bg"></div>
 			<p>
         {reciever}<br/>

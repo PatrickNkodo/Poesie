@@ -9,7 +9,8 @@ import './index.css';
 import images from './images';
 
 function App() {
-	const { formOpen, setFormOpen, poem, setPoem, getPoem, openForm, name, welcome, bg, changeBg } = useGlobalContext();
+	const { formOpen, setFormOpen, poem, setPoem, getPoem, openForm, name, welcome, bg, changeBg,setTextColor,textColor,bgColor,setBgColor,backgroundColor} = useGlobalContext();
+	console.log(textColor);
 	return (
 		<div className="App">
 			<Mainnav />
@@ -33,7 +34,7 @@ function App() {
 					<div className="backgrounds">
 						{images.map((item, index) => {
 							return (
-								<div className="image" key={index} onClick={() => changeBg(item.img)}>
+								<div className="img" key={index} onClick={() => changeBg(item.img)}>
 									<img src={item.img} width="100" height="100" alt="img" />
 								</div>
 							);
@@ -42,6 +43,15 @@ function App() {
 				)}
 				{poem && (
 					<div className="modifications">
+						<div className="overlay">
+						<span>Overlay:</span>
+							<input type=''type="range" min="0" max="1" step="any"/>
+						</div>
+						<div className="colors">
+							<span>Backround Color</span>
+							<input type="color" className='form-control' onChange={(e)=>backgroundColor(e.target.value)} value={bgColor}/>
+
+						</div>
 						<div className="align">
 							<span>Align Text</span>
 							<select name="" id="">
@@ -50,12 +60,9 @@ function App() {
 								<option value="right" selected>Right</option>
 							</select>
 						</div>
-						<div className="overlay">
-						<label htmlFor="">Overlay:</label>
-							<input type=''type="range" min="0" max="1" step="any"/>
-						</div>
 						<div className="colors">
-							<span>Backround Color</span>
+							<span>Text Color</span>
+							<input type="color" className='form-control' onChange={(e)=>setTextColor(e.target.value)} value={textColor}/>
 
 						</div>
 					</div>

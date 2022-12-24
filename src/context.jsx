@@ -9,6 +9,8 @@ const AppProvider=({children})=>{
 	const [name, setName]=useState('')
 	const [reciever, setReciever]=useState('');
 	const [overlay, setOverlay]=useState('');
+	const [textColor, setTextColor]=useState('');
+	const [bgColor, setBgColor]=useState('');
 	const openForm=(e)=>{
 		console.log('ok');
 		e.preventDefault()
@@ -18,6 +20,11 @@ const AppProvider=({children})=>{
 	const changeBg=(item)=>{
 		console.log(item);
 		setBg(item)
+	}
+	const backgroundColor=(x)=>{
+		console.log('see',x);
+		setBgColor(x)
+		setBg('')
 	}
 	const getPoem=(e)=>{
 		e.preventDefault()
@@ -31,7 +38,7 @@ const AppProvider=({children})=>{
 	}
 
     return <AppContext.Provider 
-    value={{openForm,getPoem,formOpen,setFormOpen,poem,setPoem,name,setName,reciever,setReciever,changeBg,welcome,bg,setBg,overlay,setOverlay,overlayHandler}}>
+    value={{openForm,getPoem,formOpen,setFormOpen,poem,setPoem,name,setName,reciever,setReciever,changeBg,welcome,bg,setBg,overlay,setOverlay,overlayHandler,textColor,setTextColor,bgColor,setBgColor,backgroundColor}}>
         {children}
     </AppContext.Provider>
 }

@@ -6,9 +6,12 @@ body {
   margin: 0;
   font-family:'Times New Roman', Times, serif;
     user-select: none;
+    box-sizing: border-box;
 }
 .wrapper{
   height:90vh;
+  /* width:70vw; */
+  /* margin: auto; */
   display:flex;
   background-color: rgb(0, 0, 0);
   color:white;
@@ -46,18 +49,17 @@ form>label>span{
   background-size: cover;
   background-position: center;
   /* z-index:10; */
-  background-color: red;
   height:90vh;
 }
 .poem span{
   font-weight:700;
   color: yellow;
 }
-.add-bg{
+/* .add-bg{
   display: flex;
   padding:5px;
   background-color: coral;
-}
+} */
 /* .overlay-bg{
   position: relative;
   top:0;
@@ -69,6 +71,7 @@ form>label>span{
 .backgrounds{
   /* visibility: hidden; */
   position: absolute;
+  width:20%;
   top:0;
   left: 0;
   height:90vh;
@@ -81,8 +84,10 @@ form>label>span{
   z-index:10;
 }
 .modifications{
-  /* visibility: hidden; */
+  font-size: 15px;
   position: absolute;
+  width:20%;
+  padding:10px;
   top:0;
   right: 0;
   height:90vh;
@@ -91,10 +96,43 @@ form>label>span{
   flex-direction: column;
   justify-self: center;
   align-items: center;
-  background-color:black;
+  background-color:rgb(150, 243, 0);
   z-index:10;
 }
-.image{
+.modifications>div{
+  margin: 12px;
+  /* display: flex; */
+  align-items: center;
+  justify-content: start;
+  text-align: center;
+  font-weight: bolder;
+}
+
+input[type=range]{
+  appearance:none;
+   height:7px;
+   /* width:100px; */
+   border-radius:10px;
+   background:linear-gradient(to right,white 5%, blue 70%,red)
+}
+input[type=range]::-webkit-slider-thumb{
+  appearance:none;
+  background-color: rgb(255, 255, 255);
+  height:21px;
+  width:12px;
+  border-radius:30%;
+}
+input[type=color]{
+  /* width:40px; */
+}
+select{
+  border-radius:5px;
+  padding:2px;
+  width: 90px;
+  outline:2px solid white;
+  border-color:white;
+}
+.img{
   margin:4px;
   border:2px solid white;
 }
