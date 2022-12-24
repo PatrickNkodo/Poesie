@@ -6,17 +6,20 @@ const AppProvider = ({ children }) => {
 	const [ bg, setBg ] = useState('');
 	const [ formOpen, setFormOpen ] = useState(false);
 	const [ poem, setPoem ] = useState(true);
-	const [ name, setName ] = useState('My Name');
-	const [ reciever, setReciever ] = useState('Dany');
-	const [ overlay, setOverlay ] = useState(0.5);
+	const [ name, setName ] = useState('Tapioca');
+	const [ reciever, setReciever ] = useState('Stephanie');
+	const [ overlay, setOverlay ] = useState(0);
 	const [ align, setAlign ] = useState('left');
-	const [ size, setSize ] = useState(20);
+	const [ size, setSize ] = useState(1);
 	const [ textColor, setTextColor ] = useState('#ffffff');
 	const [ bgColor, setBgColor ] = useState('#000000');
-	const [ colorPresent, setColorPresent ] = useState(false);
-	const [ color1, setColor1 ] = useState('');
-	const [ color2, setColor2 ] = useState('');
+	const [ gradientPresent, setgradientPresent ] = useState(false);
+	const [ bgImagePresent, setbgImagePresent ] = useState(false);
+	const [ color1, setColor1 ] = useState('#000000');
+	const [ color2, setColor2 ] = useState('#000000');
 	const [ direction, setDirection ] = useState('bottom');
+	const [ font, setFont ] = useState('Times New Roman');
+	const [ weight, setWeight ] = useState('times new roman');
 	// useEffect(()=>{
 	// 	// color1='#000000';
 	// 	// color2='#000000'
@@ -28,14 +31,18 @@ const AppProvider = ({ children }) => {
 		setWelcome(false);
 		setFormOpen(true);
 	};
+	//BG Image
 	const changeBg = (item) => {
 		console.log(item);
 		setBg(item);
+		setbgImagePresent(true);
+		setgradientPresent(false);
 	};
+	//Bg Color
 	const backgroundColor = (x) => {
 		setBgColor(x);
-		setBg('');
-		setColorPresent(true)
+		setbgImagePresent(false)
+		setgradientPresent(false);
 	};
 	const getPoem = (e) => {
 		// e.preventDefault()
@@ -43,13 +50,14 @@ const AppProvider = ({ children }) => {
 		// setWelcome(false)
 		setPoem(true);
 	};
-	const gradient = (a,b) => {
+	//Bg Gradient
+	const gradient = (a, b) => {
 		// setWelcome(false)
 		setBg('');
-		setBgColor('');
-		setColor1(a)
-		setColor2(b)
-		setColorPresent(false)
+		setColor1(a);
+		setColor2(b);
+		setgradientPresent(true);
+		setbgImagePresent(false);
 	};
 	const overlayHandler = (e) => {
 		setOverlay(e.target.value);
@@ -85,12 +93,18 @@ const AppProvider = ({ children }) => {
 				bgColor,
 				setBgColor,
 				backgroundColor,
-				colorPresent,
+				gradientPresent,
 				gradient,
 				color1,
 				color2,
 				direction,
-				setDirection
+				setDirection,
+				bgImagePresent,
+				setbgImagePresent,
+				font,
+				setFont,
+				weight,
+				setWeight,
 			}}
 		>
 			{children}

@@ -46,6 +46,7 @@ form>label>span{
   color: rgb(255, 255, 255);
   font-weight: bolder;
   border-radius: 3px;
+  position: relative;
 }
 .poem .bg{
   margin: auto;
@@ -57,18 +58,23 @@ form>label>span{
   justify-content: center;
   height:90vh;
   position: relative;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 .poem span{
   font-weight:700;
   /* color: yellow; */
 }
-.poem p ,span{z-index:40;position: relative;}
-/* .add-bg{
-  display: flex;
+.logo{
+  position:absolute;
+  top: 0;
+  left:0;
   padding:5px;
-  background-color: coral;
-} */
+  height:10%;
+  overflow: hidden;
+  z-index:50;
+}
+.text{z-index:40;position: relative;margin-top:1rem;padding:1rem;margin-top:2rem;/* background-color: red;*/}
+
 .overlay-bg{
   position: absolute;
   top:0;
@@ -136,7 +142,7 @@ input[type=range]::-webkit-slider-thumb{
   border-radius:30%;
 }
 input[type=color]{
-  /* width:40px; */
+  width:100%;
 }
 select{
   border-radius:3px;
@@ -149,10 +155,7 @@ select{
   margin:4px;
   border:2px solid white;
 }
-.a{
-  white-space:pre;
-  background-color: yellow;
-}
+hr{border:2px solid rgb(0, 0, 0);width:100%;}
 @media only screen and (max-width: 276px) {
   .poem{
     font-size:20px;
