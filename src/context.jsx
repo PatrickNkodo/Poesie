@@ -2,12 +2,14 @@ import React, { useState, createContext, useContext, useEffect } from 'react';
 // import sublinks from './data'
 const AppContext = createContext();
 const AppProvider = ({ children }) => {
-	const [ welcome, setWelcome ] = useState(false);
+	const [ welcome, setWelcome ] = useState(true);
 	const [ bg, setBg ] = useState('');
 	const [ formOpen, setFormOpen ] = useState(false);
-	const [ poem, setPoem ] = useState(true);
-	const [ name, setName ] = useState('Tapioca');
-	const [ reciever, setReciever ] = useState('Stephanie');
+	const [ help, sethelp ] = useState(false);
+	const [ about, setAbout ] = useState(false);
+	const [ poem, setPoem ] = useState(false);
+	const [ name, setName ] = useState('');
+	const [ reciever, setReciever ] = useState('');
 	const [ overlay, setOverlay ] = useState(0);
 	const [ align, setAlign ] = useState('left');
 	const [ size, setSize ] = useState(1);
@@ -19,17 +21,51 @@ const AppProvider = ({ children }) => {
 	const [ color2, setColor2 ] = useState('#000000');
 	const [ direction, setDirection ] = useState('bottom');
 	const [ font, setFont ] = useState('Times New Roman');
-	const [ weight, setWeight ] = useState('times new roman');
+	const [ weight, setWeight ] = useState(100);
+	const [tab,setTab]=useState('Home');
 	// useEffect(()=>{
 	// 	// color1='#000000';
 	// 	// color2='#000000'
 	// 	alert(color1)
 	// },[])
-	const openForm = (e) => {
-		console.log('ok');
-		// e.preventDefault()
-		setWelcome(false);
+	const openForm = () => {
 		setFormOpen(true);
+		setWelcome(false);
+		setAbout(false)
+		sethelp(false)
+		setPoem(false)
+	};
+	const homeFxn = (e) => {
+		setTab(e.target.innerText)
+		if(name && reciever){		
+			setPoem(true)
+			sethelp(false)
+			setWelcome(false);
+			setFormOpen(false);
+			setAbout(false)
+		}else{
+			setWelcome(true);
+			setPoem(false)
+			sethelp(false)
+			setFormOpen(false);
+			setAbout(false)
+		}
+	};
+	const helpFxn = (e) => {
+		setTab(e.target.innerText)
+		sethelp(true)
+		setPoem(false)
+		setWelcome(false);
+		setFormOpen(false);
+		setAbout(false)
+	};
+	const aboutFxn = (e) => {
+		setTab(e.target.innerText)
+		setAbout(true)
+		setPoem(false)
+		sethelp(false)
+		setWelcome(false);
+		setFormOpen(false);
 	};
 	//BG Image
 	const changeBg = (item) => {
@@ -45,11 +81,13 @@ const AppProvider = ({ children }) => {
 		setgradientPresent(false);
 	};
 	const getPoem = (e) => {
-		// e.preventDefault()
 		setFormOpen(false);
-		// setWelcome(false)
+		setWelcome(false)
+		setAbout(false)
+		sethelp(false)
 		setPoem(true);
 	};
+	console.log(tab);
 	//Bg Gradient
 	const gradient = (a, b) => {
 		// setWelcome(false)
@@ -71,6 +109,7 @@ const AppProvider = ({ children }) => {
 				getPoem,
 				formOpen,
 				setFormOpen,
+				homeFxn,
 				poem,
 				setPoem,
 				name,
@@ -80,6 +119,7 @@ const AppProvider = ({ children }) => {
 				changeBg,
 				welcome,
 				bg,
+				tab,
 				setBg,
 				size,
 				setSize,
@@ -105,6 +145,10 @@ const AppProvider = ({ children }) => {
 				setFont,
 				weight,
 				setWeight,
+				help,
+				about,
+				helpFxn,
+				aboutFxn
 			}}
 		>
 			{children}

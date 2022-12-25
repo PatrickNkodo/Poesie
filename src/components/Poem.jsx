@@ -34,7 +34,7 @@ const Poem = () => {
 	return (
 		<div className="">
 			<div className="bg col-sm-8" style={{...style }}>
-        <div className="logo">
+        <div className="logo" style={align=='left'?{right:'0'}:{left:'0'}}>
           <img src={logo} alt="Logo" width='100'/>
         </div>
 				<div className="overlay-bg" style={{ opacity: `${overlay}` }} />

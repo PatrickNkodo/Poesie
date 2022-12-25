@@ -4,6 +4,8 @@ import Mainnav from './components/mainNav';
 import Welcome from './components/Welcome';
 import Form from './components/Form';
 import Poem from './components/Poem';
+import Help from './components/Help';
+import About from './components/About';
 import { useGlobalContext } from './context';
 import './index.css';
 import images from './images';
@@ -19,6 +21,8 @@ function App() {
 		openForm,
 		name,
 		welcome,
+		help,
+		about,
 		bg,
 		overlay,
 		setOverlay,
@@ -72,6 +76,17 @@ function App() {
 						})}
 					</div>
 				)}
+				{help && (
+					<div className="hel">
+						<Help/>
+					</div>
+				)}
+				{about && (
+					<div className="hel">
+						<About/>
+					</div>
+				)}
+
 				{poem && (
 					<div className="modifications">
 						<div className="overlay">
@@ -99,7 +114,7 @@ function App() {
 							/>
 						</div>
 						<div className="overlay">
-							<span>Weight:</span>
+							<span>Boldness:</span>
 							<input
 								type=""
 								type="range"
