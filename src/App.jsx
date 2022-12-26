@@ -45,6 +45,7 @@ function App() {
 		setFont,
 		weight,
 		setWeight,
+		edition,
 	} = useGlobalContext();
 	return (
 		<div className="App">
@@ -55,7 +56,7 @@ function App() {
 						<Welcome />
 					</div>
 				)}
-				{formOpen && (
+				{(formOpen || edition) && (
 					<div className="form col-lg-8 col-md-8 col-sm-12">
 						<Form />
 					</div>
@@ -77,12 +78,12 @@ function App() {
 					</div>
 				)}
 				{help && (
-					<div className="hel">
+					<div className="help">
 						<Help/>
 					</div>
 				)}
 				{about && (
-					<div className="hel">
+					<div className="about">
 						<About/>
 					</div>
 				)}
@@ -118,8 +119,8 @@ function App() {
 							<input
 								type=""
 								type="range"
-								min="100"
-								max="900"
+								min="500"
+								max="600"
 								step="100"
 								onChange={(e) => setWeight(e.target.value)}
 								value={weight}

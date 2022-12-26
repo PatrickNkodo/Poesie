@@ -2,6 +2,10 @@
 nav{
   height:10vh;
 }
+#nav{
+
+  justify-content: space-around;
+}
 .nav-item{font-weight: 900;}
 .bordered{
   border-bottom:2px solid black;
@@ -12,6 +16,33 @@ body {
   font-family:'Times New Roman', Times, serif;
     user-select: none;
     box-sizing: border-box;
+}
+.about>div{
+  display:grid; 
+  grid:auto auto/47% 47%;
+  grid-gap:30px;
+  justify-content: center;
+}
+.part3{
+  grid-area:2/1/span 1/span 2;
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+}
+.part3 .fab{
+  font-size:50px;
+}
+.help img{float: left;}
+.about img{float: left;}
+.about p{
+  text-align: justify;
+}
+.about p::first-letter{
+  font-size:38px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.about>div div{
+  /* border:2px solid white; */
 }
 .wrapper{
   height:90vh;
@@ -41,6 +72,14 @@ form>label>span{
 }
 .fadeout{
   display: none;
+}
+.poem-fxns>li span{
+  /* display: flex; */
+  color:rgb(0, 102, 170) !important;
+  transition:color .5s ease;
+}
+.poem-fxns>li span:hover{
+  color:green !important;
 }
 .poem{
   align-self:center;

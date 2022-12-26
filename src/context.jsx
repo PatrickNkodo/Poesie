@@ -10,6 +10,7 @@ const AppProvider = ({ children }) => {
 	const [ poem, setPoem ] = useState(false);
 	const [ name, setName ] = useState('');
 	const [ reciever, setReciever ] = useState('');
+	const [edition,setEdition]=useState(false)
 	const [ overlay, setOverlay ] = useState(0);
 	const [ align, setAlign ] = useState('left');
 	const [ size, setSize ] = useState(1);
@@ -21,7 +22,7 @@ const AppProvider = ({ children }) => {
 	const [ color2, setColor2 ] = useState('#000000');
 	const [ direction, setDirection ] = useState('bottom');
 	const [ font, setFont ] = useState('Times New Roman');
-	const [ weight, setWeight ] = useState(100);
+	const [ weight, setWeight ] = useState(300);
 	const [tab,setTab]=useState('Home');
 	// useEffect(()=>{
 	// 	// color1='#000000';
@@ -81,12 +82,27 @@ const AppProvider = ({ children }) => {
 		setgradientPresent(false);
 	};
 	const getPoem = (e) => {
+		if(!(name && reciever)){
+			alert('Fill the form first please!')
+			return;
+		}
+		setPoem(true);
 		setFormOpen(false);
 		setWelcome(false)
 		setAbout(false)
 		sethelp(false)
-		setPoem(true);
+		setEdition(false)
 	};
+	
+	const editing = () => {
+		setFormOpen(true);
+		setEdition(true)
+		setPoem(false);
+		setWelcome(false)
+		setAbout(false)
+		sethelp(false)
+	};
+
 	console.log(tab);
 	//Bg Gradient
 	const gradient = (a, b) => {
@@ -148,7 +164,10 @@ const AppProvider = ({ children }) => {
 				help,
 				about,
 				helpFxn,
-				aboutFxn
+				aboutFxn,
+				edition,
+				setEdition,
+				editing,
 			}}
 		>
 			{children}
