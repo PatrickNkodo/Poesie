@@ -201,8 +201,6 @@ function App() {
 								<option value="Times New Roman">Times New Roman</option>
 								<option value="Trebuchet Ms">Trebuchet Ms</option>
 								<option value="verdana">Verdana</option>
-								<option value="sans-serif">Sans-serif</option>
-								<option value="serif">Serif</option>
 								{/* <option value="justify">Justify</option> */}
 							</select>
 						</div>

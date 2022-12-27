@@ -38,24 +38,23 @@ const Poem = () => {
           <img src={logo} alt="Logo" width='100'/>
         </div>
 				<div className="overlay-bg" style={{ opacity: `${overlay}` }} />
-				<p className='text' style={{ textAlign:align,fontFamily:font,fontWeight:weight,fontSize: `${size}rem`,}}>
-					{reciever}
-					<br />
+				<p className='text' contentEditable style={{ textAlign:align,fontFamily:font,fontWeight:weight,fontSize: `${size}rem`,}}>
+					{reciever}<br />
 					Un jour nous vivrons ensemble.<br />
 					Nous irons au supermarché,<br />
 					Pour chercher de quoi manger. <br />
-					{reciever}
-					<br /> <br />
+					<br /> 
+					{reciever}<br />
 					Un jour naîtra notre fille.<br />
 					Une princesse toute magnifique, <br />
 					Qui aimera mes textes poétiques. <br />
-					{reciever}
-					<br /> <br />
+					<br />
+					{reciever}<br />
 					Un jour nous nous marierons.<br />
 					Les alliances sur les doigts, <br />
 					Et les nôtres dans une grande joie.<br />
-					{reciever}
-					<br /> <br />
+					<br />
+					{reciever}<br />
 					Mon rêve est de rester avec toi.<br />
 					Hier, aujourd’hui, <br />
 					Et que mon lendemain soit avec toi.<br />

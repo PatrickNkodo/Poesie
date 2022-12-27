@@ -32,7 +32,8 @@ body {
 .part3 .fab{
   font-size:50px;
 }
-.help img{float: left;}
+.help, .about{}
+.help >div>div>div{display: flex;align-items: center;margin-bottom:15px;}
 .about img{float: left;}
 .about p{
   text-align: justify;
@@ -45,7 +46,7 @@ body {
   /* border:2px solid white; */
 }
 .wrapper{
-  height:90vh;
+  min-height:90vh;
   /* width:70vw; */
   /* margin: auto; */
   display:flex;
