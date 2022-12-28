@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Mainnav from './components/mainNav';
 import Welcome from './components/Welcome';
 import Form from './components/Form';
+import Choice from './components/Choice';
 import Poem from './components/Poem';
 import Help from './components/Help';
 import About from './components/About';
@@ -15,6 +16,7 @@ function App() {
 		formOpen,
 		gradientPresent,
 		setFormOpen,
+		choice,
 		poem,
 		setPoem,
 		getPoem,
@@ -46,6 +48,8 @@ function App() {
 		weight,
 		setWeight,
 		edition,
+		lineHeight,
+		setLineHeight,
 	} = useGlobalContext();
 	return (
 		<div className="App">
@@ -57,8 +61,13 @@ function App() {
 					</div>
 				)}
 				{(formOpen || edition) && (
-					<div className="form col-lg-8 col-md-8 col-sm-12">
+					<div className="form col-lg-8 col-md-10 col-sm-10">
 						<Form />
+					</div>
+				)}
+				{choice && (
+					<div className="choice">
+						<Choice />
 					</div>
 				)}
 				{poem && (
@@ -71,7 +80,7 @@ function App() {
 						{images.map((item, index) => {
 							return (
 								<div className="img" key={index} onClick={() => changeBg(item.img)}>
-									<img src={item.img} width="100" height="100" alt="img" />
+									<img src={item.img} width="100%" height="100" alt="img" />
 								</div>
 							);
 						})}
@@ -91,11 +100,11 @@ function App() {
 				{poem && (
 					<div className="modifications">
 						<div className="overlay">
-							<span>Font-Size:</span>
+							<span>Taille de police:</span>
 							<input
 								type=""
 								type="range"
-								min="1"
+								min=".5"
 								max="5"
 								step="any"
 								onChange={(e) => setSize(e.target.value)}
@@ -103,7 +112,7 @@ function App() {
 							/>
 						</div>
 						<div className="overlay">
-							<span>Overlay:</span>
+							<span>Exposure:</span>
 							<input
 								type=""
 								type="range"
@@ -115,7 +124,7 @@ function App() {
 							/>
 						</div>
 						<div className="overlay">
-							<span>Boldness:</span>
+							<span>Gras:</span>
 							<input
 								type=""
 								type="range"
@@ -126,70 +135,28 @@ function App() {
 								value={weight}
 							/>
 						</div>
-						<hr/>
-						<div className="bgcolors">
-							<span>Backround Color</span>
+						<div className="line-height">
+							<span>Espacement:</span>
 							<input
-								type="color"
-								className="form-control"
-								onChange={(e) => backgroundColor(e.target.value)}
-								value={bgColor}
-							/>
-						</div>
-						<hr/>
-						<div className="Gradient">
-							<span>Backround Gradient</span>
-							<br />
-							<label htmlFor="">Color1 </label>
-							<input
-								type="color"
-								className="form-control"
-								onChange={(e) => gradient(e.target.value, color2)}
-								value={color1}
-							/>
-							<label htmlFor="">Color2 </label>
-							<input
-								type="color"
-								className="form-control"
-								onChange={(e) => gradient(color1, e.target.value)}
-								value={color2}
-							/>
-							<div className="mt-2">
-							<span>Direction </span>
-							<select
-								name=""
-								id="direction"
-								onChange={(e) => setDirection(e.target.value)}
-								value={direction}
-							>
-								<option value="left">Right-Left</option>
-								<option value="right">Left-Right</option>
-								<option value="top">Bottom-Top</option>
-								<option value="bottom">Top-Bottom</option>
-							</select>
-							</div>
-						</div>
-						<hr/>
-						<div className="colors">
-							<span>Text Color</span>
-							<input
-								type="color"
-								className="form-control"
-								onChange={(e) => setTextColor(e.target.value)}
-								value={textColor}
+								type="range"
+								min="0"
+								max="5"
+								step="any"
+								onChange={(e) => setLineHeight(e.target.value)}
+								value={lineHeight}
 							/>
 						</div>
 						<div className="align">
-							<span>Align Text </span>
-							<select name="" id="aligh" onChange={(e) => setAlign(e.target.value)} value={align}>
-								<option value="left">Left</option>
-								<option value="center">Center</option>
-								<option value="right">Right</option>
+							<span>Aligner</span><br/>
+							<select name="" id="align" onChange={(e) => setAlign(e.target.value)} value={align}>
+								<option value="left">Gauche</option>
+								<option value="center">Centre</option>
+								<option value="right">Droite</option>
 								{/* <option value="justify">Justify</option> */}
 							</select>
 						</div>
 						<div className="font">
-							<span>Font Family</span>
+							<span>Police</span>
 							<select name="" id="aligh" onChange={(e) => setFont(e.target.value)} value={font}>
 								<option value="Arial">Arial</option>
 								<option value="Cambria">Cambria</option>
@@ -204,6 +171,59 @@ function App() {
 								{/* <option value="justify">Justify</option> */}
 							</select>
 						</div>
+						<div className="colors">
+							<span>Couleur de texte</span>
+							<input
+								type="color"
+								className="form-control"
+								onChange={(e) => setTextColor(e.target.value)}
+								value={textColor}
+							/>
+						</div>
+						<hr/>
+						<div className="bgcolors">
+							<span>Arrière plan</span>
+							<input
+								type="color"
+								className="form-control"
+								onChange={(e) => backgroundColor(e.target.value)}
+								value={bgColor}
+							/>
+						</div>
+						<hr/>
+						<div className="Gradient">
+							<span>Dégradé</span>
+							<br />
+							<label htmlFor="">Couleur1 </label>
+							<input
+								type="color"
+								className="form-control"
+								onChange={(e) => gradient(e.target.value, color2)}
+								value={color1}
+							/>
+							<label htmlFor="">Couleur2 </label>
+							<input
+								type="color"
+								className="form-control"
+								onChange={(e) => gradient(color1, e.target.value)}
+								value={color2}
+							/>
+							<div className="mt-2">
+							<span>Direction </span>
+							<select
+								name=""
+								id="direction"
+								onChange={(e) => setDirection(e.target.value)}
+								value={direction}
+							>
+								<option value="left">Droite-Gauche</option>
+								<option value="right">Gauche-Droite</option>
+								<option value="top">Bas-Haut</option>
+								<option value="bottom">Haut-Bas</option>
+							</select>
+							</div>
+						</div>
+						<hr/>
 					</div>
 				)}
 			</div>

@@ -4,20 +4,20 @@ const About = () => {
   return (
     <div>
       <div className="part1">
-        <h1>About Me</h1>
-        <img src={Me} width='400' alt="Picture"/>
-        <p>Hey! Welcome to my page. I'm called Patrick Nkodo.
-          I like giving my name in this format at the end of my poems to be marked as the author.
-          I'm a Software Engineering student in Cameroon, at the Siantou University Institute, interested in web programming.
-          All the new skills I learn, I try to practice it. It's in that vision that I built this small poetry project.
-          Hope it's interesting to you. Also, Im available on different social networks as listed below. Thanks for visiting.😉
+        <h1>A propos de moi</h1>
+        <img src={Me} width='60%' alt="Picture"/>
+        <p>Hey!bienvenu(e) sur ma page. Je me nomme Patrick Nkodo.
+         J'aime donner mon nom sous ce format à la fin de mes poèmes, pour marquer l'auteur.
+          Je suis un étudiant de la filière <b>genie logiciel</b> au Cameroun, à l'Instutut Universitaire Siantou (IUS), et je m'interesse beaucoup à la programmation web.
+          J'éssaie d'appliquer tout ce que j'apprend en créant des petits projets, et c'est dans cette lancé que j'ai crée cette application.
+          J'éspère qu'elle vous plaît. Aussi, je suis disponible dans les réseaux sociaux listés ci-dessous, vous pourriez me contacter pour faire des suggestions, ou des améliorations. Merci d'avoir visité.😉
         </p>
       </div>
       <div className="part2">
-       <h1>Why this project</h1>
-       <p>I am very interested in poetry, I might not yet follow all the rules due to ignorance, but
-         a dream I have, is to valorise the gift God gave me (inspiration to write), so as to please myself, as well as that small community,
-         which appreciates the few poems I write.
+       <h1>Pourquoi cette Application?</h1>
+       <p>Je suis très intéréssé par la poésie. Peut-être j'ai encore beaucoup à apprendre, mais
+        un de mes rêves est de valoriser cet inspiration que Dieu m'a donné, pour mon plaisir personnel, tout comme pour plaire à cette petite communauté,
+         qui n'arrête d'apprécier mes écrits.
        </p>
       </div>
       <div className='part3'>

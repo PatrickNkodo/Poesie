@@ -1,8 +1,10 @@
+import { useGlobalContext } from './context';
+// const {name}=useGlobalContext()
 export default [
     {
+      id:0,
       title:'BONNE ANNÉE',
-      text:`
-        Je tiens à vous souhaiter une bonne année,
+      text:`Je tiens à vous souhaiter une bonne année,
         Qui vaudra beaucoup mieux que les années du passé.
         Car le Seigneur entend mes prières quotidiennes,
         Dans lesquelles je n’arrête pas de prier pour qu’il vous protège.
@@ -18,16 +20,16 @@ export default [
         Bonne année 2023,
       `,
       author:'Votre Nom',
-      category:'BA'
+      category:'Bonne Année'
     },
     {
+      id:1,
       title:'BONNE ANNÉE CHERI',
-      text:`
-      Mon chéri.
+      text:`Mon chéri.
       Nous voici devant une année nouvelle.
-      Le Créateur nous a épargnés des pires dangers de 2020,
+      Le Créateur nous a épargnés des pires dangers de 2022,
       Tout y est passé :  pandémies, massacres et autres calamités…
-      Enfin !  Nous voici en plein en 2021.
+      Enfin !  Nous voici en plein en 2023.
       
       Occasion- s’il en fût-chéri, de te souhaiter le meilleur,
       Afin qu’aux pesanteurs du passé,
@@ -35,23 +37,18 @@ export default [
       Qui, assurément, fermenteront dans notre relation,
       Un amour des plus indicibles. 
       
-      Une année où je ne te verrai pas pleurer et souffrir,
-      Mais plutôt celle où tu crierais de joie et de bonheur.
-      Que 2021 se confirme pour toi une année de paix,
-      D’émerveillement et de consolidation de nos liens d’amour.
-      
-      Je te souhaite une merveilleuse année 2021, chéri.
+      Je te souhaite une merveilleuse année 2023, chéri.
+      Année d’émerveillement et de consolidation de nos liens d’amour.
       Que Dieu protège notre couple des tempêtes dévastatrices du siècle présent.
-      
       Je t’aime chéri💖
       `,
       author:'Votre Nom',
-      category:'BA'
+      category:'Bonne Année'
     },
     {
+      id:2,
       title:'BONNE ANNÉE CHERS PARENTS',
-      text:`
-        Mon cher papa,
+      text:`Mon cher papa,
         Ma chère maman.
         C’est de la part de votre enfant,
         Cet œuvre que vous avez merveilleusement crée.
@@ -61,27 +58,23 @@ export default [
         Car le seigneur entend mes prières quotidiennes,
         Dans lesquelles je n’arrête pas de prier pour qu’il vous protège.
 
-        Que 2021 pour vous soit une année de paix,
+        Que 2023 pour vous soit une année de paix,
         De joie, d’abondance, de santé.
         De miracles, de réussite, de bénédiction totale pour vous,
         De merveilles, de prospérité, et surtout d’amour entres vous deux.
 
-        Ma vie est belle depuis ma naissance auprès de vous,
+        Ma vie est belle depuis toujours auprès de vous,
         Je n’ai jamais manqué du nécessaire.
-        Car j’ai deux anges qui me guident sans cesse,
-        Car j’ai Papa et Maman dans ma vie, 
-        Et ils sont toujours là pour prendre soin de moi.
-        Je vous souhaite une merveilleuse année 2021, papa et maman.
-        Merci d’être toujours là pour me guider, me protéger et me couvrir,
+        Merci d’être toujours là pour me guider, me protéger,
         Je vous aime tellement.
       `,
       author:'Votre Nom',
-      category:'BA'
+      category:'Bonne Année'
     },
     {
+      id:3,
       title:'Happy New Year',
-      text:`
-        Today, Dear
+      text:`Today, Dear
         We are in front of a new year.
         God spared us from the worst dangers,
         As well as the heaviest tears.
@@ -100,8 +93,7 @@ export default [
         May God remove storms from your path.
       `,
       author:'Your Name',
-      category:'HNY'
+      category:'Happy new year'
     },
   ];
-//   export default menu;
   
