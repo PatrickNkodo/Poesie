@@ -80,7 +80,7 @@ function App() {
 						{images.map((item, index) => {
 							return (
 								<div className="img" key={index} onClick={() => changeBg(item.img)}>
-									<img src={item.img} width="100%" height="100" alt="img" />
+									<img src={item.img} width="100%" height="100" alt={item.img} />
 								</div>
 							);
 						})}

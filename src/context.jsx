@@ -1,5 +1,6 @@
 import React, { useState, createContext, useContext, useEffect } from 'react';
 import Poems from './poems'
+import html2canvas from 'html2canvas'
 // import sublinks from './data'
 const AppContext = createContext();
 const AppProvider = ({ children }) => {
@@ -50,7 +51,16 @@ const AppProvider = ({ children }) => {
 			setWelcome(false);
 			setFormOpen(false);
 			setAbout(false)
-		}else{
+		}
+		else if(!(title && text)){
+			setChoice(true)
+			setPoem(false)
+			sethelp(false)
+			setWelcome(false);
+			setFormOpen(false);
+			setAbout(false)
+		}
+		else{
 			setWelcome(true);
 			setChoice(false)
 			setPoem(false)
@@ -152,7 +162,15 @@ const AppProvider = ({ children }) => {
 		setOverlay(e.target.value);
 		console.log(e.target.value);
 	};
-
+	const capture=()=>{
+		document.querySelector('.img').remove()
+		let div=document.createElement("div")
+		div.classList.add('img')
+        html2canvas(document.querySelector(`#capture`)).then(canvas => {
+            document.querySelector(`.modal-body`).appendChild(div).appendChild(canvas)
+        });
+		// alert('ok')
+    }
 	return (
 		<AppContext.Provider
 			value={{
@@ -214,6 +232,7 @@ const AppProvider = ({ children }) => {
 				lineHeight,
 				setLineHeight,
 				changePoem,
+				capture
 			}}
 		>
 			{children}

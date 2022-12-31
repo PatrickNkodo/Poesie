@@ -34,11 +34,11 @@ const Poem = () => {
 	}
 	console.log(size);
 	return (
-		<div className="">
-			<div className="bg col-sm-8" style={{...style }}>
-        <div className="logo" style={align=='left'?{right:'0'}:{left:'0'}}>
-          <img src={logo} alt="Logo" width='20%'/>
-        </div>
+		<div>
+			<div id='capture' className="bg col-sm-8" style={{...style }}>
+				<div className="logo" style={align=='left'?{right:'0'}:{left:'0'}}>
+					<img src={logo} alt="Logo" width='20%'/>
+				</div>
 				<div className="overlay-bg" style={{ opacity: `${overlay}` }} />
 				<div className='text' contentEditable spellCheck="false" style={{ textAlign:align,fontFamily:font,fontWeight:weight,fontSize: `${size}rem`,lineHeight:`${lineHeight}rem`}}>
 					{title}<br/><br/>

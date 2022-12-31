@@ -3,7 +3,8 @@ import categories from '../categories';
 import { useGlobalContext } from '../context';
 import poems from '../poems';
 const Choice = () => {
-	const { display, category,title,text,name } = useGlobalContext();
+	const { display, category,title,text} = useGlobalContext();
+	// console.log(data);
 	return (
 		<div>
 			<div className="main bg-light">
@@ -18,7 +19,7 @@ const Choice = () => {
 									</div>
 						);
 					})
-					// .filter((item)=>item.category==category)
+					// data.filter((item)=>item.category==category)
 				}
 				</div>
 			</div>

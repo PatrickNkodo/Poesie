@@ -67,22 +67,22 @@ export default [
       img: '/images/image (42).jpg',
     },
     {
-      img: '/images/image1 (1).jpg',
+      img: '/images/New folder/img1 (1).jpg',
     },
     {
-      img: '/images/image1 (2).jpg',
+      img: '/images/New folder/img1 (2).jpg',
     },
     {
-      img: '/images/image1 (3).jpg',
+      img: '/images/New folder/img1 (3).jpg',
     },
     {
-      img: '/images/image1 (4).jpg',
+      img: '/images/New folder/img1 (4).jpg',
     },
     {
-      img: '/images/image1 (5).jpg',
+      img: '/images/New folder/img1 (5).jpg',
     },
     {
-      img: '/images/image1 (6).jpg',
+      img: '/images/New folder/img1 (6).jpg',
     },
   ];
 //   export default menu;
