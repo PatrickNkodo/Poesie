@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import logo from '../logo.png';
 import { useGlobalContext } from '../context';
 function Mainnav() {
-	const { helpFxn, aboutFxn, homeFxn, tab, poem, choice, getPoem, changePoem,capture } = useGlobalContext();
+	const { helpFxn, aboutFxn, homeFxn, tab, poem, choice, getPoem, changePoem,capture,download} = useGlobalContext();
 	return (
 		<header>
 			<nav className="navbar navbar-expand-sm navbar-light bg-light">
@@ -39,11 +39,12 @@ function Mainnav() {
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
 
-      <div class="modal-body bg-dark">
+      <div class="modal-body bg-dark d-flex justify-content-center">
       </div>
 
       <div class="modal-footer">
-        <button type="button" class="btn btn-success">Download</button>
+        {/* <a href='#canvas' className="btn btn-success" download='poem.png'>Download</a> */}
+        <button onClick={download} className="btn btn-success">Download</button>
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
       </div>
 

@@ -163,8 +163,6 @@ form>label>span{
 .logo{
   position:absolute;
   top: 0;
-  padding:5px;
-  height:10%;
   overflow: hidden;
   z-index:50;
 }
@@ -255,6 +253,9 @@ hr{border:2px solid rgb(0, 0, 0);width:100%;}
 
 
 
+@media only screen and (max-width: 711px) {
+  .nav-link{font-size:10px;}
+}
 @media only screen and (max-width: 576px) {
   body{background-color: black;}
   .choice>div{

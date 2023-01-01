@@ -27,7 +27,7 @@ const AppProvider = ({ children }) => {
 	const [ color1, setColor1 ] = useState('#000000');
 	const [ color2, setColor2 ] = useState('#000000');
 	const [ direction, setDirection ] = useState('bottom');
-	const [ font, setFont ] = useState('Times New Roman');
+	const [ font, setFont ] = useState('Arial');
 	const [ weight, setWeight ] = useState(300);
 	const [tab,setTab]=useState('Accueil');
 	// useEffect(()=>{
@@ -163,14 +163,26 @@ const AppProvider = ({ children }) => {
 		console.log(e.target.value);
 	};
 	const capture=()=>{
-		document.querySelector('.img').remove()
-		let div=document.createElement("div")
-		div.classList.add('img')
+		let modalBody=document.querySelector('.modal-body')
+		let canvas=document.querySelector('#canvas')
+		if(canvas){modalBody.removeChild(canvas)}
+		// let div=document.createElement("div")
+		// div.setAttribute('id','canvas')
+		// div.setAttribute('class','capture')
         html2canvas(document.querySelector(`#capture`)).then(canvas => {
-            document.querySelector(`.modal-body`).appendChild(div).appendChild(canvas)
+			canvas.setAttribute('id','canvas')
+            modalBody.appendChild(canvas)
         });
-		// alert('ok')
     }
+	const download=()=>{
+		let canvas=document.getElementById('canvas')
+		let a=document.createElement('a')
+		a.href=canvas.toDataURL('image/jpeg')
+		// console.log(a.href);	
+		a.download='poem.jpeg'
+		a.click();
+        };
+    
 	return (
 		<AppContext.Provider
 			value={{
@@ -232,7 +244,8 @@ const AppProvider = ({ children }) => {
 				lineHeight,
 				setLineHeight,
 				changePoem,
-				capture
+				capture,
+				download,
 			}}
 		>
 			{children}

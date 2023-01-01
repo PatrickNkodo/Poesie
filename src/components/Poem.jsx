@@ -35,7 +35,7 @@ const Poem = () => {
 	console.log(size);
 	return (
 		<div>
-			<div id='capture' className="bg col-sm-8" style={{...style }}>
+			<div id='capture' className="bg col-lg-8 col-md-8 col-sm-12" style={{...style }}>
 				<div className="logo" style={align=='left'?{right:'0'}:{left:'0'}}>
 					<img src={logo} alt="Logo" width='20%'/>
 				</div>
