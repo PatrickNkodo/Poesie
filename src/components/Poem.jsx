@@ -12,6 +12,7 @@ const Poem = () => {
 		overlay,
 		align,
 		size,
+		edition,
 		color1,
 		color2,
 		direction,
@@ -32,7 +33,7 @@ const Poem = () => {
 	if (bgImagePresent) {
 		style = { ...style, backgroundImage: `url('${bg}')` };
 	}
-	console.log(size);
+	console.log(title);
 	return (
 		<div>
 			<div id='capture' className="bg col-lg-8 col-md-8 col-sm-12" style={{...style }}>
@@ -40,7 +41,7 @@ const Poem = () => {
 					<img src={logo} alt="Logo" width='20%'/>
 				</div>
 				<div className="overlay-bg" style={{ opacity: `${overlay}` }} />
-				<div className='text' contentEditable spellCheck="false" style={{ textAlign:align,fontFamily:font,fontWeight:weight,fontSize: `${size}rem`,lineHeight:`${lineHeight}rem`}}>
+				<div className='text' contentEditable spellCheck='false' onChange={edition} style={{ textAlign:align,fontFamily:font,fontWeight:weight,fontSize: `${size}rem`,lineHeight:`${lineHeight}rem`}}>
 					{title}<br/><br/>
 					{text}<br/>
 					~{name}

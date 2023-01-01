@@ -6,11 +6,11 @@ const Welcome =   () => {
 
   return (
     <div className='col-lg-10 col-md-10 col-sm-12'>
-       <h4>Welcome to you.</h4>
-       <p>I'm happy to have you here. I wish you a happy christmas celebration,
-          as well as to your friends. I will do so with a poem, because that's all I can offer for now😊.
+       <h4>Bienvenu(e) à vous!</h4>
+       <p>Content de vous voir ici. Sentez-vous à laise ici. Le monde de la poésie est à nous pendant ce petit momment passé ensemble.
+          Cliquez sur Continuer pour passer à la prochaine étape. Il y'a bien un poème chez moi qui te remuera des souvenirs😊.
        </p>
-       <button className='btn btn-primary' onClick={openForm}>Click here to continue</button>
+       <button className='btn btn-primary' onClick={openForm}>Continuer</button>
     </div>
   )
 }

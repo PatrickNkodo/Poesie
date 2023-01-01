@@ -32,20 +32,20 @@ function Mainnav() {
 							</span>
 						</li>
 
-<div class="modal" id="myModal">
+<div class="modal col-12" id="myModal">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      <div class="modal-header justify-content-around">
+	  <button onClick={download} className="btn btn-success">Download</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
       </div>
 
-      <div class="modal-body bg-dark d-flex justify-content-center">
+      <div class="modal-body d-flex justify-content-center">
       </div>
 
       <div class="modal-footer">
-        {/* <a href='#canvas' className="btn btn-success" download='poem.png'>Download</a> */}
-        <button onClick={download} className="btn btn-success">Download</button>
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        {/* <a href={`canvas.${toDataURL()}`} className="btn btn-success" download>Download</a> */}
+       
       </div>
 
     </div>

@@ -4,9 +4,9 @@ import html2canvas from 'html2canvas'
 // import sublinks from './data'
 const AppContext = createContext();
 const AppProvider = ({ children }) => {
-	const [ welcome, setWelcome ] = useState(false);
+	const [ welcome, setWelcome ] = useState(true);
 	const [ bg, setBg ] = useState('');
-	const [choice,setChoice]=useState(true)
+	const [choice,setChoice]=useState(false)
 	const [title,setTitle]=useState('')
 	const [text,setText]=useState('')
 	const [lineHeight,setLineHeight]=useState('')
@@ -166,22 +166,31 @@ const AppProvider = ({ children }) => {
 		let modalBody=document.querySelector('.modal-body')
 		let canvas=document.querySelector('#canvas')
 		if(canvas){modalBody.removeChild(canvas)}
-		// let div=document.createElement("div")
-		// div.setAttribute('id','canvas')
-		// div.setAttribute('class','capture')
         html2canvas(document.querySelector(`#capture`)).then(canvas => {
-			canvas.setAttribute('id','canvas')
+			canvas.setAttribute('id','canvas') //add it the id='canvas'
             modalBody.appendChild(canvas)
         });
     }
 	const download=()=>{
 		let canvas=document.getElementById('canvas')
 		let a=document.createElement('a')
-		a.href=canvas.toDataURL('image/jpeg')
-		// console.log(a.href);	
-		a.download='poem.jpeg'
+		a.href=canvas.toDataURL('image/jpeg') //The toDataURL returns a file/format file, with details on the canvas
+		a.download='poem.jpg'
 		a.click();
         };
+
+		//INTERNET EXPLORER AND EDGE METHODS... ONLY SAVES AS PNG
+	// const download1=()=>{
+	// 	if(window.navigator.msSaveBlob){
+	// 		(canvas.msSaveBlob(), "image.png")
+    //     }else{
+	// 	let canvas=document.getElementById('canvas')
+	// 	let a=document.createElement('a')
+	// 	a.href=canvas.toDataURL('image/jpeg') //The toDataURL returns a file/format file, with details on the canvas
+	// 	a.download='poem.jpeg'
+	// 	a.click();
+	// 	}
+	// }
     
 	return (
 		<AppContext.Provider
