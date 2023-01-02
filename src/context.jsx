@@ -88,13 +88,18 @@ const AppProvider = ({ children }) => {
 		setWelcome(false);
 		setFormOpen(false);
 	};
+
 	const display=(ID,category)=>{
 		const filterCategory=poems.filter((item)=>item.category==category)
-		const filterPoem=filterCategory[0].items.filter((item)=>item.id==ID)
-		const {id,title,text,author}=filterPoem[0];
-		setTitle(title)
-		setText(text)
-		setAuthor(author)
+		filterCategory.map((poem)=>{
+			let myPoem= poem.items.filter((x)=>x.id==ID)
+			myPoem.map((data)=>{
+				const {id,title,text,author}=data;
+				setTitle(title)
+				setText(text)
+				setAuthor(author)
+			})
+		})
 	}
 	let date=new Date
 	let time=date.getHours()

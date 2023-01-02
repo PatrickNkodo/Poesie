@@ -5,7 +5,6 @@ import poems from '../poems';
 const Choice = () => {
 	const { display, category, title, setTitle, text,author } = useGlobalContext();
 	const filter=poems.filter((item)=>item.category==category)
-	console.log(filter);
 	return (
 		<div>
 			<div className="main bg-light">
