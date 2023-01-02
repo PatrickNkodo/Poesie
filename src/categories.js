@@ -1,9 +1,9 @@
 export default [
     {
-      category:'Bonne année'
+      category:'Bonne Année'
     },
     {
-      category:'Happy new year'
+      category:'Happy New Year'
     },
   ];
 //   export default menu;

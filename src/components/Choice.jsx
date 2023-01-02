@@ -3,8 +3,9 @@ import categories from '../categories';
 import { useGlobalContext } from '../context';
 import poems from '../poems';
 const Choice = () => {
-	const { display, category, title, setTitle, text, setText } = useGlobalContext();
-	console.log(text);
+	const { display, category, title, setTitle, text,author } = useGlobalContext();
+	const filter=poems.filter((item)=>item.category==category)
+	console.log(filter);
 	return (
 		<div>
 			<div className="main bg-light">
@@ -12,15 +13,14 @@ const Choice = () => {
 					Choisissez un exemplaire <b>en dessous</b>
 				</h5>
 				<div className="">
-					{poems.map((item, index) => {
+					{filter[0].items.map((item, index) => {
 						return (
-							<div className="examples  my-2" key={index} onClick={() => display(item.id)}>
+							<div className="examples  my-2" key={index} onClick={() => display(item.id,category)}>
 								<p>{item.title}</p>
 								<p className="poem-copy">{`${item.text.slice(0, 30)}...`}</p>
 							</div>
 						);
 					})
-					// data.filter((item)=>item.category==category)
 					}
 				</div>
 			</div>
@@ -34,7 +34,7 @@ const Choice = () => {
 							{text}
 						</p>
 						<span>
-							<b>~Votre nom</b>
+							<b>~{author}</b>
 						</span>
 					</div>
 				) : (

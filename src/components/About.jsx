@@ -21,8 +21,10 @@ const About = () => {
        </p>
       </div>
       <div className='part3'>
-        <i class="fab fa-facebook" aria-hidden="true"></i>
-        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        <a href="m.me/Poésie dans les airs "><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        {/*Whatsapp share link 
+        <a href="whatsapp://send?text=Salut Patrick, je vous contacte depuis votre application."><i class="fab fa-whatsapp" aria-hidden="true"></i></a> */}
+        <a href="https://wa.me/237696950600/?text=Salut Patrick, je vous contacte depuis votre application."><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
         <i class="fab fa-linkedin" aria-hidden="true"></i>
        </div>
     </div>

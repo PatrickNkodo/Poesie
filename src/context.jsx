@@ -1,6 +1,7 @@
 import React, { useState, createContext, useContext, useEffect } from 'react';
 import Poems from './poems'
 import html2canvas from 'html2canvas'
+import poems from './poems';
 // import sublinks from './data'
 const AppContext = createContext();
 const AppProvider = ({ children }) => {
@@ -9,6 +10,7 @@ const AppProvider = ({ children }) => {
 	const [choice,setChoice]=useState(false)
 	const [title,setTitle]=useState('')
 	const [text,setText]=useState('')
+	const [author,setAuthor]=useState('')
 	const [lineHeight,setLineHeight]=useState('')
 	const [ formOpen, setFormOpen ] = useState(false);
 	const [ help, sethelp ] = useState(false);
@@ -86,13 +88,16 @@ const AppProvider = ({ children }) => {
 		setWelcome(false);
 		setFormOpen(false);
 	};
-	const display=(x)=>{
-		// alert('ok')
-		const tmp=Poems.filter((poem)=>poem.id===x)
-		const {id,title,text}=tmp[0];
+	const display=(ID,category)=>{
+		const filterCategory=poems.filter((item)=>item.category==category)
+		const filterPoem=filterCategory[0].items.filter((item)=>item.id==ID)
+		const {id,title,text,author}=filterPoem[0];
 		setTitle(title)
 		setText(text)
+		setAuthor(author)
 	}
+	let date=new Date
+	let time=date.getHours()
 	//BG Image
 	const changeBg = (item) => {
 		setBg(item);
@@ -207,6 +212,8 @@ const AppProvider = ({ children }) => {
 				setTitle,
 				text,
 				setText,
+				author,
+				setAuthor,
 				homeFxn,
 				poem,
 				setPoem,
