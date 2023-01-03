@@ -28,6 +28,7 @@ const AppProvider = ({ children }) => {
 	const [ bgImagePresent, setbgImagePresent ] = useState(false);
 	const [ color1, setColor1 ] = useState('#000000');
 	const [ color2, setColor2 ] = useState('#000000');
+	const [ shadow, setShadow ] = useState(0);
 	const [ direction, setDirection ] = useState('bottom');
 	const [ font, setFont ] = useState('Arial');
 	const [ weight, setWeight ] = useState(300);
@@ -176,7 +177,7 @@ const AppProvider = ({ children }) => {
 		let modalBody=document.querySelector('.modal-body')
 		let canvas=document.querySelector('#canvas')
 		if(canvas){modalBody.removeChild(canvas)}
-        html2canvas(document.querySelector(`#capture`)).then(canvas => {
+        html2canvas(document.querySelector(`#capture`),{height:400}).then(canvas => {
 			canvas.setAttribute('id','canvas') //add it the id='canvas'
             modalBody.appendChild(canvas)
         });
@@ -233,6 +234,8 @@ const AppProvider = ({ children }) => {
 				setBg,
 				size,
 				setSize,
+				shadow,
+				setShadow,
 				overlay,
 				setOverlay,
 				overlayHandler,

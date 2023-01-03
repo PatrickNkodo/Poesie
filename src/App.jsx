@@ -50,6 +50,8 @@ function App() {
 		edition,
 		lineHeight,
 		setLineHeight,
+		shadow,
+		setShadow,
 	} = useGlobalContext();
 	return (
 		<div className="App">
@@ -80,7 +82,7 @@ function App() {
 						{images.map((item, index) => {
 							return (
 								<div className="img" key={index} onClick={() => changeBg(item.img)}>
-									<img src={item.img} width="100%" height="100" alt={item.img} />
+									<img src={item.img} alt={item.img} />
 								</div>
 							);
 						})}
@@ -99,7 +101,7 @@ function App() {
 
 				{poem && (
 					<div className="modifications">
-						<div className="overlay">
+						<div className="font-size">
 							<span>Taille de police:</span>
 							<input
 								type=""
@@ -144,6 +146,17 @@ function App() {
 								step="any"
 								onChange={(e) => setLineHeight(e.target.value)}
 								value={lineHeight}
+							/>
+						</div>
+						<div className="shadow">
+							<span>Ombre de texte:</span>
+							<input
+								type="range"
+								min="0"
+								max="1"
+								step="any"
+								onChange={(e) => setShadow(e.target.value)}
+								value={shadow}
 							/>
 						</div>
 						<div className="align">
@@ -191,9 +204,10 @@ function App() {
 							/>
 						</div>
 						<hr/>
-						<div className="Gradient">
+						<div className="gradient">
 							<span>Dégradé</span>
-							<br />
+							<div className="">
+							
 							<label htmlFor="">Couleur1 </label>
 							<input
 								type="color"
@@ -208,7 +222,7 @@ function App() {
 								onChange={(e) => gradient(color1, e.target.value)}
 								value={color2}
 							/>
-							<div className="mt-2">
+							<div className="">
 							<span>Direction </span>
 							<select
 								name=""
@@ -221,6 +235,7 @@ function App() {
 								<option value="top">Bas-Haut</option>
 								<option value="bottom">Haut-Bas</option>
 							</select>
+							</div>
 							</div>
 						</div>
 						<hr/>

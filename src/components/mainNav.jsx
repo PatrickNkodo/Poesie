@@ -32,15 +32,15 @@ function Mainnav() {
 							</span>
 						</li>
 
-<div class="modal col-12" id="myModal">
+<div class="modal fade" id="myModal">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header justify-content-around">
-	  <button onClick={download} className="btn btn-success">Download</button>
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+	  <button onClick={download} className="btn btn-success" data-bs-dismiss="modal">Télécharger</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fermer</button>
       </div>
 
-      <div class="modal-body d-flex justify-content-center">
+      <div class="modal-body">
       </div>
 
       <div class="modal-footer">

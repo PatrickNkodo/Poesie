@@ -110,6 +110,9 @@ form>label>span{
   color: black;
   font-size:20px;
 }
+.modal-content{display: flex !important;height:50%;position: relative;}
+.modal-body{display: flex !important; justify-content: center !important; padding:5px; margin: 0;height: 50% !important;}
+#canvas{transform: scale(.8);}
 .choice .display-msg{height:inherit;display: flex;font-size:100%; align-items: center; color:rgb(122, 122, 122);}
 .examples{
   /* position: relative; */
@@ -182,6 +185,9 @@ form>label>span{
   z-index:10;
   background-color: rgb(0, 0, 0);
   opacity:.5;
+}
+.backgrounds>.img>img{
+  width:100px;
 }
 .backgrounds{
   /* visibility: hidden; */
@@ -302,14 +308,48 @@ hr{border:2px solid rgb(0, 0, 0);width:100%;}
     display: flex; 
     flex-direction: row;
   }
-
+ 
   .poem-fxns li span,.choice-fxns li span{font-size:13px; padding:5px !important;}
   .modifications div{
     font-size: 13px;
   }
-
+  .backgrounds{
+    width:100%;
+    height:15%;
+    flex-direction: row;
+    overflow-y: hidden;
+    overflow-x: scroll;
+  }
+  /* .backgrounds>.img{padding: 5px;background-color: red;} */
+  .modifications{
+    width:100%;
+    height:15%;
+    flex-direction: row;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    top:unset;
+    bottom:0;
+  }
+  .modifications>div>span{
+    white-space: pre;
+  }
+  .modifications .gradient{ border: solid;background: linear-gradient(to right, orange,rgb(0, 101, 253));}
+  .modifications .gradient input[type='color']{
+    width:100px;
+  }
+  .modifications .gradient>div{
+    display: flex;
+  }
+  .poem .bg{
+    height:60vh;
+  }
 }
 @media only screen and (max-width: 437px) {
   .poem-fxns li span,.choice-fxns li span{font-size:10px; padding:2px !important;}
   .poem-fxn1,.poem-fxn2{margin:0 1px 0 1px;}
+}
+@media only screen and (max-width: 576px) {
+  .poem{
+    width:100%;
+  }
 }
