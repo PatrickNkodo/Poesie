@@ -21,7 +21,7 @@ const AppProvider = ({ children }) => {
 	const [edition,setEdition]=useState(false)
 	const [ overlay, setOverlay ] = useState(0);
 	const [ align, setAlign ] = useState('left');
-	const [ size, setSize ] = useState(.7);
+	const [ size, setSize ] = useState(5);
 	const [ textColor, setTextColor ] = useState('#ffffff');
 	const [ bgColor, setBgColor ] = useState('#000000');
 	const [ gradientPresent, setgradientPresent ] = useState(false);
@@ -177,7 +177,7 @@ const AppProvider = ({ children }) => {
 		let modalBody=document.querySelector('.modal-body')
 		let canvas=document.querySelector('#canvas')
 		if(canvas){modalBody.removeChild(canvas)}
-        html2canvas(document.querySelector(`#capture`),{height:400}).then(canvas => {
+        html2canvas(document.querySelector(`#capture`)).then(canvas => {
 			canvas.setAttribute('id','canvas') //add it the id='canvas'
             modalBody.appendChild(canvas)
         });

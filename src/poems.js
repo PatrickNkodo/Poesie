@@ -7,7 +7,8 @@ export default [
 			{
 				id: 0,
 				title: 'BONNE ANNÉE',
-				text: `Je tiens à vous souhaiter une bonne année,
+				text:` 
+          Je tiens à vous souhaiter une bonne année,
           Qui vaudra beaucoup mieux que les années du passé.
           Car le Seigneur entend mes prières quotidiennes,
           Dans lesquelles je n’arrête pas de prier pour qu’il vous protège.
@@ -27,7 +28,8 @@ export default [
 			{
 				id: 1,
 				title: 'BONNE ANNÉE CHERI',
-				text: `Mon chéri.
+				text: `
+        Mon chéri,
         Nous voici devant une année nouvelle.
         Le Créateur nous a épargnés des pires dangers de 2022,
         Tout y est passé :  pandémies, massacres et autres calamités…
@@ -49,7 +51,8 @@ export default [
 			{
 				id: 2,
 				title: 'BONNE ANNÉE CHERS PARENTS',
-				text: `Mon cher papa,
+				text: `
+          Mon cher papa,
           Ma chère maman.
           C’est de la part de votre enfant,
           Cet œuvre que vous avez merveilleusement crée.
@@ -79,23 +82,24 @@ export default [
 			{
 				id: 3,
 				title: 'Happy New Year',
-				text: `Today, Dear
-      We are in front of a new year.
-      God spared us from the worst dangers,
-      As well as the heaviest tears.
-      
-      So here is a new year,
-      Opportunity for me to wish you the best.
-      So that compared to the years of the past,
-      This year should be rich in openings and breakthroughs.
-      
-      May 2023 be a year of peace for you,
-      A year of success, happiness.
-      May the tears of your eyes never be of sadness,
-      But rather tears of extreme joy.
-      
-      I wish you a wonderful year 2023.
-      May God remove storms from your path.
+				text: `
+        Today, Dear
+        We are in front of a new year.
+        God spared us from the worst dangers,
+        As well as the heaviest tears.
+        
+        So here is a new year,
+        Opportunity for me to wish you the best.
+        So that compared to the years of the past,
+        This year should be rich in openings and breakthroughs.
+        
+        May 2023 be a year of peace for you,
+        A year of success, happiness.
+        May the tears of your eyes never be of sadness,
+        But rather tears of extreme joy.
+        
+        I wish you a wonderful year 2023.
+        May God remove storms from your path.
     `,
 				author: 'Your Name'
 			}

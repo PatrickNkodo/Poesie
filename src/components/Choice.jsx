@@ -3,7 +3,7 @@ import categories from '../categories';
 import { useGlobalContext } from '../context';
 import poems from '../poems';
 const Choice = () => {
-	const { display, category, title, setTitle, text,author } = useGlobalContext();
+	const { display, category, title, setTitle,text,setText,name } = useGlobalContext();
 	const filter=poems.filter((item)=>item.category==category)
 	return (
 		<div>
@@ -25,17 +25,13 @@ const Choice = () => {
 			</div>
 			<div className="display bg-light p-3">
 				{title && text ? (
-					<div>
-						<p>
-							{title}
-						</p>
-						<p>
-							{text}
-						</p>
-						<span>
-							<b>~{author}</b>
-						</span>
+					<div className="items">
+						<textarea className='form-control' rows='1' onChange={(e)=>setTitle(e.target.value)} value={title}></textarea>
+						<textarea className='form-control' style={{height:'70vh',whiteSpace:'normal',textAlign:'left',}} onChange={(e)=>setText(e.target.value)} value={text}></textarea>
+						<textarea className='form-control' rows='1' disabled value={`~${name}`}></textarea>
 					</div>
+ 
+
 				) : (
 					<div className="display-msg">
 						<h4>Instructions</h4>

@@ -37,24 +37,22 @@ const Poem = () => {
 		textAlign: align,
 		fontFamily: font,
 		fontWeight: weight,
-		fontSize: `${size}rem`,
+		fontSize: `${size}px`,
 		lineHeight: `${lineHeight}rem`,
 		textShadow:`2px 2px 3px rgb(0,0,0,${shadow}) `
 	};
 	return (
 		<div>
-			<div id="capture" className="bg col-lg-8 col-md-10 col-sm-12" style={{ ...style }}>
+			<div id="capture" className="bg col-lg-10 col-md-10 col-sm-12" style={{ ...style }}>
 				<div className="logo" style={align == 'left' ? { right: '0' } : { left: '0' }}>
 					<img src={logo} alt="Logo" width="20%" />
 				</div>
 				<div className="overlay-bg" style={{ opacity: `${overlay}` }} />
-				<div className="text" contentEditable spellCheck="false" onChange={edition} style={textStyle}>
+				<div className="text" onChange={edition} style={textStyle}>
 					{title}
 					<br />
-					<br />
 					{text}
-					<br />
-					~{name}
+					<span>~{name}</span>
 				</div>
 			</div>
 			{/* <div className="add-bg">

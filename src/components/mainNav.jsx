@@ -23,7 +23,7 @@ function Mainnav() {
 					<div className="navbar-nav poem-fxns">
 						<li className="nav-item poem-fxn1">
 							<span className={`nav-link`} onClick={changePoem}>
-								Changer le poème
+								Editer
 							</span>
 						</li>
 						<li className="nav-item poem-fxn2" data-bs-toggle="modal" data-bs-target="#myModal">

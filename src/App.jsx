@@ -106,8 +106,8 @@ function App() {
 							<input
 								type=""
 								type="range"
-								min=".5"
-								max="5"
+								min="5"
+								max="30"
 								step="any"
 								onChange={(e) => setSize(e.target.value)}
 								value={size}
