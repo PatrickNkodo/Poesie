@@ -5,6 +5,7 @@ import poems from '../poems';
 const Choice = () => {
 	const { display, category, title, setTitle,text,setText,name } = useGlobalContext();
 	const filter=poems.filter((item)=>item.category==category)
+	console.log(text);
 	return (
 		<div>
 			<div className="main bg-light">
@@ -28,7 +29,7 @@ const Choice = () => {
 					<div className="items">
 						<textarea className='form-control' rows='1' onChange={(e)=>setTitle(e.target.value)} value={title}></textarea>
 						<textarea className='form-control' onChange={(e)=>setText(e.target.value)} value={text}></textarea>
-						{/* <div className='form-control trial'>{text}</div> */}
+						{/* <div className='form-control display-text' contentEditable>{text}</div> */}
 						<textarea className='form-control' rows='1' disabled value={`~${name}`}></textarea>
 					</div>
  

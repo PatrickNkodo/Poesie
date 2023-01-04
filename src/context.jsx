@@ -129,6 +129,7 @@ const AppProvider = ({ children }) => {
 		sethelp(false)
 		setEdition(false)
 	};
+	
 	const getChoice = () => {
 		if(!(name && category)){
 			alert('Veillez remplir tous les champs svp!')
