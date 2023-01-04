@@ -77,8 +77,36 @@ Je vous aime tellement.`,
 		category: 'Happy New Year',
 		items: [
 			{
-				id: 3,
+				id: 1,
 				title: 'Happy New Year',
+				text: 
+ `Today, Dear
+ We are in front of a new year.
+ God spared us from the worst dangers,
+ As well as the heaviest tears.
+ 
+ So here is a new year,
+ Opportunity for me to wish you the best.
+ So that compared to the years of the past,
+ This year should be rich in openings and breakthroughs.
+ 
+ May 2023 be a year of peace for you,
+ A year of success, happiness.
+ May the tears of your eyes never be of sadness,
+ But rather tears of extreme joy.
+ 
+ I wish you a wonderful year 2023.
+ May God remove storms from your path.`,
+				author: 'Your Name'
+			}
+		]
+	},
+  {
+		category: 'Happy New Year',
+		items: [
+			{
+				id: 1,
+				title: 'Happy Birth Day Friend',
 				text: 
  `Today, Dear
  We are in front of a new year.

@@ -3,9 +3,8 @@ import categories from '../categories';
 import { useGlobalContext } from '../context';
 import poems from '../poems';
 const Choice = () => {
-	const { display, category, title, setTitle,text,setText,name } = useGlobalContext();
+	const { display, category, title, setTitle,text,setText,name,setName } = useGlobalContext();
 	const filter=poems.filter((item)=>item.category==category)
-	console.log(text);
 	return (
 		<div>
 			<div className="main bg-light">
@@ -30,7 +29,7 @@ const Choice = () => {
 						<textarea className='form-control' rows='1' onChange={(e)=>setTitle(e.target.value)} value={title}></textarea>
 						<textarea className='form-control' onChange={(e)=>setText(e.target.value)} value={text}></textarea>
 						{/* <div className='form-control display-text' contentEditable>{text}</div> */}
-						<textarea className='form-control' rows='1' disabled value={`~${name}`}></textarea>
+						<textarea className='form-control' rows='1'  onChange={(e)=>setName(e.target.value)} value={name}>~</textarea>
 					</div>
  
 
@@ -39,10 +38,9 @@ const Choice = () => {
 						<h4>Instructions</h4>
 							<ol>
 								<li>Sélectionnez un poème à gauche et il s'affichera ici.</li>
-								<li>cliquez sur <b>selectionner</b> sur la bare de tâche pour passer à l'étape suivante.</li>
-								<li>Après cela, vous pourrez<b>modifier</b> votre texte en cliquant sur le mot ou la phrase à modifier.</li>
+								<li>Après cela, vous pourrez <b>modifier</b> votre texte autant que vous le voulez.</li>
+								<li>Cliquez sur <b>selectionner</b> sur la bare de navigation pour passer à l'étape suivante.</li>
 								<li>Vous cliquerez ensuite sur <b>sauvegarder</b> sur la bare de tâche pour telecharger le resultat en image</li>
-								
 							</ol>
 						
 					</div>

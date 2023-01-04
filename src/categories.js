@@ -5,6 +5,15 @@ export default [
     {
       category:'Happy New Year'
     },
+    {
+      category:'Anniversaire'
+    },
+    {
+      category:'Amour'
+    },
+    {
+      category:'Simple'
+    },
   ];
 //   export default menu;
   

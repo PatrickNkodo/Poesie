@@ -6,6 +6,9 @@ export default [
         img: '/images/image (1).jpeg',
     },
     {
+        img: '/images/image (2).jpeg',
+    },
+    {
         img: '/images/image (1).jpg',
     },
     

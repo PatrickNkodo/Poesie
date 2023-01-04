@@ -40,6 +40,9 @@ function App() {
 		textColor,
 		bgColor,
 		setBgColor,
+		url,
+		setUrl,
+		urlBg,
 		backgroundColor,
 		color1,
 		color2,
@@ -79,6 +82,10 @@ function App() {
 				)}
 				{poem && (
 					<div className="backgrounds">
+						{/* <form> */}
+							<input type="text"className='form-control' onChange={(e)=>setUrl(e.target.value)} value={url} placeholder="Url pour l'arriere plan"/>
+							<button className='btn btn-sm mt-1 btn-dark' onClick={()=>urlBg(url)}>Definir l'arrière plan</button>
+						{/* </form> */}
 						{images.map((item, index) => {
 							return (
 								<div className="img" key={index} onClick={() => changeBg(item.img)}>

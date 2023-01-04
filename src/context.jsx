@@ -24,6 +24,7 @@ const AppProvider = ({ children }) => {
 	const [ size, setSize ] = useState(10);
 	const [ textColor, setTextColor ] = useState('#ffffff');
 	const [ bgColor, setBgColor ] = useState('#000000');
+	const [url, setUrl]=useState('')
 	const [ gradientPresent, setgradientPresent ] = useState(false);
 	const [ bgImagePresent, setbgImagePresent ] = useState(false);
 	const [ color1, setColor1 ] = useState('#000000');
@@ -110,6 +111,21 @@ const AppProvider = ({ children }) => {
 		setbgImagePresent(true);
 		setgradientPresent(false);
 	};
+	const urlBg=async(url)=>{
+		// e.preventDefault();
+		setbgImagePresent(true)
+		setgradientPresent(false);
+		const res= await fetch(url)
+		const img= await res.blob()
+		let localUrl=URL.createObjectURL(img)
+		changeBg(localUrl); 
+		console.log(bg);
+	}
+		// .catch((Error)=>console.log(Error))
+	
+	useEffect(()=>{
+		urlBg()
+	},[])
 	//Bg Color
 	const backgroundColor = (x) => {
 		setBgColor(x);
@@ -118,7 +134,7 @@ const AppProvider = ({ children }) => {
 	};
 	const getPoem = () => {
 		if(!(title && text)){
-			alert('Please make a choice first')
+			alert("Veillez faire un choix s'il vous plaît")
 			return
 		}
 		setPoem(true);
@@ -271,6 +287,9 @@ const AppProvider = ({ children }) => {
 				changePoem,
 				capture,
 				download,
+				urlBg,
+				url,
+				setUrl
 			}}
 		>
 			{children}
