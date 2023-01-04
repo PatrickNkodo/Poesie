@@ -21,15 +21,14 @@ export default [
           Mon souhait est de vous voir heureux,
           Danser, célébrer et le succèss chaque jours.
           Alors je ne vous souhaite que le meilleur, 
-          Bonne année 2023,
-        `,
+          Bonne année 2023,`,
 				author: 'Votre nom'
 			},
 			{
 				id: 1,
 				title: 'BONNE ANNÉE CHERI',
 				text: `
-        Mon chéri,
+Mon chéri,
         Nous voici devant une année nouvelle.
         Le Créateur nous a épargnés des pires dangers de 2022,
         Tout y est passé :  pandémies, massacres et autres calamités…
@@ -44,8 +43,7 @@ export default [
         Je te souhaite une merveilleuse année 2023, chéri.
         Année d’émerveillement et de consolidation de nos liens d’amour.
         Que Dieu protège notre couple des tempêtes dévastatrices du siècle présent.
-        Je t’aime chéri💖
-        `,
+        Je t’aime chéri💖`,
 				author: 'Votre nom'
 			},
 			{
@@ -70,8 +68,7 @@ export default [
           Ma vie est belle depuis toujours auprès de vous,
           Je n’ai jamais manqué du nécessaire.
           Merci d’être toujours là pour me guider, me protéger,
-          Je vous aime tellement.
-        `,
+          Je vous aime tellement.`,
 				author: 'Votre nom'
 			}
 		]
@@ -99,8 +96,7 @@ export default [
         But rather tears of extreme joy.
         
         I wish you a wonderful year 2023.
-        May God remove storms from your path.
-    `,
+        May God remove storms from your path.`,
 				author: 'Your Name'
 			}
 		]

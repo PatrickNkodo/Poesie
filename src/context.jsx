@@ -21,7 +21,7 @@ const AppProvider = ({ children }) => {
 	const [edition,setEdition]=useState(false)
 	const [ overlay, setOverlay ] = useState(0);
 	const [ align, setAlign ] = useState('left');
-	const [ size, setSize ] = useState(5);
+	const [ size, setSize ] = useState(10);
 	const [ textColor, setTextColor ] = useState('#ffffff');
 	const [ bgColor, setBgColor ] = useState('#000000');
 	const [ gradientPresent, setgradientPresent ] = useState(false);

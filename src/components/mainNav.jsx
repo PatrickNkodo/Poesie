@@ -74,6 +74,11 @@ function Mainnav() {
 								A propos de moi
 							</span>
 						</li>
+						<li className="nav-item">
+							<span className={`nav-link ${tab == 'Commander' && 'bordered'}`} onClick={aboutFxn}>
+								Commander
+							</span>
+						</li>
 					</ul>
 				</div>
 			</nav>

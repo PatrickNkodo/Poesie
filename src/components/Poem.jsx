@@ -50,8 +50,9 @@ const Poem = () => {
 				<div className="overlay-bg" style={{ opacity: `${overlay}` }} />
 				<div className="text" onChange={edition} style={textStyle}>
 					{title}
-					<br />
+					{/* <br/> */}
 					{text}
+					<br />
 					<span>~{name}</span>
 				</div>
 			</div>

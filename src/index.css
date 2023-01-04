@@ -8,6 +8,7 @@
   justify-content: flex-end;
   margin-right:20px;
 }
+.trial{white-space:pre-line;}
 .bordered{
   border-bottom:2px solid rgb(8, 112, 153) !important;
   color: rgb(8, 112, 153) !important;
@@ -139,6 +140,11 @@ form>label>span{
 .examples:hover{
   border:1px solid rgba(3, 28, 252, 0.993);
 }
+.choice .display textarea:nth-child(2){
+  height:70vh;
+  white-space: pre-line !important;
+  /* background-color: rgb(0, 225, 255); */
+}
 .poem-fxn1,.poem-fxn2, .select{margin:0 2px 0 2px;font-size:15px;padding:1px !important;margin:0 !important;}
 .choice-fxns>li span,.poem-fxns>li span{
   /* display: flex; */
@@ -184,7 +190,7 @@ form>label>span{
   overflow: hidden;
   z-index:50;
 }
-.poem .text{z-index:40;width:100%;max-height:90%;overflow: hidden;align-items: center;flex-wrap: wrap;position: relative;margin-top:2rem;white-space:pre-wrap;}
+.poem .text{z-index:40;width:100%;max-height:90%;overflow: hidden;padding:5px;align-items: center;flex-wrap: wrap;position: relative;margin-top:2rem;white-space:pre-wrap;}
 .poem .text p,h4{margin: 0;padding: 0;}
 .overlay-bg{
   position: absolute;
@@ -295,9 +301,10 @@ hr{border:2px solid rgb(0, 0, 0);width:100%;}
     display: block;
     overflow-y: hidden;
   }
-  /* .choice .display{
-    height:9vh;
-  } */
+  .choice .display textarea:nth-child(2){
+    height:'50vh';
+    /* background-color: yellow; */
+  }
   .choice .main>div{
     display: flex;
     background-color: rgb(207, 207, 207);
@@ -312,6 +319,7 @@ hr{border:2px solid rgb(0, 0, 0);width:100%;}
     width:100vw;
     font-size:15px;
   }
+
   nav, .poem,.wrapper div{
     font-size:15px;
   }
@@ -351,16 +359,17 @@ hr{border:2px solid rgb(0, 0, 0);width:100%;}
   .modifications .gradient>div{
     display: flex;
   }
+  .poem{
+    width:100%;
+  }
   .poem .bg{
     height:60vh;
+  }
+  .choice .display{
+    height:50vh;
   }
 }
 @media only screen and (max-width: 437px) {
   .poem-fxns li span,.choice-fxns li span{font-size:10px; padding:2px !important;}
   .poem-fxn1,.poem-fxn2{margin:0 1px 0 1px;}
-}
-@media only screen and (max-width: 576px) {
-  .poem{
-    width:100%;
-  }
 }
