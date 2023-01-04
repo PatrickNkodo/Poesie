@@ -184,6 +184,7 @@ form>label>span{
   font-style: italic;
   /* color: yellow; */
 }
+.poem span:first-child{text-decoration: underline solid ;}
 .logo{
   position:absolute;
   top: 0;

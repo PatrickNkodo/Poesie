@@ -7,8 +7,7 @@ export default [
 			{
 				id: 0,
 				title: 'BONNE ANNÉE',
-				text: 
-`Je tiens à vous souhaiter une bonne année,
+				text: `Je tiens à vous souhaiter une bonne année,
 Qui vaudra beaucoup mieux que les années du passé.
 Car le Seigneur entend mes prières quotidiennes,
 Dans lesquelles je n’arrête pas de prier pour qu’il vous protège.
@@ -22,13 +21,11 @@ Mon souhait est de vous voir heureux,
 Danser, célébrer et le succèss chaque jours.
 Alors je ne vous souhaite que le meilleur, 
 Bonne année 2023,`,
-				author: 'Votre nom'
 			},
 			{
 				id: 1,
 				title: 'BONNE ANNÉE CHERI',
-				text: 
-`Mon chéri,
+				text: `Mon chéri,
 Nous voici devant une année nouvelle.
 Le Créateur nous a épargnés des pires dangers de 2022,
 Tout y est passé :  pandémies, massacres et autres calamités...
@@ -44,13 +41,11 @@ Je te souhaite une merveilleuse année 2023, chéri.
 Année d’émerveillement et de consolidation de nos liens d’amour.
 Que Dieu protège notre couple des tempêtes dévastatrices du siècle présent.
 Je t’aime chéri💖`,
-				author: 'Votre nom'
 			},
 			{
 				id: 2,
 				title: 'BONNE ANNÉE CHERS PARENTS',
-				text: 
-`Mon cher papa,
+				text: `Mon cher papa,
 Ma chère maman.
 C’est de la part de votre enfant,
 Cet œuvre que vous avez merveilleusement crée.
@@ -69,7 +64,6 @@ Ma vie est belle depuis toujours auprès de vous,
 Je n’ai jamais manqué du nécessaire.
 Merci d’être toujours là pour me guider, me protéger,
 Je vous aime tellement.`,
-				author: 'Votre nom'
 			}
 		]
 	},
@@ -79,8 +73,7 @@ Je vous aime tellement.`,
 			{
 				id: 1,
 				title: 'Happy New Year',
-				text: 
- `Today, Dear
+				text: `Today, Dear
  We are in front of a new year.
  God spared us from the worst dangers,
  As well as the heaviest tears.
@@ -97,36 +90,550 @@ Je vous aime tellement.`,
  
  I wish you a wonderful year 2023.
  May God remove storms from your path.`,
-				author: 'Your Name'
 			}
 		]
 	},
-  {
-		category: 'Happy New Year',
+	{
+    category:'Anniversaire',
 		items: [
 			{
 				id: 1,
 				title: 'Happy Birth Day Friend',
-				text: 
- `Today, Dear
- We are in front of a new year.
- God spared us from the worst dangers,
- As well as the heaviest tears.
+				text: `Before any best wish,
+You know you’re my best friend.
+And now for this occasion,
+You know to which extend i wish you the best.
+I’m very happy for you getting older,
+That means you’re gaining more intelligence and blessings.
+I’m happy again that GOD made me know you,
+Because you’re a blessing to my eyes.
+You know how much i can thank you for all you did and still do for me,
+But for now it’s your birth day.
+So for this occasion,
+I pray the ALMIGHTY and thank him for creating you.
+I thank him for making you attain this age that many children didn’t attained.
+I thank GOD for giving you an angelic heart full of elegant extracts.
+Without forgetting to pray him to continue protecting you from all hellish spirits,
+To guide and assist you in all positive projects you’ll undertake.`,
+			},
+			{
+				id: 2,
+				title: 'Joyeux Anniversaire Maman',
+				text: `Pour une maman unique,
+Qui a une valeur inestimable à nos yeux,
+Nous nous donnons de tout cœur aujourd’hui,
+Et nous lui souhaitons un merveilleux joyeux anniversaire.
  
- So here is a new year,
- Opportunity for me to wish you the best.
- So that compared to the years of the past,
- This year should be rich in openings and breakthroughs.
- 
- May 2023 be a year of peace for you,
- A year of success, happiness.
- May the tears of your eyes never be of sadness,
- But rather tears of extreme joy.
- 
- I wish you a wonderful year 2023.
- May God remove storms from your path.`,
-				author: 'Your Name'
-			}
+Maman, pour nous tu es un ange,
+Qui veille sur nous sur terre, comme Dieu du ciel.
+Et tout comme tu nous aime de tout ton cœur,
+Notre amour pour toi déplacerait des  montagnes. 
+
+Joyeux anniversaire maman,
+Que Dieu te comble de grâces, d’abondance, et t’accorde longévité,
+Ainsi, tu seras toujours présente dans nos vies,
+Pour te remercier pour tous ce que tu as faits pour nous.
+
+
+Nous t’aimons, maman,
+Et nous t’aimerons toujours.
+Prions Dieu qu’il nous donne une vie bénie,
+Et aux yeux des hommes, nous te donnerons l’honneur que tu mérites.
+
+N’oublie jamais que nous t’aimons, chère maman.`
+			},
+			{
+        id:3,
+        title:'',
+        text:
+`Oh ! Mon pote de longue date,
+C’est bien moi … qui te parle.
+Car pour cette occasion spéciale de ta vie,
+Je ne pouvais manquer à t’écrire quelque-chose de beau.
+
+
+
+Ce jour est spécial pour toi je le sais,
+Mais ça l’est encore plus pour moi.
+Car en ce jour mon p’tit cœur a un an de plus,
+Mon bout de chou devient vraiment un homme.
+
+
+Que le Seigneur bénisse ta vie.
+Qu’il t’accorde une santé presque éternelle.
+Que Dieu tout puissant t’accompagne toujours,
+Dans tes projets, tes actions, et tes démarches avenirs,
+Et qu’il te rende sage et te donne tout en abondance.
+Tu es un mec trop chou, 
+Et pour cela je t’aime beaucoup.
+JOYEUX ANNIVERSAIRE ...
+Vraiment tu es quelqu’un de bien.
+Ces … ans passées avec toi,
+Vraiment je ne regrette pas de t’avoir connu.
+`
+      },
+			{
+        id:4,
+        title:'HBD ma belle',
+        text:
+`Il n’est peut-être le plus beau, 
+Mais ce poème est né de mon cœur pour toi. 
+Il n’est peut-être le meilleur, 
+Mais je l’ai écrit pour ton bonheur.   
+
+Aujourd’hui, Daphné Je suis joyeux, tout comme toi. 
+De te voir grandir de plus en plus, 
+Et que de jours en jours, 
+Tu deviens plus mature.  
+
+Joyeux anniversaire à toi ma beauté,  
+Pour moi, tu es spéciale. Sans doute, tu le sais. 
+Que Dieu t’accorde santé, argent, sagesse, bonheur, 
+Des bénédictions, et tout ce qu’il y’ a de merveilleux.  
+
+Merci pour toutes fois où tu m’as donné un sourire, 
+Je suis ravi de te connaître jusqu’ici. 
+Alors reçois mon profond joyeux anniversaire, 
+Je ne souhaite que le meilleur dans ta vie.`
+      },
+		
+			// {
+      //   id:6,
+      //   title:'',
+      //   category:'Anniversaire'
+      // }
 		]
-	}
+	},
+  {
+    category:'Louange',
+    items:[
+      {
+        id:1,
+        title:'Dieu est là',
+        text:
+`Ne pleure pas,
+Dieu ne t’a oublié.
+Il t’ôtera ton fardeau,
+Il essuiera tes larmes.
+
+Ne t’égare pas,
+Dieu demeure le seul vrai berger.
+Les hommes ne sauront te guider,
+Car leurs pensées naissent du péché.
+
+Ne te lamente pas,
+Dieu connait tous tes désirs.
+Souris à la vie, il sait ce qu’il fait,
+Le Dieu d’amour ne t’a jamais abandonné.
+
+Et lorsqu’il te comblera de grâces,
+Je te prie, ne t’élève pas.
+Car comme il s’est souvenu de toi,
+Souviens-toi de ceux qui coulent des larmes de sang.`
+      },
+      	{
+        id:2,
+        title:'My savior',
+        text:
+`How wouldn’t I praise your name,
+When I have you as my savior.
+How wouldn’t I boast myself,
+When the almighty is my shepherd.
+
+How could I not be moved,
+Your love for mankind is indescribable.
+No higher love has ever existed,
+ No higher love will ever exist.
+
+How not to thank you Lord,
+You have never condemned one for his sins.
+Instead, you came to save the sinners,
+And by your power, you conquered death.
+
+I will follow you Lord,
+You, the path to endless joy.
+All my sins will be forgiven,
+Because you died for our salvation.`
+      },
+      	{
+        id:3,
+        title:'Père',
+        text:
+`Père,
+Souviens-toi de moi.
+Réalise tes promesses,
+Rend ma joie parfaite.
+
+Père,
+Ne regarde pas mes péchés.
+Regarde mes larmes sincères,
+Qui coulent pour implorer ton pardon.
+
+Père,
+Je voudrais suivre tes pas.
+Aujourd’hui, demain,
+Et pendant tous les jours de ma vie.
+
+Père,
+Merci pour ta présence.
+Merci pour ton amour,
+Et pour ta bonté sans limites.`
+      },
+      	{
+        id:4,
+        title:'Oh père',
+          text:
+`Oh père
+Oh père,
+Aie pitié de moi.
+Elle devient lourde pour moi,
+Ma pauvre croix me renverse.
+
+Oh père,
+Souviens-toi de moi.
+Je voudrais vivre le conte de fées,
+Que tu promets à tes enfants.
+
+Oh père,
+N’oublies-pas ma famille.
+Ceux- là qui sont les miens,
+Je ne les abandonnerai jamais.
+
+Oh père,
+Je suis à genoux.
+Car ma peine est longue,
+Et toi seul peut me consoler.`
+      },
+      	{
+        id:5,
+        title:'Oh mon père',
+          text:
+`Oh père,
+Je voudrais demeurer bénit.
+Je fuirai le monde et ses œuvres,
+Je voudrais m’attacher à toi.
+
+Oh père,
+Merci pour la vie.
+Merci de nous rassurer,
+Dans les et les mauvais moments.
+
+Oh père,
+Epargne ma famille du drame.
+Maintiens-nous dans ton amour,
+Souviens-toi de nous pour toujours.
+
+Oh père, 
+Toi qui es l’ami fidèle. 
+N’oublie pas ceux qui suivent tes pas, 
+Et par ta grâce, rend notre joie parfaite.`
+      },
+//       	{
+//         id:2,
+//         title:'',
+//           text:
+// ``
+//       },
+    ]
+  },
+  {
+    category:'Triste',
+    items:[
+      {
+        id:1,
+        title:'ADIEU GRAND-MÈRE',
+        text:
+`Grand-mère,
+Toi aussi qui étais ma mère.
+Une des plus grandes guerrières,
+Mais qui a dû retourner à la poussière.
+
+Sept ans déjà,
+Et mon cœur n’arrête de larmoyer.
+Car les beaux souvenirs demeurent,
+Ces moments de bonheur qui me manquent tant.
+
+Grand-mère, 
+Pourquoi m’as-tu abandonné.
+Et où es-tu allée,
+Depuis ton départ, tant de choses ont changés.
+
+J’aurais aimé t’avoir à mes côtés,
+Mais tu n’es plus parmi nous.
+Alors que dire, repose en paix, mère du cœur,
+A toi les fleurs, à nous les pleurs.
+`},
+      	{
+        id:2,
+        title:'C’ETAIT SI BEAU',
+          text:
+`J’ouvrais mes yeux dès les premières heures,
+Et toi, collé à moi tu me serrais si fort.
+Tu étais merveilleuse, si mignonne quand tu dormais,
+J’y pense encore, c’était si beau.
+
+Je préparais le repas, et toi endormie,
+Ce plat délicieux que tu aimais tant.
+A ton réveil, je n’étais jamais loin de toi,
+Et sans cesse, je désirais tes lèvres de princesse.
+
+Je priais que notre amour dure une éternité,
+Jusqu’au jour où la vie m’a séparé de toi.
+Mes larmes n’ont pas suffi pour te ramener à moi,
+Mes cris non plus ne furent suffisants. 
+
+Aujourd’hui je suis déboussolé
+Je perds la raison, je perds le nord.
+Tu le sais très bien, toi seule pourrait me consoler,
+Mais tu es partie, et ma joie, tu l’as emportée.
+`
+},
+      	{
+        id:3,
+        title:"Maman m'a quitté",
+          text:
+`Maman,
+Je suis rentré.
+Quelle dure journée,
+Je suis d’ailleurs très affamé.
+
+Maman,
+Qu’as-tu cuisiné ?
+Pourquoi es-tu bouche bée ?
+Dis-moi, es-tu fâché ?
+
+Maman,
+Ton corps est tout glacé.
+Ton sang a l’air coagulé,
+Mais qu’est ce qui s’est passé ?
+
+Maman,
+Alors tu m’as quitté ?
+Est-ce cela ma destinée ?
+Vivre sans toi à mes côtés.
+`
+      },
+      	{
+        id:4,
+        title:'Mon cœur affamé',
+          text:
+`Mon cœur affamé
+Je suis tout attristé,
+Et mon cœur est affamé.
+Le bourrer d’amour j’ai toujours rêvé,
+ Mais jusqu’ici, aucun cœur il n’a gagné. 
+
+Serais-je donc un raté,
+Mon esprit est si troublé.
+Au grand  jamais je n’avais blessé,
+Mais pourquoi je n’ai pas de bien-aimé.
+
+Je crains d’être exilé,
+J’ai besoin d’être sauvé.
+Mais la solution, je ne l’ai pas trouvé,
+En ce moment, je suis déboussolé.`
+      },
+      	{
+        id:5,
+        title:'Ma vie n’a plus de sens',
+          text:
+`
+De jours, des nuits, sans cesse, je pleurs,  
+Plus rien ne me plait, plus rien ne me fait peur. 
+Mon cœur est submergé, il n’y a que des douleurs,  
+Essayez seulement d’imaginer l’ampleur.     
+
+Tout ce que je fais ne m’apporte que des malheurs,  
+Je ne sais plus quoi faire, alors je pleure pendant des heures.  
+Qui donc viendra de loin, pour me jeter une fleur ?  
+Oh mon Dieu, dis-moi, qui donc fera mon bonheur.    
+
+Voyez-vous pourquoi je n’ai plus peur,   
+J’ai juste été aveuglée. Et ce par mes pleurs.  
+Ces pleures de douleurs ont changés mon cœur,  
+Depuis lors, je vis, comme un être sans honneur.    
+
+SOS à toute la terre, j’ai besoin d’un cœur,  
+Un cœur tout doux, qui ferra mon bonheur.  
+Ainsi un jour, elle changera cette vie de malheur,  
+Il n’y aura que joie, et je préserverai mon honneur.          
+`
+      },
+            {
+          id:6,
+          title:'Ainsi fût notre histoire',
+          text:
+`Ainsi fût notre histoire,
+Douce et romantique le premier soir.
+Nous avions l’impression d’avoir des super pouvoirs,
+C’était de l’amusement du matin jusqu’au soir.
+
+Ainsi fût notre histoire,
+Belle et claire comme un reflet du miroir.
+Que de la joie et l’harmonie, il n’y avait pas de désespoir,
+C’était l’amour à la folie, ensemble nous aimions boire.
+
+Ainsi fût notre histoire, la première fois que tu m’as poignardé,
+Triste lorsque le mensonge y est né, amère tel un comprimé.
+Moi qui t’aimais tant, tu as fini par me blesser,
+Cette histoire qui faisait ma joie, à présent elle me fait pleurer.
+
+Notre histoire était si belle,
+Et moi, je la croyais éternelle.
+Hélas, l’histoire s’est transformée en pathos,
+Elle est désormais tel un corps sans os.
+`
+      },
+//             {
+//           id:1,
+//           title:'',
+//           text:
+// ``
+//       },
+    ]
+  },
+  {
+    category:'Amour',
+    items:[
+      {
+          id:1,
+          title:'Bébé',
+          text:
+`Bébé,
+Un jour nous vivrons ensemble. 
+Ensemble nous irons dans les supermarchés, 
+Pour chercher tes aliments préférés.
+
+Bébé,
+Un jour naîtra notre fille.
+Une princesse toute magnifique,
+Qui aimera mes textes poétiques.
+
+Bébé,
+Un jour nous nous marierons.
+Nous aurons ces alliances sur les doigts,
+Et les nôtres seront dans une grande joie.
+
+Bébé,
+Mon rêve est de rester avec toi.
+Hier, aujourd’hui,
+Et que mon lendemain soit avec toi
+`
+      },
+            {
+          id:2,
+          title:'La fille que j’aime',
+          text:
+`La fille que j’aime,
+Est un ange né d’une reine.
+Elle tient un cœur dans sa main,
+Et son mignon sourire n’est jamais absent.
+
+La fille que j’aime,
+Ne brise pas les cœurs des hommes.
+Elle les couvre de fleurs et de parfums,
+Et cherche toujours à les combler de bonheur.
+
+La fille que j’aime,
+Ouvre son cœur quand elle pleure.
+Révèle sa peine et coule des larmes,
+Mais se relève toujours et n’abandonne jamais. 
+
+La fille que j’aime est unique,
+Et sa vie est si magnifique.
+Je l’aimais hier, je l’aime aujourd’hui,
+Et ça c’est sûr, je l’aimerais toujours. ❤`
+      },
+            {
+          id:3,
+          title:"L'amour pur",
+          text:
+`A y penser, le cœur bat si fort,
+Plutôt normal, c’est son souhait de chaque jour.
+A voir sa moitié, un sourire d’ange se révèle, 
+Pas besoin de le forcer, le corps réclame cette expression
+
+Il est le sentiment le plus beau,
+Et ses concurrents n’ont pas le niveau.
+A y croire, vous pourrez déplacer des montagnes.
+Les rêves par ici, ils sont si merveilleux.
+
+Il se nourrit par la présence,
+Et vit un enfer lors de l’absence.
+Il est un coup de foudre qui n’est pas mortel.
+Il est une flamme que l’eau ne peut éteindre.
+
+Son reflet pourrait demeurer éternel,
+Si bien-sûr, personne ne couvre sa lumière.
+Il est unique sur la terre des vivants,
+Le temps passera, mais lui il existera.`
+      },
+            {
+          id:4,
+          title:'Life with love',
+          text:
+`Being loved sounds so nice, 
+And to love, another beauty. 
+They are all like dreams without end,  
+The feeling wished to last forever.  
+
+Life is so nice when love is alive, 
+The name, the face, the thoughts bring smiles. 
+Everything looks beautiful, no place for sadness, 
+The heart is soft, cherished by love memories together.  
+
+It’s better to live as such, 
+To just smile, follow joy for a while. 
+Living in happiness, the heart in the clouds, 
+Travelling in that world, where “I love you” is the pass.  
+
+No need to cry for yesterday, 
+No need to worry for tomorrow. 
+Today you’re the happiest of the world, 
+Forget about them, enjoy your love moments. 
+`
+      },
+            {
+          id:5,
+          title:'Mon mignon',
+          text:
+` Mon mignon,
+Je voudrais t’appartenir.
+Tu es le seul qui compte dans ma vie,
+Le seul qui comptera toujours pour moi.
+
+Mon mignon,
+Tu es le plus beau dans mes pensées,
+Oui, je dirai l’homme parfait,
+Qui a réussi à conquérir mon cœur.
+
+Mon amour,
+Tu es ma raison de vivre depuis que je te connais.
+Je t’aimais déjà depuis nos premiers pas,
+Et à présent mon amour, je t’aime plus que jamais.
+
+Je suis heureuse de t’avoir à mes côtés,
+Et je compte bien rester avec toi jusqu’au bout.
+Car tu es l’amour de ma vie,
+Et je t’assure je t’aime à la folie.`
+      },
+//             {
+//           id:5,
+//           title:'',
+//           text:
+// ``
+//       },
+    ]
+  }
+//   {
+//     category:'',
+//     items:[
+//       {
+//           id:1,
+//           title:'',
+//           text:
+// ``
+//       },
+//     ]
+//   }
 ];

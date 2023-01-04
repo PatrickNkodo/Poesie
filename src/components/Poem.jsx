@@ -49,7 +49,7 @@ const Poem = () => {
 				</div>
 				<div className="overlay-bg" style={{ opacity: `${overlay}` }} />
 				<div className="text" onChange={edition} style={textStyle}>
-					{title}
+					<span>{title}</span>
 					<br/>
 					{text}
 					<br />

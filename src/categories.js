@@ -14,6 +14,12 @@ export default [
     {
       category:'Simple'
     },
+    {
+      category:'Louange'
+    },
+    {
+      category:'Triste'
+    },
   ];
 //   export default menu;
   
