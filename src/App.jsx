@@ -122,7 +122,7 @@ function App() {
 								type=""
 								type="range"
 								min="5"
-								max="50"
+								max="100"
 								step="any"
 								onChange={(e) => setSize(e.target.value)}
 								value={size}

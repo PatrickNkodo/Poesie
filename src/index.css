@@ -111,11 +111,12 @@ form>label>span{
 .display.write{
   width:100%;
 }
+/* .display.write .write- */
 .choice .display .items{
   width:60vw;
   height: 90vh;
   align-self: center;
-  justify-content: space-between;
+  justify-content: space-around;
   display: inherit;
   flex-direction: column;
 }
@@ -141,7 +142,7 @@ form>label>span{
 .examples:hover{
   border:1px solid rgba(3, 28, 252, 0.993);
 }
-.choice .display .items textarea:nth-child(2){
+.choice .display .items .display-text{
   height:70vh;
 }
 .poem-copy{white-space: pre-line;}

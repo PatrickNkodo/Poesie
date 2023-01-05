@@ -26,10 +26,10 @@ const Choice = () => {
 			<div className="display bg-light p-3">
 				{title && text ? (
 					<div className="items">
-						<textarea className='form-control' rows='1' onChange={(e)=>setTitle(e.target.value)} value={title} required></textarea>
-						<textarea className='form-control' onChange={(e)=>setText(e.target.value)} value={text} required></textarea>
+						<textarea className='form-control display-title' rows='1' onChange={(e)=>setTitle(e.target.value)} value={title} required></textarea>
+						<textarea className='form-control display-text' onChange={(e)=>setText(e.target.value)} value={text} required></textarea>
 						{/* <div className='form-control display-text' contentEditable>{text}</div> */}
-						<textarea className='form-control' rows='1'  onChange={(e)=>setName(e.target.value)} value={name} required>~</textarea>
+						<textarea className='form-control display-author' rows='1'  onChange={(e)=>setName(e.target.value)} value={name} required>~</textarea>
 					</div>
  
 

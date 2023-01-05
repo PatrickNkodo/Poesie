@@ -231,30 +231,7 @@ Je te prie, ne t’élève pas.
 Car comme il s’est souvenu de toi,
 Souviens-toi de ceux qui coulent des larmes de sang.`
       },
-      	{
-        id:2,
-        title:'My savior',
-        text:
-`How wouldn’t I praise your name,
-When I have you as my savior.
-How wouldn’t I boast myself,
-When the almighty is my shepherd.
-
-How could I not be moved,
-Your love for mankind is indescribable.
-No higher love has ever existed,
- No higher love will ever exist.
-
-How not to thank you Lord,
-You have never condemned one for his sins.
-Instead, you came to save the sinners,
-And by your power, you conquered death.
-
-I will follow you Lord,
-You, the path to endless joy.
-All my sins will be forgiven,
-Because you died for our salvation.`
-      },
+      	
       	{
         id:3,
         title:'Père',
@@ -569,31 +546,6 @@ Il est unique sur la terre des vivants,
 Le temps passera, mais lui il existera.`
       },
             {
-          id:4,
-          title:'Life with love',
-          text:
-`Being loved sounds so nice, 
-And to love, another beauty. 
-They are all like dreams without end,  
-The feeling wished to last forever.  
-
-Life is so nice when love is alive, 
-The name, the face, the thoughts bring smiles. 
-Everything looks beautiful, no place for sadness, 
-The heart is soft, cherished by love memories together.  
-
-It’s better to live as such, 
-To just smile, follow joy for a while. 
-Living in happiness, the heart in the clouds, 
-Travelling in that world, where “I love you” is the pass.  
-
-No need to cry for yesterday, 
-No need to worry for tomorrow. 
-Today you’re the happiest of the world, 
-Forget about them, enjoy your love moments. 
-`
-      },
-            {
           id:5,
           title:'Mon mignon',
           text:
@@ -624,6 +576,108 @@ Et je t’assure je t’aime à la folie.`
 // ``
 //       },
     ]
+  },
+  {
+    category:'Praise',
+    items:[
+      {
+          id:1,
+          title:'My Saviour',
+          text:
+`How wouldn’t I praise your name,
+When I have you as my savior.
+How wouldn’t I boast myself,
+When the almighty is my shepherd.
+
+How could I not be moved,
+Your love for mankind is indescribable.
+No higher love has ever existed,
+No higher love will ever exist.
+
+How not to thank you Lord,
+You have never condemned one for his sins.
+Instead, you came to save the sinners,
+And by your power, you conquered death.
+
+I will follow you Lord,
+You, the path to endless joy.
+All my sins will be forgiven,
+Because you died for our salvation.`
+      },
+      // {
+        //           id:1,
+        //           title:'',
+        //           text:
+        // ``
+        //       },
+    ]
+  },
+  {
+    category:'Love',
+    items:[
+      {
+        id:1,
+        title:'Life with love',
+        text:
+`Being loved sounds so nice, 
+And to love, another beauty. 
+They are all like dreams without end,  
+The feeling wished to last forever.  
+
+Life is so nice when love is alive, 
+The name, the face, the thoughts bring smiles. 
+Everything looks beautiful, no place for sadness, 
+The heart is soft, cherished by love memories together.  
+
+It’s better to live as such, 
+To just smile, follow joy for a while. 
+Living in happiness, the heart in the clouds, 
+Travelling in that world, where “I love you” is the pass.  
+
+No need to cry for yesterday, 
+No need to worry for tomorrow. 
+Today you’re the happiest of the world, 
+Forget about them, enjoy your love moments. 
+`
+    },
+    // {
+      //           id:1,
+      //           title:'',
+      //           text:
+      // ``
+      //       },
+    ]
+  },
+  {
+    category:'Happy Birth Day',
+    items:[
+      {
+				id: 1,
+				title: 'Happy Birth Day Friend',
+				text: `Before any best wish,
+You know you’re my best friend.
+And now for this occasion,
+You know to which extend i wish you the best.
+I’m very happy for you getting older,
+That means you’re gaining more intelligence and blessings.
+I’m happy again that GOD made me know you,
+Because you’re a blessing to my eyes.
+You know how much i can thank you for all you did and still do for me,
+But for now it’s your birth day.
+So for this occasion,
+I pray the ALMIGHTY and thank him for creating you.
+I thank him for making you attain this age that many children didn’t attained.
+I thank GOD for giving you an angelic heart full of elegant extracts.
+Without forgetting to pray him to continue protecting you from all hellish spirits,
+To guide and assist you in all positive projects you’ll undertake.`,
+			},
+//       {
+//           id:1,
+//           title:'',
+//           text:
+// ``
+//       }, 
+    ]
   }
 //   {
 //     category:'',
@@ -634,6 +688,12 @@ Et je t’assure je t’aime à la folie.`
 //           text:
 // ``
 //       },
+// {
+  //           id:1,
+  //           title:'',
+  //           text:
+  // ``
+  //       }, 
 //     ]
-//   }
+//   },
 ];

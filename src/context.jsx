@@ -16,7 +16,9 @@ const AppProvider = ({ children }) => {
 	const [ formOpen, setFormOpen ] = useState(false);
 	const [ help, sethelp ] = useState(false);
 	const [ about, setAbout ] = useState(false);
+	const [ itsPoem, setItsPoem ] = useState(false);
 	const [ poem, setPoem ] = useState(false);
+	const [ what, setWhat ] = useState('');
 	const [ name, setName ] = useState('');
 	const [ composition, setComposition ] = useState('help');
 	const [write,setWrite]=useState(false)
@@ -152,11 +154,11 @@ const AppProvider = ({ children }) => {
 		setgradientPresent(false);
 	};
 	const getPoem = () => {
-		if(!(title && text) && composition=='help'){
+		if(!(name && text) && composition=='help'){
 			alert("Veillez faire un choix s'il vous plaît")
 			return
 		}
-		else if(!(title && text) && composition=='alone'){
+		else if(!(name && text) && composition=='alone'){
 			alert("Veillez remplir tous les champs s'il vous plaît")
 			return
 		}
@@ -170,8 +172,13 @@ const AppProvider = ({ children }) => {
 		setEdition(false)
 	};
 	
+useEffect(()=>{	
+	if(what=='quote'){setComposition('alone');} 
+	console.log(what,composition);
+// }
+},[what])
 	const getChoice = () => {
-		if(!(name && category && composition)){
+		if(!(name && category && composition && what)){
 			alert('Veillez remplir tous les champs svp!')
 			return;
 		}
@@ -184,7 +191,7 @@ const AppProvider = ({ children }) => {
 			setAbout(false)
 			sethelp(false)
 			setEdition(false)
-		}else{
+		}else if(composition=='alone'){
 			setWrite(true)
 			setChoice(false)
 			setPoem(false);
@@ -284,11 +291,15 @@ const AppProvider = ({ children }) => {
 				display,
 				title,
 				setTitle,
+				what,
+				setWhat,
 				text,
 				setText,
 				author,
 				setAuthor,
 				homeFxn,
+				itsPoem,
+				setItsPoem,
 				poem,
 				setPoem,
 				name,
@@ -342,7 +353,7 @@ const AppProvider = ({ children }) => {
 				download,
 				urlBg,
 				url,
-				setUrl
+				setUrl,
 			}}
 		>
 			{children}
