@@ -3,9 +3,6 @@ export default [
       category:'Bonne Année'
     },
     {
-      category:'Happy New Year'
-    },
-    {
       category:'Anniversaire'
     },
     {
@@ -19,6 +16,15 @@ export default [
     },
     {
       category:'Triste'
+    },
+    {
+      category:'Happy New Year'
+    },
+    {
+      category:'Love'
+    },
+    {
+      category:'Praise'
     },
   ];
 //   export default menu;

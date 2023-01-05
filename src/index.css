@@ -57,7 +57,6 @@ body {
   color:white;
   font-size:20px;
   background-color: black;
-  background-image: url('../public/Images/New folder/img1\ \(6\).jpg');
   background-size: cover;
   background-position: 50% 30%;
 }
@@ -109,6 +108,9 @@ form>label>span{
   font-size:20px;
   position: relative;
 }
+.display.write{
+  width:100%;
+}
 .choice .display .items{
   width:60vw;
   height: 90vh;
@@ -116,7 +118,6 @@ form>label>span{
   justify-content: space-between;
   display: inherit;
   flex-direction: column;
-  background-color: red;
 }
 .choice .display .items textarea{resize: none;}
 .choice>.display>.items{

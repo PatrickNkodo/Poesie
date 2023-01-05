@@ -5,6 +5,7 @@ import poems from './poems';
 // import sublinks from './data'
 const AppContext = createContext();
 const AppProvider = ({ children }) => {
+	const [wrapperBg,setWrapperBg]=useState('/images/New folder/img1 (6).jpg')
 	const [ welcome, setWelcome ] = useState(true);
 	const [ bg, setBg ] = useState('');
 	const [choice,setChoice]=useState(false)
@@ -17,6 +18,8 @@ const AppProvider = ({ children }) => {
 	const [ about, setAbout ] = useState(false);
 	const [ poem, setPoem ] = useState(false);
 	const [ name, setName ] = useState('');
+	const [ composition, setComposition ] = useState('help');
+	const [write,setWrite]=useState(false)
 	const [ category, setCategory ] = useState('');
 	const [edition,setEdition]=useState(false)
 	const [ overlay, setOverlay ] = useState(0);
@@ -41,6 +44,7 @@ const AppProvider = ({ children }) => {
 	// },[])
 	const openForm = () => {
 		setFormOpen(true);
+		setWrite(false)
 		setWelcome(false);
 		setAbout(false)
 		sethelp(false)
@@ -50,6 +54,7 @@ const AppProvider = ({ children }) => {
 		setTab(e.target.innerText)
 		if(name && category){		
 			setPoem(true)
+			setWrite(false)
 			setChoice(false)
 			sethelp(false)
 			setWelcome(false);
@@ -57,15 +62,27 @@ const AppProvider = ({ children }) => {
 			setAbout(false)
 		}
 		else if(!(title && text)){
-			setChoice(true)
-			setPoem(false)
-			sethelp(false)
-			setWelcome(false);
-			setFormOpen(false);
-			setAbout(false)
+			if(composition=='help'){
+				setChoice(true)
+				setWrite(false)
+				setPoem(false)
+				sethelp(false)
+				setWelcome(false);
+				setFormOpen(false);
+				setAbout(false)
+			}else{
+				setWrite(true)
+				setChoice(false)
+				setPoem(false)
+				sethelp(false)
+				setWelcome(false);
+				setFormOpen(false);
+				setAbout(false)
+			}
 		}
 		else{
 			setWelcome(true);
+			setWrite(false)
 			setChoice(false)
 			setPoem(false)
 			sethelp(false)
@@ -76,6 +93,7 @@ const AppProvider = ({ children }) => {
 	const helpFxn = (e) => {
 		setTab(e.target.innerText)
 		sethelp(true)
+		setWrite(false)
 		setChoice(false)
 		setPoem(false)
 		setWelcome(false);
@@ -85,6 +103,7 @@ const AppProvider = ({ children }) => {
 	const aboutFxn = (e) => {
 		setTab(e.target.innerText)
 		setAbout(true)
+		setWrite(false)
 		setPoem(false)
 		sethelp(false)
 		setWelcome(false);
@@ -133,11 +152,16 @@ const AppProvider = ({ children }) => {
 		setgradientPresent(false);
 	};
 	const getPoem = () => {
-		if(!(title && text)){
+		if(!(title && text) && composition=='help'){
 			alert("Veillez faire un choix s'il vous plaît")
 			return
 		}
+		else if(!(title && text) && composition=='alone'){
+			alert("Veillez remplir tous les champs s'il vous plaît")
+			return
+		}
 		setPoem(true);
+		setWrite(false)
 		setChoice(false)
 		setFormOpen(false);
 		setWelcome(false)
@@ -147,17 +171,29 @@ const AppProvider = ({ children }) => {
 	};
 	
 	const getChoice = () => {
-		if(!(name && category)){
+		if(!(name && category && composition)){
 			alert('Veillez remplir tous les champs svp!')
 			return;
 		}
-		setChoice(true)
-		setPoem(false);
-		setFormOpen(false);
-		setWelcome(false)
-		setAbout(false)
-		sethelp(false)
-		setEdition(false)
+		if(composition=='help'){
+			setChoice(true)
+			setWrite(false)
+			setPoem(false);
+			setFormOpen(false);
+			setWelcome(false)
+			setAbout(false)
+			sethelp(false)
+			setEdition(false)
+		}else{
+			setWrite(true)
+			setChoice(false)
+			setPoem(false);
+			setFormOpen(false);
+			setWelcome(false)
+			setAbout(false)
+			sethelp(false)
+			setEdition(false)
+		}
 	};
 	
 	const editing = () => {
@@ -169,12 +205,24 @@ const AppProvider = ({ children }) => {
 		sethelp(false)
 	};
 	const changePoem = () => {
-		setChoice(true)
-		setFormOpen(false);
-		setPoem(false);
-		setWelcome(false)
-		setAbout(false)
-		sethelp(false)
+		if(composition=='help'){
+			setChoice(true)
+			setWrite(false)
+			setFormOpen(false);
+			setPoem(false);
+			setWelcome(false)
+			setAbout(false)
+			sethelp(false)
+		}else{
+			setWrite(true)
+			setChoice(false)
+			setFormOpen(false);
+			setPoem(false);
+			setWelcome(false)
+			setAbout(false)
+			sethelp(false)
+
+		}
 	};
 
 	//Bg Gradient
@@ -223,10 +271,13 @@ const AppProvider = ({ children }) => {
 	return (
 		<AppContext.Provider
 			value={{
+				wrapperBg,
+				setWrapperBg,
 				openForm,
 				getPoem,
 				formOpen,
 				setFormOpen,
+				write,
 				choice,
 				setChoice,
 				getChoice,
@@ -244,6 +295,8 @@ const AppProvider = ({ children }) => {
 				setName,
 				category,
 				setCategory,
+				composition,
+				setComposition,
 				changeBg,
 				welcome,
 				bg,

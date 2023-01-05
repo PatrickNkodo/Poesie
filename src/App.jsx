@@ -7,12 +7,14 @@ import Choice from './components/Choice';
 import Poem from './components/Poem';
 import Help from './components/Help';
 import About from './components/About';
+import WritePoem from './components/write';
 import { useGlobalContext } from './context';
 import './index.css';
 import images from './images';
 
 function App() {
 	const {
+		wrapperBg,
 		formOpen,
 		gradientPresent,
 		setFormOpen,
@@ -55,11 +57,12 @@ function App() {
 		setLineHeight,
 		shadow,
 		setShadow,
+		write
 	} = useGlobalContext();
 	return (
 		<div className="App">
 			<Mainnav />
-			<div className="wrapper">
+			<div className="wrapper" style={{backgroundImage:`url('${wrapperBg}')`}}>
 				{welcome && (
 					<div className={`welcome col-lg-8 col-md-8 col-sm-12`}>
 						<Welcome />
@@ -68,6 +71,11 @@ function App() {
 				{(formOpen || edition) && (
 					<div className="form col-lg-8 col-md-10 col-sm-10">
 						<Form />
+					</div>
+				)}
+				{write && (
+					<div className="choice write">
+						<WritePoem />
 					</div>
 				)}
 				{choice && (

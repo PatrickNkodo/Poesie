@@ -2,14 +2,14 @@ import { Link } from 'react-router-dom';
 import logo from '../logo.png';
 import { useGlobalContext } from '../context';
 function Mainnav() {
-	const { helpFxn, aboutFxn, homeFxn, tab, poem, choice, getPoem, changePoem,capture,download} = useGlobalContext();
+	const { helpFxn, aboutFxn, homeFxn, tab, poem, choice, getPoem, changePoem,capture,download,write} = useGlobalContext();
 	return (
 		<header>
 			<nav className="navbar navbar-expand-sm navbar-light bg-light">
 				<a className="navbar-brand" href="#">
 					<img src={logo} alt="Avatar Logo" width="100px" className="p-0" />
 				</a>
-				{choice && (
+				{(choice || write) && (
 					<div className="navbar-nav choice-fxns">
 						<li className="nav-item select">
 							<span className={`nav-link`} onClick={getPoem}>

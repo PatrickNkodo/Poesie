@@ -6,11 +6,11 @@ const Form = () => {
   // useEffect(()=>{
   //   input.current.focus()
   // })
-const {name,category,setName,setCategory,getPoem,getChoice}=useGlobalContext()
+const {name,category,setName,setCategory,getPoem,getChoice,composition,setComposition}=useGlobalContext()
   return (
     <div>
        <form action="" >
-          <label htmlFor="Your Name">Qui offre le poème?<span>(Ce nom figurera comme étant l'auteur)</span></label>
+          <label htmlFor="Your Name">Votre Nom<span>(Ce nom figurera comme étant l'auteur de vos poèmes)</span></label>
           <input type="text" autoFocus className='form-control' placeholder='Entrez votre nom' onChange={(e)=>setName(e.target.value)} value={name} required/>
           <label htmlFor="">Catégorie du poème</label>
           <select name="" id="" className='form-control' placeholder='Choose' onChange={(e)=>setCategory(e.target.value)} value={category} required>
@@ -19,8 +19,14 @@ const {name,category,setName,setCategory,getPoem,getChoice}=useGlobalContext()
               return <option key={i} value={x.category}>{x.category}</option>
             })}
           </select>
-          
-          <button className='btn btn-primary mt-2' onClick={getChoice}>Choisir un poème</button>
+         <div className="form-group">
+         <label htmlFor="">Composition du poème</label><br/>
+          <select name="" id="" className='form-control' onChange={(e)=>setComposition(e.target.value)} value={composition}>
+            <option value="help">Je vous propose quelques poèmes à modifier</option>
+            <option value="alone">Par vous même uniquement</option>
+          </select>
+         </div>
+          <button className='btn btn-primary mt-2' onClick={getChoice}>Ecrire le poème</button>
        </form>
     </div>
   )
