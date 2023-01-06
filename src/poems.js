@@ -152,7 +152,6 @@ Car pour cette occasion spéciale de ta vie,
 Je ne pouvais manquer à t’écrire quelque-chose de beau.
 
 
-
 Ce jour est spécial pour toi je le sais,
 Mais ça l’est encore plus pour moi.
 Car en ce jour mon p’tit cœur a un an de plus,

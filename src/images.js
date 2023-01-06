@@ -3,88 +3,88 @@ export default [
     category:'Love',
     items:[
       {
-        img: '/Love/Love (1).png',
+        img: '/Images/Love/Love (1).png',
       },
       {
-        img: '/Love/Love (1).jpg',
+        img: '/Images/Love/Love (1).jpg',
       },
       {
-        img: '/Love/Love (2).jpg',
+        img: '/Images/Love/Love (2).jpg',
       },
       {
-        img: '/Love/Love (3).jpg',
+        img: '/Images/Love/Love (3).jpg',
       },
       {
-        img: '/Love/Love (4).jpg',
+        img: '/Images/Love/Love (4).jpg',
       },
       {
-        img: '/Love/Love (5).jpg',
+        img: '/Images/Love/Love (5).jpg',
       },
       {
-        img: '/Love/Love (6).jpg',
+        img: '/Images/Love/Love (6).jpg',
       },
       {
-        img: '/Love/Love (7).jpg',
+        img: '/Images/Love/Love (7).jpg',
       },
       {
-        img: '/Love/Love (8).jpg',
+        img: '/Images/Love/Love (8).jpg',
       },
       {
-        img: '/Love/Love (9).jpg',
+        img: '/Images/Love/Love (9).jpg',
       },
       {
-        img: '/Love/Love (10).jpg',
+        img: '/Images/Love/Love (10).jpg',
       },
       {
-        img: '/Love/Love (11).jpg',
+        img: '/Images/Love/Love (11).jpg',
       },
       {
-        img: '/Love/Love (12).jpg',
+        img: '/Images/Love/Love (12).jpg',
       },
       {
-        img: '/Love/Love (13).jpg',
+        img: '/Images/Love/Love (13).jpg',
       },
       {
-        img: '/Love/Love (14).jpg',
+        img: '/Images/Love/Love (14).jpg',
       },
       {
-        img: '/Love/Love (15).jpg',
+        img: '/Images/Love/Love (15).jpg',
       },
       {
-        img: '/Love/Love (16).jpg',
+        img: '/Images/Love/Love (16).jpg',
       },
       {
-        img: '/Love/Love (17).jpg',
+        img: '/Images/Love/Love (17).jpg',
       },
       {
-        img: '/Love/Love (18).jpg',
+        img: '/Images/Love/Love (18).jpg',
       },
       {
-        img: '/Love/Love (19).jpg',
+        img: '/Images/Love/Love (19).jpg',
       },
       {
-        img: '/Love/Love (20).jpg',
+        img: '/Images/Love/Love (20).jpg',
       },
       {
-        img: '/Love/Love (21).jpg',
+        img: '/Images/Love/Love (21).jpg',
       },
       {
-        img: '/Love/Love (22).jpg',
+        img: '/Images/Love/Love (22).jpg',
       },
       {
-        img: '/Love/Love (23).jpg',
+        img: '/Images/Love/Love (23).jpg',
       },
       {
-        img: '/Love/Love (24).jpg',
+        img: '/Images/Love/Love (24).jpg',
       },
       {
-        img: '/Love/Love (25).jpg',
+        img: '/Images/Love/Love (25).jpg',
       },
       {
-        img: '/Love/Love (26).jpg',
+        img: '/Images/Love/Love (26).jpg',
       },
       {
-        img: '/Love/Love (27).jpg',
+        img: '/Images/Love/Love (27).jpg',
       },
     ]
   },
@@ -93,88 +93,64 @@ export default [
     category:'Sad',
     items:[
       {
-        img: '/Sad/Sad (1).png',
+        img: '/Images/Sad/Sad (1).jpg',
       },
       {
-        img: '/Sad/Sad (1).jpg',
+        img: '/Images/Sad/Sad (2).jpg',
       },
       {
-        img: '/Sad/Sad (2).jpg',
+        img: '/Images/Sad/Sad (3).jpg',
       },
       {
-        img: '/Sad/Sad (3).jpg',
+        img: '/Images/Sad/Sad (4).jpg',
       },
       {
-        img: '/Sad/Sad (4).jpg',
+        img: '/Images/Sad/Sad (5).jpg',
       },
       {
-        img: '/Sad/Sad (5).jpg',
+        img: '/Images/Sad/Sad (6).jpg',
       },
       {
-        img: '/Sad/Sad (6).jpg',
+        img: '/Images/Sad/Sad (7).jpg',
       },
       {
-        img: '/Sad/Sad (7).jpg',
+        img: '/Images/Sad/Sad (8).jpg',
       },
       {
-        img: '/Sad/Sad (8).jpg',
+        img: '/Images/Sad/Sad (9).jpg',
       },
       {
-        img: '/Sad/Sad (9).jpg',
+        img: '/Images/Sad/Sad (10).jpg',
       },
       {
-        img: '/Sad/Sad (10).jpg',
+        img: '/Images/Sad/Sad (11).jpg',
       },
       {
-        img: '/Sad/Sad (11).jpg',
+        img: '/Images/Sad/Sad (12).jpg',
       },
       {
-        img: '/Sad/Sad (12).jpg',
+        img: '/Images/Sad/Sad (13).jpg',
       },
       {
-        img: '/Sad/Sad (13).jpg',
+        img: '/Images/Sad/Sad (14).jpg',
       },
       {
-        img: '/Sad/Sad (14).jpg',
+        img: '/Images/Sad/Sad (15).jpg',
       },
       {
-        img: '/Sad/Sad (15).jpg',
+        img: '/Images/Sad/Sad (16).jpg',
       },
       {
-        img: '/Sad/Sad (16).jpg',
+        img: '/Images/Sad/Sad (17).jpg',
       },
       {
-        img: '/Sad/Sad (17).jpg',
+        img: '/Images/Sad/Sad (18).jpg',
       },
       {
-        img: '/Sad/Sad (18).jpg',
+        img: '/Images/Sad/Sad (19).jpg',
       },
       {
-        img: '/Sad/Sad (19).jpg',
-      },
-      {
-        img: '/Sad/Sad (20).jpg',
-      },
-      {
-        img: '/Sad/Sad (21).jpg',
-      },
-      {
-        img: '/Sad/Sad (22).jpg',
-      },
-      {
-        img: '/Sad/Sad (23).jpg',
-      },
-      {
-        img: '/Sad/Sad (24).jpg',
-      },
-      {
-        img: '/Sad/Sad (25).jpg',
-      },
-      {
-        img: '/Sad/Sad (26).jpg',
-      },
-      {
-        img: '/Sad/Sad (27).jpg',
+        img: '/Images/Sad/Sad (20).jpg',
       },
     ],
   },

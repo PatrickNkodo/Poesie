@@ -6,7 +6,13 @@ export default [
       category:'Anniversaire'
     },
     {
+      category:'Happy Birth Day'
+    },
+    {
       category:'Amour'
+    },
+    {
+      category:'Love'
     },
     {
       category:'Simple'
@@ -18,11 +24,12 @@ export default [
       category:'Triste'
     },
     {
-      category:'Happy New Year'
+      category:'Sad'
     },
     {
-      category:'Love'
+      category:'Happy New Year'
     },
+ 
     {
       category:'Praise'
     },

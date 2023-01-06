@@ -300,7 +300,7 @@ const AppProvider = ({ children }) => {
 		let canvas = document.getElementById('canvas');
 		let a = document.createElement('a');
 		a.href = canvas.toDataURL('image/jpeg'); //The toDataURL returns a file/format file, with details on the canvas
-		a.download = 'poem.jpg';
+		a.download = `${title}.jpg`;
 		a.click();
 	};
 

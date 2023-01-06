@@ -26,7 +26,7 @@ const Write = () => {
 			</div> */}
 			<div className="display write p-3">
 					<div className="items">
-						{what=='poem' && <textarea className='form-control display-title' rows='1' onChange={(e)=>setTitle(e.target.value)} value={title} placeholder='Enter the poem title here' required></textarea>}
+						{what=='poem' && <textarea className='form-control display-title' rows='1' onChange={(e)=>setTitle(e.target.value)} value={title} placeholder='Enter the poem title here' required autoFocus></textarea>}
 						<textarea className='form-control display-text' onChange={(e)=>setText(e.target.value)} value={text} placeholder={what=='poem'? 'Enter the poem here' : 'Enter the quote here'} required></textarea>
 						<textarea className='form-control display-author' rows='1'  onChange={(e)=>setName(e.target.value)} value={name} placeholder='Enter your name here' required>~</textarea>
 					</div>
