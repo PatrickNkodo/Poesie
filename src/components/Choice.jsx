@@ -24,7 +24,7 @@ const Choice = () => {
 				</div>
 			</div>
 			<div className="display bg-light p-3">
-				{title && text ? (
+				{text ? (
 					<div className="items">
 						<textarea className='form-control display-title' rows='1' onChange={(e)=>setTitle(e.target.value)} value={title} required></textarea>
 						<textarea className='form-control display-text' onChange={(e)=>setText(e.target.value)} value={text} required></textarea>

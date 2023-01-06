@@ -113,7 +113,7 @@ form>label>span{
 }
 /* .display.write .write- */
 .choice .display .items{
-  width:60vw;
+  width:70vw;
   height: 90vh;
   align-self: center;
   justify-content: space-around;
@@ -193,7 +193,7 @@ form>label>span{
   overflow: hidden;
   z-index:50;
 }
-.poem .text{z-index:40;width:100%;max-height:90%;overflow: hidden;padding:5px;align-items: center;flex-wrap: wrap;position: relative;margin-top:2rem;white-space:pre-wrap;}
+.poem .text{margin:0;z-index:40;width:100%;max-height:90%;overflow: hidden;padding:5px;align-items: center;flex-wrap: wrap;position: relative;background-color: red;white-space:pre-wrap;}
 .poem .text p,h4{margin: 0;padding: 0;}
 .overlay-bg{
   position: absolute;
@@ -280,7 +280,7 @@ select{
   border:2px solid white;
 }
 hr{border:2px solid rgb(0, 0, 0);width:100%;}
-
+.command textarea{white-space: normal;}
 
 
 @media only screen and (max-width: 711px) {
@@ -288,6 +288,18 @@ hr{border:2px solid rgb(0, 0, 0);width:100%;}
 }
 @media only screen and (max-width: 576px) {
   body{background-color: black;}
+  form>label>span{
+    font-size:10px;
+  }
+  .url-bg{
+    border: 3px solid red;
+    display: flex;
+    width:5%;
+  }
+  .choice .display .items .display-text{
+    height:70vh;
+  }
+  .command .command-text{font-size: 15px;}
   .choice>div{
     display: flex;
     flex-direction: column;
@@ -295,6 +307,7 @@ hr{border:2px solid rgb(0, 0, 0);width:100%;}
     background-color: rgb(0, 0, 0);
     height:90vh;
   }
+  .logo>img{width:80px;}
   .choice .examples{margin:0 15px 0 15px;}
   /* .poem-fxns>li>span{padding: 10px;} */
   .choice .main{
@@ -304,10 +317,9 @@ hr{border:2px solid rgb(0, 0, 0);width:100%;}
     display: block;
     overflow-y: hidden;
   }
-  .choice .display textarea:nth-child(2){
-    height:'50vh';
-    /* background-color: yellow; */
-  }
+  .choice .display{
+    font-size: 10px;
+   }
   .choice .main>div{
     display: flex;
     background-color: rgb(207, 207, 207);
@@ -315,10 +327,9 @@ hr{border:2px solid rgb(0, 0, 0);width:100%;}
     /* width:100vw; */
     /* color:#f8f9fa; light color */
   }
-  .choice .main .main-title{margin:0;padding: 0;}
-  .choice .examples{font-size:10px;height:50px;overflow-y: hidden;}
+  .choice .main .main-title{margin:0;padding: 0;font-size: 10px;}
+  .choice .examples{font-size:10px;height:50px;overflow: hidden;min-width:75px;}
   .choice .display{
-    height:68vh;
     width:100vw;
     font-size:15px;
   }
@@ -330,7 +341,7 @@ hr{border:2px solid rgb(0, 0, 0);width:100%;}
     display: flex; 
     flex-direction: row;
   }
- 
+ .poem .text{margin-top: 2rem;}
   .poem-fxns li span,.choice-fxns li span{font-size:13px; padding:5px !important;}
   .modifications div{
     font-size: 13px;
@@ -368,11 +379,9 @@ hr{border:2px solid rgb(0, 0, 0);width:100%;}
   .poem .bg{
     height:60vh;
   }
-  .choice .display{
-    height:50vh;
-  }
 }
 @media only screen and (max-width: 437px) {
   .poem-fxns li span,.choice-fxns li span{font-size:10px; padding:2px !important;}
   .poem-fxn1,.poem-fxn2{margin:0 1px 0 1px;}
+  .command .command-text{font-size: 12px;}
 }

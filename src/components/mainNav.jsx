@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 import logo from '../logo.png';
 import { useGlobalContext } from '../context';
+import Command from './Command';
 function Mainnav() {
-	const { helpFxn, aboutFxn, homeFxn, tab, poem, choice, getPoem, changePoem,capture,download,write} = useGlobalContext();
+	const { helpFxn, aboutFxn, homeFxn, tab, poem, choice, getPoem, changePoem,capture,download,write,commandFxn} = useGlobalContext();
 	return (
 		<header>
 			<nav className="navbar navbar-expand-sm navbar-light bg-light">
@@ -13,7 +14,7 @@ function Mainnav() {
 					<div className="navbar-nav choice-fxns">
 						<li className="nav-item select">
 							<span className={`nav-link`} onClick={getPoem}>
-								Selectionner
+								Appliquer
 							</span>
 						</li>
 					</div>
@@ -75,7 +76,7 @@ function Mainnav() {
 							</span>
 						</li>
 						<li className="nav-item">
-							<span className={`nav-link ${tab == 'Commander' && 'bordered'}`} onClick={aboutFxn}>
+							<span className={`nav-link ${tab == 'Commander' && 'bordered'}`} onClick={commandFxn}>
 								Commander
 							</span>
 						</li>

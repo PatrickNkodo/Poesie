@@ -44,13 +44,13 @@ const Poem = () => {
 	return (
 		<div>
 			<div id="capture" className="bg col-lg-10 col-md-10 col-sm-12" style={{ ...style }}>
-				<div className="logo" style={align == 'left' ? { right: '0' } : { left: '0' }}>
+				<div className="logo" >
 					<img src={logo} alt="Logo" width="20%" />
 				</div>
 				<div className="overlay-bg" style={{ opacity: `${overlay}` }} />
 				<div className="text" onChange={edition} style={textStyle}>
-					<span>{title}</span>
-					<br/>
+					{title && <React.Fragment><span>{title}</span><br/></React.Fragment> }
+					
 					{text}
 					<br />
 					<span>~{name}</span>

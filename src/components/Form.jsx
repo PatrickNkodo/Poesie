@@ -6,11 +6,11 @@ const Form = () => {
   // useEffect(()=>{
   //   input.current.focus()
   // })
-const {name,category,setName,setCategory,getPoem,getChoice,composition,setComposition,what,setWhat}=useGlobalContext()
+const {name,category,setName,setCategory,prevent,getPoem,getChoice,composition,setComposition,what,setWhat}=useGlobalContext()
   return (
     <div>
-       <form action="" >
-          <label htmlFor="Your Name">Votre Nom<span>(Ce nom figurera comme étant l'auteur de vos poèmes)</span></label>
+       <form onSubmit={getChoice}>
+          <label htmlFor="Your Name">Votre Nom<span>(Ce nom figurera comme étant l'auteur de vos oeuvres)</span></label>
           <input type="text" autoFocus className='form-control' placeholder='Entrez votre nom' onChange={(e)=>setName(e.target.value)} value={name} required/>
           
           <div className="form-group">
@@ -50,7 +50,7 @@ const {name,category,setName,setCategory,getPoem,getChoice,composition,setCompos
           
         
          
-          <button className='btn btn-primary mt-2' onClick={getChoice}>{what=='poem'? 'Ecrire le poème' : 'Ecrire la Citation'}</button>
+          {what && <button type='submit' className='btn btn-primary mt-2'>{what=='poem'? 'Ecrire le poème' : 'Ecrire la Citation'}</button>}
        </form>
     </div>
   )

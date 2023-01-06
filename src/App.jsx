@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Mainnav from './components/mainNav';
 import Welcome from './components/Welcome';
@@ -8,6 +8,7 @@ import Poem from './components/Poem';
 import Help from './components/Help';
 import About from './components/About';
 import WritePoem from './components/write';
+import Command from './components/Command';
 import { useGlobalContext } from './context';
 import './index.css';
 import images from './images';
@@ -19,6 +20,7 @@ function App() {
 		gradientPresent,
 		setFormOpen,
 		choice,
+		command,
 		poem,
 		setPoem,
 		getPoem,
@@ -28,6 +30,7 @@ function App() {
 		help,
 		about,
 		bg,
+		category,
 		overlay,
 		setOverlay,
 		align,
@@ -59,6 +62,15 @@ function App() {
 		setShadow,
 		write
 	} = useGlobalContext();
+
+	useEffect(()=>{
+		let filter
+		if(category=='Amour'){
+			alert('ok')
+			filter= images.filter((img)=>img.category=='Love');
+		}
+		console.log(filter,category);
+	},[category])
 	return (
 		<div className="App">
 			<Mainnav />
@@ -69,7 +81,7 @@ function App() {
 					</div>
 				)}
 				{(formOpen || edition) && (
-					<div className="form col-lg-8 col-md-10 col-sm-10">
+					<div className="form col-lg-8 col-md-12 col-sm-12">
 						<Form />
 					</div>
 				)}
@@ -92,8 +104,9 @@ function App() {
 					<div className="backgrounds">
 						{/* <form> */}
 							<input type="text"className='form-control' onChange={(e)=>setUrl(e.target.value)} value={url} placeholder="Url pour l'arriere plan"/>
-							<button className='btn btn-sm mt-1 btn-dark' onClick={()=>urlBg(url)}>Definir l'arrière plan</button>
+							<button className='btn btn-sm mt-1 btn-dark' onClick={()=>urlBg(url)}>Definir</button>
 						{/* </form> */}
+						
 						{images.map((item, index) => {
 							return (
 								<div className="img" key={index} onClick={() => changeBg(item.img)}>
@@ -111,6 +124,11 @@ function App() {
 				{about && (
 					<div className="about">
 						<About/>
+					</div>
+				)}
+				{command && (
+					<div className="form col-lg-8 col-md-12 col-sm-12">
+						<Command/>
 					</div>
 				)}
 
