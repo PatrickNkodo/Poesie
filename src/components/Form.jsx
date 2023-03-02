@@ -9,6 +9,7 @@ const Form = () => {
 const {name,category,setName,setCategory,prevent,getPoem,getChoice,composition,setComposition,what,setWhat}=useGlobalContext()
   return (
     <div>
+      <h3>Veillez remplir les champs ci-dessous</h3>
        <form onSubmit={getChoice}>
           <label htmlFor="Your Name">Votre Nom<span>(Ce nom figurera comme étant l'auteur de vos oeuvres)</span></label>
           <input type="text" autoFocus className='form-control' placeholder='Entrez votre nom' onChange={(e)=>setName(e.target.value)} value={name} required/>
@@ -33,8 +34,8 @@ const {name,category,setName,setCategory,prevent,getPoem,getChoice,composition,s
             <div className="form-group">
               <label htmlFor="">Composition du poème</label><br/>
                 <select name="" id="" className='form-control' onChange={(e)=>setComposition(e.target.value)} value={composition}>
-                  <option value="help">Je vous propose quelques poèmes à modifier</option>
-                  <option value="alone">Par vous même uniquement</option>
+                  <option value="help">Modifier les poèmes intégrés</option>
+                  <option value="alone">Ecrire tout seul</option>
                 </select>
             </div>
             </React.Fragment>}

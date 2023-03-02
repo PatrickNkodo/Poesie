@@ -22,10 +22,10 @@ const Command = () => {
           </select>
          </div>
          <div className="form-group mt-2">
-              <label htmlFor="" className='text-secondary font-weight-bolder command-text'>Pour un travail reussi, j'ai besoin de quelques informations sur vous, ou sur la personne à qui le service est destiné. Dites-moi tous ce que je dois savoir pour un meilleur service rendu.</label><br/>
-                <textarea value={commandMsg} onChange={(e)=>setCommandMsg(e.target.value)} className="form-control" id="" cols="30" rows="5" placeholder={`Example: Patrick est mon frère, et je voudrais ${commandWhat=='poem'?'un poème': 'une citation'} pour son anniversaire. 
-                C'est un garçon reservé, qui a vécu tant de moments avec moi. Dans le poème, incluez le fait que je le remercie encore de m'avoir montré le chemin de Dieu. Je voudrais qu'il sache que ce fût le plus beau cadeau à mes yeux.
-                Aussi, il a toujours voulu recevoir un poème venant d'une amie, alors ajoute une phrase du genre 'Voici le poème que tu as toujours voulou'.`} required></textarea>
+              <label htmlFor="" className='text-secondary font-weight-bolder command-text'>Pour un travail reussi, j'ai besoin de quelques informations sur la personne à qui le service est destiné. Dites-moi tous ce que je dois savoir pour un meilleur service rendu.</label><br/>
+                <textarea value={commandMsg} onChange={(e)=>setCommandMsg(e.target.value)} className="form-control" id="" cols="30" rows="5" placeholder={`Example: Patrick est mon copain, et je voudrais ${commandWhat=='quote'?'une petite citation': 'un poème'} d'amour pour son anniversaire. 
+                C'est un garçon reservé, qui a vécu tant de moments avec moi. Dans le poème, incluez le fait que je l'aime tellement,et que je le remercie encore de m'avoir montré le chemin de Dieu. Je voudrais qu'il sache que ce fût le plus beau cadeau à mes yeux.
+                Aussi, il a toujours voulu recevoir un poème venant d'un proche, alors ajoutez une phrase du genre 'Voici le poème que tu as toujours voulou'.`} required></textarea>
             </div>
           {commandWhat && <React.Fragment>
             <label htmlFor="">Commander {commandWhat=='poem'? 'le poème' :'la citation'} par quel réseau:</label>

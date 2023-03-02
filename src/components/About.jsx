@@ -6,11 +6,11 @@ const About = () => {
       <div className="part1">
         <h1>A propos de moi</h1>
         <img src={Me} width='60%' alt="Picture"/>
-        <p>Hey!bienvenu(e) sur ma page. Je me nomme Patrick Nkodo.
+        <p>Hey! Bienvenu(e) sur ma page. Je me nomme Patrick Nkodo.
          J'aime donner mon nom sous ce format à la fin de mes poèmes, pour marquer l'auteur.
-          Je suis un étudiant de la filière <b>genie logiciel</b> au Cameroun, à l'Instutut Universitaire Siantou (IUS), et je m'interesse beaucoup à la programmation web.
-          J'éssaie d'appliquer tout ce que j'apprend en créant des petits projets, et c'est dans cette lancé que j'ai crée cette application.
-          J'éspère qu'elle vous plaît. Aussi, je suis disponible dans les réseaux sociaux listés ci-dessous, vous pourriez me contacter pour faire des suggestions, ou des améliorations. Merci d'avoir visité.😉
+          Je suis un étudiant de la filière <b>génie logiciel</b> au Cameroun, à l'Instutut Universitaire Siantou (IUS), et je m'interesse beaucoup à la programmation web.
+          J'éssaie d'appliquer tout ce que j'apprends en créant des petits projets, et c'est dans cette lancé que j'ai créé cette application.
+          J'espère qu'elle vous plaît. Merci d'avoir visité.😉
         </p>
       </div>
       <div className="part2">
@@ -19,14 +19,18 @@ const About = () => {
         un de mes rêves est de valoriser cet inspiration que Dieu m'a donné, pour mon plaisir personnel, tout comme pour plaire à cette petite communauté,
          qui n'arrête d'apprécier mes écrits.
        </p>
-      </div>
-      <div className='part3'>
-        <a href="m.me/Poésie dans les airs "><i class="fab fa-facebook" aria-hidden="true"></i></a>
-        {/*Whatsapp share link 
+       <div className='socials'>
+       <center><h3>Me Contacter?</h3></center>  
+       <div className="">
+          {/*Whatsapp share link 
         <a href="whatsapp://send?text=Salut Patrick, je vous contacte depuis votre application."><i class="fab fa-whatsapp" aria-hidden="true"></i></a> */}
         <a href="https://wa.me/237696950600/?text=Salut Patrick, je vous contacte depuis votre application."><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
-        <i class="fab fa-linkedin" aria-hidden="true"></i>
+        <a href="https://m.facebook.com/Poésie dans les airs"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/essama-patrick-071806227/"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
        </div>
+       </div>
+      </div>
+      
     </div>
   )
 }

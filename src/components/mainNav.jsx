@@ -10,6 +10,31 @@ function Mainnav() {
 				<a className="navbar-brand" href="#">
 					<img src={logo} alt="Avatar Logo" width="100px" className="p-0" />
 				</a>
+				<div id="nav" className="collapse navbar-collapse">
+					<ul className="navbar-nav">
+						<li className="nav-item">
+							<span className={`nav-link ${tab == 'Accueil' && 'bordered'}`} onClick={homeFxn}>
+								Accueil
+							</span>
+						</li>
+						<li className="nav-item">
+							<span className={`nav-link ${tab == 'Aide' && 'bordered'}`} onClick={helpFxn}>
+								Aide
+							</span>
+						</li>
+						<li className="nav-item">
+							<span className={`nav-link ${tab == 'A propos de moi' && 'bordered'}`} onClick={aboutFxn}>
+								A propos de moi
+							</span>
+						</li>
+						<li className="nav-item">
+							<span className={`nav-link ${tab == 'Commander' && 'bordered'}`} onClick={commandFxn}>
+								Commander
+							</span>
+						</li>
+					</ul>
+				</div>
+				
 				{(choice || write) && (
 					<div className="navbar-nav choice-fxns">
 						<li className="nav-item select">
@@ -58,30 +83,7 @@ function Mainnav() {
 				<div className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
 					<span className="navbar-toggler-icon" />
 				</div>
-				<div id="nav" className="collapse navbar-collapse">
-					<ul className="navbar-nav">
-						<li className="nav-item">
-							<span className={`nav-link ${tab == 'Accueil' && 'bordered'}`} onClick={homeFxn}>
-								Accueil
-							</span>
-						</li>
-						<li className="nav-item">
-							<span className={`nav-link ${tab == 'Aide' && 'bordered'}`} onClick={helpFxn}>
-								Aide
-							</span>
-						</li>
-						<li className="nav-item">
-							<span className={`nav-link ${tab == 'A propos de moi' && 'bordered'}`} onClick={aboutFxn}>
-								A propos de moi
-							</span>
-						</li>
-						<li className="nav-item">
-							<span className={`nav-link ${tab == 'Commander' && 'bordered'}`} onClick={commandFxn}>
-								Commander
-							</span>
-						</li>
-					</ul>
-				</div>
+				
 			</nav>
 		</header>
 	);

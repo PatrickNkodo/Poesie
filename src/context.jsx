@@ -1,4 +1,5 @@
 import React, { useState, createContext, useContext, useEffect } from 'react';
+import axios from 'axios'
 import Poems from './poems';
 import html2canvas from 'html2canvas';
 import poems from './poems';
@@ -13,6 +14,7 @@ const AppProvider = ({ children }) => {
 	const [ commandWhat, setCommandWhat ] = useState('');
 	const [ commandMsg, setCommandMsg ] = useState('');
 	const [ bg, setBg ] = useState('');
+	const [image,setImage]=useState('')
 	const [ choice, setChoice ] = useState(false);
 	const [ title, setTitle ] = useState('');
 	const [ text, setText ] = useState('');
@@ -31,7 +33,7 @@ const AppProvider = ({ children }) => {
 	const [ edition, setEdition ] = useState(false);
 	const [ overlay, setOverlay ] = useState(0);
 	const [ align, setAlign ] = useState('left');
-	const [ size, setSize ] = useState(10);
+	const [ size, setSize ] = useState(20);
 	const [ textColor, setTextColor ] = useState('#ffffff');
 	const [ bgColor, setBgColor ] = useState('#000000');
 	const [ url, setUrl ] = useState('');
@@ -138,6 +140,7 @@ const AppProvider = ({ children }) => {
 	const aboutFxn = (e) => {
 		setTab(e.target.innerText);
 		setAbout(true);
+		setChoice(false)
 		setWrite(false);
 		setPoem(false);
 		sethelp(false);
@@ -187,13 +190,14 @@ const AppProvider = ({ children }) => {
 		setgradientPresent(false);
 	};
 	const getPoem = () => {
-		if (!(name && text) && composition == 'help') {
-			alert("Veillez remplir tous les champs s'il vous plaît");
-			return;
-		} else if (!(name && text) && composition == 'alone') {
+		if (!(name && text)) {
 			alert("Veillez remplir tous les champs s'il vous plaît");
 			return;
 		}
+		// else if (!(name && text) && composition == 'alone') {
+		// 	alert("Veillez remplir tous les champs s'il vous plaît");
+		// 	return;
+		// }
 		setPoem(true);
 		setWrite(false);
 		setChoice(false);
@@ -241,7 +245,8 @@ const AppProvider = ({ children }) => {
 		}
 	};
 
-	const commandFxn = () => {
+	const commandFxn = (e) => {
+		setTab(e.target.innerText);
 		setCommand(true);
 		setFormOpen(false);
 		setEdition(false);
@@ -291,13 +296,24 @@ const AppProvider = ({ children }) => {
 		if (canvas) {
 			modalBody.removeChild(canvas);
 		}
-		html2canvas(document.querySelector(`#capture`)).then((canvas) => {
+		html2canvas(document.querySelector(`#capture`),
+		// {width:800}
+		).then((canvas) => {
 			canvas.setAttribute('id', 'canvas'); //add it the id='canvas'
+			// canvas.setAttribute('width',100);
+			// canvas.setAttribute('height', 'auto');
+			// removeAttributes(canvas,'height','width')
 			modalBody.appendChild(canvas);
 		});
 	};
+	//Function to remove attributes
+	const removeAttributes=(element,...attr)=>{
+		attr.forEach(attr=>element.removeAttribute(attr))
+	}
+
 	const download = () => {
 		let canvas = document.getElementById('canvas');
+		// canvas.setAttribute('width',2480)
 		let a = document.createElement('a');
 		a.href = canvas.toDataURL('image/jpeg'); //The toDataURL returns a file/format file, with details on the canvas
 		a.download = `${title}.jpg`;
@@ -316,6 +332,17 @@ const AppProvider = ({ children }) => {
 	// 	a.click();
 	// 	}
 	// }
+//on input onChange
+	// const uploadImg=(e)=>{
+	// 	console.log(e.target.files)
+	// 	setImage(e.target.files[0])
+	// }
+	//getImg now
+	const handle=()=>{
+		const formData=new formData()
+		formData.append(`image`,image)
+		axios.post('url',formData).then((res)=>{console.log(res);})
+	}
 	const sendRequest = (e) => {
 		e.preventDefault()
 		let a = document.createElement('a');
@@ -326,7 +353,7 @@ const AppProvider = ({ children }) => {
 			a.href = `https://wa.me/237696950600/?text=${commandName} sent a message:<br/> ${commandMsg}`; //The toDataURL returns a file/format file, with details on the canvas
 		}
 		if (commandWhere == 'LinkedIn') {
-			a.href = `https://wa.me/237696950600/?text=${commandName} sent a message:<br/> ${commandMsg}`; //The toDataURL returns a file/format file, with details on the canvas
+			a.href = `https://LinkedIn/?text=${commandName} sent a message:<br/> ${commandMsg}`; //The toDataURL returns a file/format file, with details on the canvas
 		}
 		a.click();
 		console.log(a.href);
@@ -346,8 +373,10 @@ const AppProvider = ({ children }) => {
 				setCommandWhat,
 				commandWhere,
 				setCommandWhere,
-				prevent,
 				commandMsg,
+				image,
+				setImage,
+				prevent,
 				setCommandMsg,
 				commandName,
 				setCommandName,
@@ -422,7 +451,8 @@ const AppProvider = ({ children }) => {
 				urlBg,
 				url,
 				setUrl,
-				sendRequest
+				sendRequest,
+				handle,
 			}}
 		>
 			{children}

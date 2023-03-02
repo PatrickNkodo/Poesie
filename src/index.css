@@ -2,8 +2,9 @@
 	margin: 0;
 }
 
+.navbar{padding:0 1rem 0 1rem;}
 #nav {
-	/* justify-content: flex-end; */
+	justify-content: center;
 }
 .nav-item {
 	font-weight: 900;
@@ -27,11 +28,12 @@ body {
 	user-select: none;
 	box-sizing: border-box;
 	font-size: 20px;
+	overflow :hidden;
 }
 .about > div {
 	display: grid;
 	grid: auto auto/47% 47%;
-	grid-gap: 30px;
+	grid-gap: 5px 30px;
 	justify-content: center;
 }
 .part3 {
@@ -40,16 +42,36 @@ body {
 	align-items: center;
 	justify-content: space-around;
 }
-.part3 .fab {
-	font-size: 50px;
+.socials{color: black;}
+.socials div{
+	display: flex;
+	justify-content: space-around;
 }
+.part2 .socials{background-color: white; padding: 10px; border-radius: 5px;}
+.part2 .fab {
+	font-size: 50px;
+	/* background-color: blue; */
+	color: white;
+	width: fit-content;
+}
+.part2 .fa-whatsapp{color: green; border-radius: 5px;}
+.part2 .fa-facebook{color: blue; border-radius: 5px;}
+.part2 .fa-linkedin{color: blue; border-radius: 5px;padding: 0;margin: ;}
 .help,
 .about {
+  overflow-y: scroll;
 }
 .help > div > div > div {
-	display: flex;
-	align-items: center;
-	margin-bottom: 15px;
+	/* display: flex; */
+	/* align-items: center; */
+	margin-bottom: 2rem;
+	border-bottom: 2px solid whitesmoke;
+}
+.help > div > div > div  img {
+max-width: 800px;
+display: flex;
+margin: auto;
+border: 2px solid white;
 }
 .about img {
 	float: left;
@@ -158,9 +180,7 @@ form > label > span {
 	margin: 0;
 	height: 50% !important;
 }
-#canvas {
-	transform: scale(.8);
-}
+
 .choice .display-msg {
 	height: inherit;
 	font-size: 100%;
@@ -172,14 +192,18 @@ form > label > span {
 	max-width: 200px;
 	max-height: 200px;
 	font-size: 20px;
-	border: .5px solid black;
+	border: .5px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  cursor: pointer;
 	color: rgb(0, 0, 0);
 	background-color: rgb(255, 255, 255);
 	padding: 5px;
-	transition: border .5s ease;
+	transition: border,background .5s ease;
 }
 .examples:hover {
-	border: 1px solid rgba(3, 28, 252, 0.993);
+	border: 1px solid rgba(255, 255, 255, 0.993);
+  background-color: rgb(0, 0, 0);
+  color: white;
 }
 .choice .display .items .display-text {
 	height: 70vh;
@@ -238,6 +262,7 @@ form > label > span {
 }
 .poem span:first-child {
 	text-decoration: underline solid;
+	/* margin-bottom: 1rem; */
 }
 .logo {
 	position: absolute;
@@ -246,7 +271,7 @@ form > label > span {
 	z-index: 50;
 }
 .poem .text {
-	margin: 1.5rem 0 0 0;
+	margin: 2.5rem 0 0 0;
 	z-index: 40;
 	width: 100%;
 	max-height: 90%;
@@ -276,6 +301,7 @@ h4 {
 	width: 100px;
   /* height:150px; */
 }
+/* .backgrounds input{display: none;} */
 .backgrounds {
 	/* visibility: hidden; */
 	position: absolute;
@@ -366,13 +392,14 @@ hr {
   /* .choice .main{width:20vw;} */
   .choice .main .main-title{font-size: 12px;}
   .choice .display .items {
-    width: 95vw;
+    width: 95%;
   }
   .choice .main .examples{
     max-width:100px;
     max-height:100px;
     overflow: hidden;
   }
+.modal-dialog{max-width: max-content;}
 }
 @media only screen and (max-width: 576px) {
 	body {

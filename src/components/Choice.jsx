@@ -40,7 +40,7 @@ const Choice = () => {
 								<li>Sélectionnez un poème depuis la liste et il s'affichera ici.</li>
 								<li>Après cela, vous pourrez <b>modifier</b> votre texte autant que vous le voulez.</li>
 								<li>Cliquez sur <b>appliquer</b> sur la bare de navigation pour passer à l'étape suivante.</li>
-								<li>Vous cliquerez ensuite sur <b>sauvegarder</b> sur la bare de tâche pour telecharger le resultat en image</li>
+								<li>Vous cliquerez ensuite sur <b>sauvegarder</b> sur la bare de navigation pour telecharger le resultat en image</li>
 							</ol>
 						
 					</div>

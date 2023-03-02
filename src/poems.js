@@ -97,26 +97,6 @@ Je vous aime tellement.`,
     category:'Anniversaire',
 		items: [
 			{
-				id: 1,
-				title: 'Happy Birth Day Friend',
-				text: `Before any best wish,
-You know you’re my best friend.
-And now for this occasion,
-You know to which extend i wish you the best.
-I’m very happy for you getting older,
-That means you’re gaining more intelligence and blessings.
-I’m happy again that GOD made me know you,
-Because you’re a blessing to my eyes.
-You know how much i can thank you for all you did and still do for me,
-But for now it’s your birth day.
-So for this occasion,
-I pray the ALMIGHTY and thank him for creating you.
-I thank him for making you attain this age that many children didn’t attained.
-I thank GOD for giving you an angelic heart full of elegant extracts.
-Without forgetting to pray him to continue protecting you from all hellish spirits,
-To guide and assist you in all positive projects you’ll undertake.`,
-			},
-			{
 				id: 2,
 				title: 'Joyeux Anniversaire Maman',
 				text: `Pour une maman unique,
@@ -545,7 +525,7 @@ Il est unique sur la terre des vivants,
 Le temps passera, mais lui il existera.`
       },
             {
-          id:5,
+          id:4,
           title:'Mon mignon',
           text:
 ` Mon mignon,
@@ -567,6 +547,56 @@ Je suis heureuse de t’avoir à mes côtés,
 Et je compte bien rester avec toi jusqu’au bout.
 Car tu es l’amour de ma vie,
 Et je t’assure je t’aime à la folie.`
+      },
+            {
+          id:5,
+          title:'UN POÈME POUR TOI',
+          text:
+`Aujourd’hui tu es là,
+Tout près de moi, me regardant dans les yeux.
+Et moi, à te revoir, mon cœur se réjouit,
+Car tu es important pour moi.
+
+Je suis heureuse de te revoir,
+Comme dans mes rêves, de passer du temps avec toi,
+Et à présent que je peux te toucher,
+Je souhaiterais que tu sois là pour éclairer mes journées.
+
+Passons donc une journée magnifique,
+Soyons comme des tout petits, et amusons-nous.
+Je voudrais vivre un moment unique,
+Et ce, avec toi, car tu es unique.
+
+Je suis heureuse de te connaître,
+Et merci pour l’affection que tu m’apportes.
+Je prie l’éternel qu’il conserve notre lien,
+Ainsi, comme deux mignons, Nous serons toujours `
+      },
+            {
+          id:6,
+          title:'Tu es mon rêve',
+          text:
+`Aussitôt que je t’ai vue,
+Mon cœur se mit à battre plus fort.
+Car te décrire m’étais difficile,
+Je me suis rapproché pour mieux te voir,
+Contempler l’œuvre du Dieu parfait.
+
+Ta nature toute douce, si simple et gentille,
+Ton sourire si mignon, à mes yeux, tu es un ange.
+Mes chagrins ont étés dilués par la bonté de ton cœur.
+Et toi seule a su me  donner une belle humeur.
+
+Souvent mes cauchemars me disent que tu m’abandonneras,
+Oui, qu’un jour, de moi tu te lasseras.
+A mes réveils de ces sombres rêves, je coule des larmes,
+Car je crains le pire, c’est-à-dire vivre sans toi.
+
+Tu es ma lumière,
+Ma belle, tu es ma reine.
+Mon rêve manifesté, ne me lâche pas,
+Car sans toi, ma vie ne serait que ténèbres.
+`
       },
 //             {
 //           id:5,
@@ -639,12 +669,111 @@ Today you’re the happiest of the world,
 Forget about them, enjoy your love moments. 
 `
     },
-    // {
-      //           id:1,
-      //           title:'',
-      //           text:
-      // ``
-      //       },
+    {
+                id:2,
+                title:'THE LOVE OF MY LIFE',
+                text:
+`If you’re by my side my life will always shine,
+When I’m with you I’m feeling so fine.
+I wish my love for you should never die,
+	Cause 	I want to have you forever by my side.
+
+Anywhere you wish, if you want to go, I’ll bring you,
+Whatever you want, if you ask me, I’ll give you.
+My love for you is endless, so never I’ll be far from you,
+And if ever you’re in danger, I’ll be ready to die for you.
+
+When I grade my love for you, everyday, it makes me sing,
+For you I can write a poem, using a pen without ink.
+The last time you were far from me, I remember I felt sick,
+Forever in my heart, you’ll always have a seat.
+
+All days of my life, alone I was, I remember,
+But searching the love of my heart, I said I’ll never surrender.
+Today I’m a king, with the kingdom we built together,
+And yes, of course, our love will last forever
+`
+            },
+    {
+                id:3,
+                title:'My reason of living',
+                text:
+`You might not be the prettiest in the world
+But you are the one that I prefer among all the others.
+You might not be so raised financially,
+But your heart is architecturally rich.
+
+Today again, my beloved,
+I want you to know how much I love you.
+You give a lot of meaning to my life,
+You give me a smile that I never had before.
+
+When I feel lonely or abandoned
+Thinking of you is enough for me to gain a smile.
+The bond between you and me is so strong,
+No obstacle will ever break our love.
+
+Before I was lonely in every corner I went.
+But now you’re in my heart everywhere I go.
+You are my joy of living, my treasure.
+That's why I will never want to give up on you.
+Never forget this word, from the bowels of my heart,
+
+I Love You Baby!!!
+`
+            },
+    {
+                id:4,
+                title:`You're My Love`,
+                text:
+`My love, 
+The light of my life.
+If you could know the poems in my heart,
+That my love for you decided to write.
+
+You’re a blessing to my eyes, never doubt about that,
+Because no one in life followed me as you did.
+During moments of pains and joy, you never left me,
+And endlessly, you gave me the courage to continue with life.
+
+I promise henceforth to take you as a queen,
+To give you all I have, because you deserve the best.
+You know, in my world, no one lets her lonely,
+And you, you’re my queen, so I’ll always be with you.
+
+Thanks to God who directed you on my way,
+You’re the greatest, most beautiful gift in my life.
+Yesterday, and today, I loved you so much,
+And forever, my love for you will last.
+`
+            },
+    {
+                id:15,
+                title:'Our Story',
+                text:
+`It once started as a love story,
+Who’ll wonder, of course you’re a beauty.
+My thoughts couldn’t be made without you,
+But the story looked long, viewing it as such.
+
+I loosed the battle, glided on the way,
+But no, never forgot your loving nature.
+I couldn’t stop, your heart was so luminous,
+Your light brought some joy to mine.
+
+Since then we friendly merged our hearts, Talking of a friendship that will last forever. Because you’re unique, I’ll say a special spark, That special spark that I couldn’t forget.
+I believe we’ll always be tight,
+Thanks for the trust and joy brought to me.
+May the lord bless our friendship,
+I wish the story should never end.
+`
+            },
+    {
+                id:1,
+                title:'',
+                text:
+``
+            },
     ]
   },
   {
@@ -657,14 +786,17 @@ Forget about them, enjoy your love moments.
 You know you’re my best friend.
 And now for this occasion,
 You know to which extend i wish you the best.
+
 I’m very happy for you getting older,
 That means you’re gaining more intelligence and blessings.
 I’m happy again that GOD made me know you,
 Because you’re a blessing to my eyes.
+
 You know how much i can thank you for all you did and still do for me,
 But for now it’s your birth day.
 So for this occasion,
 I pray the ALMIGHTY and thank him for creating you.
+
 I thank him for making you attain this age that many children didn’t attained.
 I thank GOD for giving you an angelic heart full of elegant extracts.
 Without forgetting to pray him to continue protecting you from all hellish spirits,
@@ -677,7 +809,68 @@ To guide and assist you in all positive projects you’ll undertake.`,
 // ``
 //       }, 
     ]
-  }
+  },
+  {
+    category:'Simple',
+    items:[
+      {
+          id:1,
+          title:'Tel un grain de poussière',
+          text:
+`Tel un grain de poussière,
+Ma vie est née du vide.
+Eclairé par une lumière,
+La seule, l’unique venant du ciel.
+
+Tel un grain de poussière,
+Je n’avais d’avenir.
+J’étais perdu, je me sentais seul,
+J’avais bien un cœur, mais il était meurtri.
+
+Tel un grain de poussière,
+Je vivais des misères.
+Dans les eaux je me noyais,
+ Et dans les flammes, je brûlais.
+
+Mais un jour, tel un grain de poussière,
+Je vis la lumière du soleil au loin.
+Ses doux rayons me donnaient espoir,
+Alors j’ai décidé de suivre la lumière.
+`
+      },
+{
+            id:2,
+            title:'Je suis cet arbre',
+            text:
+`Je suis cet arbre,
+Qui est né de l’orage.
+ Elevé dans la tempête,
+Endurci par le sable.
+
+Je suis cet arbre,
+Le plus loin de la forêt.
+Qui pousse dans le désert,
+Et se nourrit des cendres.
+
+Je suis cet arbre,
+Fait de branches de fer.
+Avec un tronc séduisant,
+Et des feuilles humides.
+
+Je suis cet arbre,
+Unique en son genre.
+Qui apparaît dans les légendes,
+Et demeureras dans l’histoire du désert.
+`
+        }, 
+// {
+//             id:5,
+//             title:'',
+//             text:
+// ``
+// }, 
+    ]
+  },
 //   {
 //     category:'',
 //     items:[
@@ -688,11 +881,11 @@ To guide and assist you in all positive projects you’ll undertake.`,
 // ``
 //       },
 // {
-  //           id:1,
-  //           title:'',
-  //           text:
-  // ``
-  //       }, 
+//             id:1,
+//             title:'',
+//             text:
+//   ``
+//         }, 
 //     ]
 //   },
 ];

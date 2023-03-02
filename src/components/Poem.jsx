@@ -49,8 +49,7 @@ const Poem = () => {
 				</div>
 				<div className="overlay-bg" style={{ opacity: `${overlay}` }} />
 				<div className="text" onChange={edition} style={textStyle}>
-					{title && <React.Fragment><span>{title}</span><br/></React.Fragment> }
-					
+					{title && <React.Fragment><span>{title}<br/></span></React.Fragment> }
 					{text}
 					<br />
 					<span>~{name}</span>

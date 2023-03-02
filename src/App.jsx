@@ -60,9 +60,13 @@ function App() {
 		setLineHeight,
 		shadow,
 		setShadow,
-		write
+		write,
+		image,
+		setImage,
+		handle,
 	} = useGlobalContext();
 	let filter
+	// console.log(image);
 	// useEffect(()=>{
 		 filter= images.filter((img)=>{
 			if(category=='Amour' || category=='Love'){
@@ -77,7 +81,7 @@ function App() {
 			if(category=='Bonne Année' || category=='Happy New Year'){
 				return img.category=='NewYear';
 			}
-			if(category=='Anniversaire'){
+			if(category=='Simple'){
 				return img.category=='Simple';
 			}
 			if(category=='Triste' || category=='Sad'){
@@ -85,7 +89,6 @@ function App() {
 			}
 	})
 // },[category])
-console.log(filter[0]);
 	return (
 		<div className="App">
 			<Mainnav />
@@ -118,8 +121,9 @@ console.log(filter[0]);
 				{poem && (
 					<div className="backgrounds">
 						{/* <form> */}
-							<input type="text"className='form-control' onChange={(e)=>setUrl(e.target.value)} value={url} placeholder="Url pour l'arriere plan"/>
-							<button className='btn btn-sm mt-1 btn-dark' onClick={()=>urlBg(url)}>Definir</button>
+							<input type="file" id="bg" className='form-control' onChange={(e)=>setImage(e.target.files)}   placeholder="Url pour l'arriere plan"/>
+							{/* <label htmlFor="bg" className="btn btn-sm mt-1 btn-dark" onClick={handle}>Mon image</label> */}
+							<label className="btn btn-sm mt-1 btn-dark" onClick={handle}>Definir</label>
 						{/* </form> */}
 						
 						{filter[0].items.map((item, index) => {
