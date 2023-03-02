@@ -33,7 +33,7 @@ const AppProvider = ({ children }) => {
 	const [ edition, setEdition ] = useState(false);
 	const [ overlay, setOverlay ] = useState(0);
 	const [ align, setAlign ] = useState('left');
-	const [ size, setSize ] = useState(20);
+	const [ size, setSize ] = useState(60);
 	const [ textColor, setTextColor ] = useState('#ffffff');
 	const [ bgColor, setBgColor ] = useState('#000000');
 	const [ url, setUrl ] = useState('');
@@ -298,6 +298,10 @@ const AppProvider = ({ children }) => {
 		}
 		html2canvas(document.querySelector(`#capture`),
 		// {width:800}
+		{
+		allowtaint:true,
+		useCORS:true
+	}
 		).then((canvas) => {
 			canvas.setAttribute('id', 'canvas'); //add it the id='canvas'
 			// canvas.setAttribute('width',100);

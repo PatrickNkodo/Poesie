@@ -76,7 +76,7 @@ function App() {
 				return img.category=='Hbd';
 			}
 			if(category=='Praise' || category=='Louange'){
-				return img.category=='Simple';
+				return img.category=='Praise';
 			}
 			if(category=='Bonne Année' || category=='Happy New Year'){
 				return img.category=='NewYear';
@@ -158,8 +158,8 @@ function App() {
 							<input
 								type=""
 								type="range"
-								min="5"
-								max="100"
+								min="60"
+								max="200"
 								step="any"
 								onChange={(e) => setSize(e.target.value)}
 								value={size}

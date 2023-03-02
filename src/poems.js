@@ -676,7 +676,7 @@ Forget about them, enjoy your love moments.
 `If you’re by my side my life will always shine,
 When I’m with you I’m feeling so fine.
 I wish my love for you should never die,
-	Cause 	I want to have you forever by my side.
+Cause I want to have you forever by my side.
 
 Anywhere you wish, if you want to go, I’ll bring you,
 Whatever you want, if you ask me, I’ll give you.
@@ -748,7 +748,7 @@ And forever, my love for you will last.
 `
             },
     {
-                id:15,
+                id:5,
                 title:'Our Story',
                 text:
 `It once started as a love story,
@@ -765,15 +765,14 @@ Since then we friendly merged our hearts, Talking of a friendship that will last
 I believe we’ll always be tight,
 Thanks for the trust and joy brought to me.
 May the lord bless our friendship,
-I wish the story should never end.
-`
+I wish the story should never end.`
             },
-    {
-                id:1,
-                title:'',
-                text:
-``
-            },
+//     {
+//                 id:1,
+//                 title:'',
+//                 text:
+// ``
+//             },
     ]
   },
   {
@@ -835,8 +834,7 @@ Dans les eaux je me noyais,
 Mais un jour, tel un grain de poussière,
 Je vis la lumière du soleil au loin.
 Ses doux rayons me donnaient espoir,
-Alors j’ai décidé de suivre la lumière.
-`
+Alors j’ai décidé de suivre la lumière.`
       },
 {
             id:2,
@@ -860,8 +858,7 @@ Et des feuilles humides.
 Je suis cet arbre,
 Unique en son genre.
 Qui apparaît dans les légendes,
-Et demeureras dans l’histoire du désert.
-`
+Et demeureras dans l’histoire du désert.`
         }, 
 // {
 //             id:5,

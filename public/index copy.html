@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="text">Click on the w3schools logo to download the image:<p>
+  <img id="img" src="Images/image (1).jpeg" width="100" alt="">
+
+<a href="Images/image (1).jpeg" download>
+  Download
+</a>
+<div class="map"></div>
+<script>
+
+  const data= [
+        {
+          id: 0,
+          title: 'BONNE ANNÉE',
+          text: `Je tiens à vous souhaiter une bonne année,
+            Qui vaudra beaucoup mieux que les années du passé.
+          `,
+          author: 'Votre nom',
+          category: 'Bonne Année',
+        },
+        {
+          id: 1,
+          title: 'BONNE ANNÉE CHERI',
+          text: `Mon chéri.
+          Nous voici devant une année nouvelle.
+          `,
+          author: 'Votre nom',
+          category: 'Bonne Année',
+        },
+        {
+          id: 2,
+          title: 'BONNE ANNÉE CHERS PARENTS',
+          text: `Mon cher papa,
+            Ma chère maman.
+            C’est de la part de votre enfant,
+          `,
+          author: 'Votre nom'
+        },
+      
+    
+    
+      
+      
+        {
+          id: 3,
+          title: 'Happy New Year',
+          text: `Today, Dear
+        We are in front of a new year.
+        God spared us from the worst dangers,
+        As well as the heaviest tears.
+      `,
+          author: 'Your Name',
+          category: 'Happy new year',
+        }
+        
+      ];
+      const color=[{c:'red'},{c:'green'},{c:'blue'}]
+  // filter=data.filter(({category},i)=>category=='Bonne Année')
+  filter=color.filter((x)=>x.c!='blue')
+  console.log(filter);
+  // let mapped=filter.map((x)=>console.log(x[0].items[i].text))
+  // console.log(filter[0].items[2].title)
+  document.body.innerHTML=filter.map((x)=>x.c)
+</script>
+
+
+<p><b>Note:</b> The download attribute is not supported in Edge version 12, IE, Safari 10 (and earlier), or Opera version 12 (and earlier).</p>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/howto/tryit.asp?filename=tryhow_html_download_link by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 07:01:37 GMT -->
+</html>
