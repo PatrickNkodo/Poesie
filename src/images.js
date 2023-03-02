@@ -42,64 +42,34 @@ export default [
     category:'Sad',
     items:[
       {
-        img: '/Images/Sad/Sad (1).jpg',
+        img: 'https://i.pinimg.com/236x/09/a5/5f/09a55f7c96017f096838153e8b74d88d.jpg',
       },
       {
-        img: '/Images/Sad/Sad (2).jpg',
+        img: 'https://i.pinimg.com/236x/93/f5/62/93f562e58936a7bd44bcb12ff25f0f5d.jpg',
       },
       {
-        img: '/Images/Sad/Sad (3).jpg',
+        img: 'https://i.pinimg.com/236x/c7/81/48/c781489fdffb5ff568be8c6b69254400.jpg',
       },
       {
-        img: '/Images/Sad/Sad (4).jpg',
+        img: 'https://i.pinimg.com/236x/c2/48/4b/c2484b304201b1b42dadb4e56003bb3b.jpg',
       },
       {
-        img: '/Images/Sad/Sad (5).jpg',
+        img: 'https://i.pinimg.com/236x/c3/40/f2/c340f2614d4b887af448f13b976709cc.jpg',
       },
       {
-        img: '/Images/Sad/Sad (6).jpg',
+        img: 'https://i.pinimg.com/236x/be/05/49/be0549e77402b8198fdd7cf57ce2a225.jpg',
       },
       {
-        img: '/Images/Sad/Sad (7).jpg',
+        img: 'https://i.pinimg.com/736x/03/e7/cc/03e7cc272e8210025d90a6b737294d31.jpg',
       },
       {
-        img: '/Images/Sad/Sad (8).jpg',
+        img: 'https://i.pinimg.com/236x/76/e8/14/76e814517712348511071b65c2f282bb.jpg',
       },
       {
-        img: '/Images/Sad/Sad (9).jpg',
+        img: 'https://i.pinimg.com/236x/a1/ba/83/a1ba8356698d355ac318b3f53e9c2f26.jpg',
       },
       {
-        img: '/Images/Sad/Sad (10).jpg',
-      },
-      {
-        img: '/Images/Sad/Sad (11).jpg',
-      },
-      {
-        img: '/Images/Sad/Sad (12).jpg',
-      },
-      {
-        img: '/Images/Sad/Sad (13).jpg',
-      },
-      {
-        img: '/Images/Sad/Sad (14).jpg',
-      },
-      {
-        img: '/Images/Sad/Sad (15).jpg',
-      },
-      {
-        img: '/Images/Sad/Sad (16).jpg',
-      },
-      {
-        img: '/Images/Sad/Sad (17).jpg',
-      },
-      {
-        img: '/Images/Sad/Sad (18).jpg',
-      },
-      {
-        img: '/Images/Sad/Sad (19).jpg',
-      },
-      {
-        img: '/Images/Sad/Sad (20).jpg',
+        img: 'https://i.pinimg.com/236x/e0/47/34/e04734d5e10bdbf94b71ffb533d5dd3e.jpg',
       },
     ],
   },
