@@ -174,15 +174,19 @@ const AppProvider = ({ children }) => {
 		setbgImagePresent(true);
 		setgradientPresent(false);
 		const res = await fetch(url);
-		const img = await res.blob();
-		let localUrl = URL.createObjectURL(img);
+		const img = await res.blob(); //res.json for text files
+		let localUrl = URL.createObjectURL(img); //Necessary method to convert url to image
 		changeBg(localUrl);
 	};
 	// .catch((Error)=>console.log(Error))
 
 	useEffect(() => {
 		urlBg();
-	}, []);
+	}, []); 
+	const urlBgHandler=()=>{
+		let img=document.getElementById('bgUrl')
+		changeBg(img.value);
+	}
 	//Bg Color
 	const backgroundColor = (x) => {
 		setBgColor(x);
@@ -347,6 +351,7 @@ const AppProvider = ({ children }) => {
 		formData.append(`image`,image)
 		axios.post('url',formData).then((res)=>{console.log(res);})
 	}
+
 	const sendRequest = (e) => {
 		e.preventDefault()
 		let a = document.createElement('a');
@@ -380,6 +385,7 @@ const AppProvider = ({ children }) => {
 				commandMsg,
 				image,
 				setImage,
+				urlBgHandler,
 				prevent,
 				setCommandMsg,
 				commandName,

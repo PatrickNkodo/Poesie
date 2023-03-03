@@ -142,6 +142,10 @@ form > label > span {
 	color: black;
 	text-align: center;
 }
+.bgUrlParent{text-align: center;}
+#bgUrl{
+	width: 10rem !important;
+}
 .choice .display {
 	display: flex;
 	flex-direction: column;
@@ -429,7 +433,7 @@ hr {
 		height: 90vh;
 	}
 	.logo > img {
-		width: 80px;
+		width:4rem;
 	}
 	.choice .examples {
 		margin: 0 15px 0 15px;
@@ -545,5 +549,14 @@ hr {
 	h1,h2,h3,h4,h5,h6{font-size: 130%;}
 	.about div{
 		padding:10px;
+	}
+	.navbar-brand{
+		margin: 0;
+	}
+	.navbar-brand img{
+		width:3.6rem;
+	}
+	#bgUrl{
+		width: 6rem !important;
 	}
 }

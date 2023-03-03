@@ -47,6 +47,7 @@ function App() {
 		setBgColor,
 		url,
 		setUrl,
+		urlBgHandler,
 		urlBg,
 		backgroundColor,
 		color1,
@@ -121,9 +122,11 @@ function App() {
 				{poem && (
 					<div className="backgrounds">
 						{/* <form> */}
-							<input type="file" id="bg" className='form-control' onChange={(e)=>setImage(e.target.files)}   placeholder="Url pour l'arriere plan"/>
-							{/* <label htmlFor="bg" className="btn btn-sm mt-1 btn-dark" onClick={handle}>Mon image</label> */}
-							<label className="btn btn-sm mt-1 btn-dark" onClick={handle}>Definir</label>
+							<div className="bgUrlParent">
+								<input type="text" id="bgUrl" className='form-control' onChange={(e)=>urlBg(e.target.value)}   placeholder="Url d'image d'arriere plan"/>
+								{/* <label htmlFor="bg" className="btn btn-sm mt-1 btn-dark" onClick={handle}>Mon image</label> */}
+								<label className="form-label btn btn-sm mt-1 btn-dark" onClick={(e)=>urlBgHandler()}>Definir</label>
+							</div>
 						{/* </form> */}
 						
 						{filter[0].items.map((item, index) => {
