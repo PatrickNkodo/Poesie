@@ -56,7 +56,7 @@ body {
 }
 .part2 .fa-whatsapp{color: green; border-radius: 5px;}
 .part2 .fa-facebook{color: blue; border-radius: 5px;}
-.part2 .fa-linkedin{color: blue; border-radius: 5px;padding: 0;margin: ;}
+.part2 .fa-linkedin{color: blue; border-radius: 5px;padding: 0;}
 .help,
 .about {
   overflow-y: scroll;
