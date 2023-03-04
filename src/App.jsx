@@ -131,7 +131,7 @@ function App() {
 						
 						{filter[0].items.map((item, index) => {
 							return (
-								<div className="img" key={index} onClick={() => changeBg(item.img)}>
+								<div className="img" key={index} onMouseUp={() => changeBg(item.img)}>
 									<img src={item.img} alt={item.img} />
 								</div>
 							);
@@ -192,17 +192,6 @@ function App() {
 								value={weight}
 							/>
 						</div>
-						<div className="line-height">
-							<span>Espacement:</span>
-							<input
-								type="range"
-								min="0"
-								max="5"
-								step="any"
-								onChange={(e) => setLineHeight(e.target.value)}
-								value={lineHeight}
-							/>
-						</div>
 						<div className="shadow">
 							<span>Ombre de texte:</span>
 							<input
@@ -212,6 +201,17 @@ function App() {
 								step="any"
 								onChange={(e) => setShadow(e.target.value)}
 								value={shadow}
+							/>
+						</div>
+						<div className="line-height">
+							<span>Espacement:</span>
+							<input
+								type="range"
+								min="20"
+								max="50"
+								step="any"
+								onChange={(e) => setLineHeight(e.target.value)}
+								value={lineHeight}
 							/>
 						</div>
 						<div className="align">

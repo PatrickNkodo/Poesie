@@ -19,7 +19,7 @@ const AppProvider = ({ children }) => {
 	const [ title, setTitle ] = useState('');
 	const [ text, setText ] = useState('');
 	const [ author, setAuthor ] = useState('');
-	const [ lineHeight, setLineHeight ] = useState('');
+	const [ lineHeight, setLineHeight ] = useState('20');
 	const [ formOpen, setFormOpen ] = useState(false);
 	const [ help, sethelp ] = useState(false);
 	const [ about, setAbout ] = useState(false);
@@ -57,6 +57,7 @@ const AppProvider = ({ children }) => {
 	} 
 	const openForm = () => {
 		setFormOpen(true);
+		setChoice(false);
 		setWrite(false);
 		setWelcome(false);
 		setAbout(false);
