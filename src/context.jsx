@@ -298,11 +298,15 @@ const AppProvider = ({ children }) => {
 	const capture = () => {
 		let modalBody = document.querySelector('.modal-body');
 		let canvas = document.querySelector('#canvas');
+		let capture = document.querySelector('#capture');
 		if (canvas) {
 			modalBody.removeChild(canvas);
 		}
-		html2canvas(document.querySelector(`#capture`),
-
+		html2canvas(capture,
+		{
+		allowtaint:true,
+		useCORS:true
+	}
 		).then((canvas) => {
 			canvas.setAttribute('id', 'canvas'); //add it the id='canvas'
 			// canvas.setAttribute('width',100);
@@ -311,20 +315,20 @@ const AppProvider = ({ children }) => {
 			modalBody.appendChild(canvas);
 		});
 	};
-	
-	const download = () => {
-		let canvas = document.getElementById('canvas');
-		// canvas.setAttribute('width',2480)
-		let a = document.createElement('a');
-		a.href = canvas.toDataURL('image/jpg'); //The toDataURL returns a file/format file, with details on the canvas
-		a.download = `${title}.jpg`;
-		a.click();
-	};
-	
 	//Function to remove attributes
 	const removeAttributes=(element,...attr)=>{
 		attr.forEach(attr=>element.removeAttribute(attr))
 	}
+
+	const download = () => {
+		let canvas = document.getElementById('canvas');
+		// canvas.setAttribute('width',2480)
+		let a = document.createElement('a');
+		a.href = canvas.toDataURL('image/jpeg'); //The toDataURL returns a file/format file, with details on the canvas
+		a.download = `${title}.jpg`;
+		a.click();
+	};
+
 	//INTERNET EXPLORER AND EDGE METHODS... ONLY SAVES AS PNG
 	// const download1=()=>{
 	// 	if(window.navigator.msSaveBlob){
