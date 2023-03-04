@@ -50,16 +50,15 @@ export default [
     category:'Simple',
     items:[
         {img:'https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60'},
-        {img:'https://media.istockphoto.com/id/1423284665/photo/man-tourist-walking-on-the-ice-of-baikal-lake-winter-landscape-of-baikal-lake-russia.jpg?b=1&s=170667a&w=0&k=20&c=VsezULZvjg-xRsDPRdmJbNdDdEV8Y3B9c7HJ6pfkbpg='},
-        {img:'https://media.istockphoto.com/id/1427249962/photo/tropical-leaves-abstract-green-leaf-texture-in-garden-nature-background.jpg?b=1&s=170667a&w=0&k=20&c=40KcV7mbAQWihuO0At8GSOTIKp-TvIoHGIhurHBeUq0='},
+        {img:'https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8bmF0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60'},
+        {img:'https://images.unsplash.com/photo-1458966480358-a0ac42de0a7a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8dHJlZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'},
         {img:'https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60'},
-        {img:''},
-        {img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd5aqY_d9RKhtyS-IWRIT6_7AETn6s2xTJnQ&usqp=CAU'},
-        {img:''},
-        {img:''},
-        {img:''},
+        {img:'https://images.unsplash.com/photo-1677725979845-e1895887e1d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60'},
+        {img:'https://images.unsplash.com/photo-1677926405168-fa86268b7295?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60'},
+        {img:'https://plus.unsplash.com/premium_photo-1670513727240-792add6f13e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60'},
+        {img:'https://media.istockphoto.com/id/1431911416/photo/magnolia-blossom.jpg?b=1&s=170667a&w=0&k=20&c=O14u-EOXk5GzXhXHZWZPDR_EnbalbOQwI9DvZBSorYY='},
         {img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_gfm7GRFOmJdA73N8Sox-wCx8pKo0JH07UQ&usqp=CAU'},
-        {img:''},
+        {img:'https://media.istockphoto.com/id/1408374612/photo/different-crystals-on-moss-in-forest-space-for-text.jpg?b=1&s=170667a&w=0&k=20&c=5NmDqGvI3yqlwBHLHqJAxJRj-gFDfxdCxUmxGAL9Y8Q='},
     ]
   },
   {

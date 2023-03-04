@@ -19,7 +19,7 @@ const AppProvider = ({ children }) => {
 	const [ title, setTitle ] = useState('');
 	const [ text, setText ] = useState('');
 	const [ author, setAuthor ] = useState('');
-	const [ lineHeight, setLineHeight ] = useState('');
+	const [ lineHeight, setLineHeight ] = useState('20');
 	const [ formOpen, setFormOpen ] = useState(false);
 	const [ help, sethelp ] = useState(false);
 	const [ about, setAbout ] = useState(false);
@@ -57,6 +57,7 @@ const AppProvider = ({ children }) => {
 	} 
 	const openForm = () => {
 		setFormOpen(true);
+		setChoice(false);
 		setWrite(false);
 		setWelcome(false);
 		setAbout(false);
@@ -301,11 +302,7 @@ const AppProvider = ({ children }) => {
 			modalBody.removeChild(canvas);
 		}
 		html2canvas(document.querySelector(`#capture`),
-		// {width:800}
-		{
-		allowtaint:true,
-		useCORS:true
-	}
+
 		).then((canvas) => {
 			canvas.setAttribute('id', 'canvas'); //add it the id='canvas'
 			// canvas.setAttribute('width',100);
@@ -314,20 +311,20 @@ const AppProvider = ({ children }) => {
 			modalBody.appendChild(canvas);
 		});
 	};
-	//Function to remove attributes
-	const removeAttributes=(element,...attr)=>{
-		attr.forEach(attr=>element.removeAttribute(attr))
-	}
-
+	
 	const download = () => {
 		let canvas = document.getElementById('canvas');
 		// canvas.setAttribute('width',2480)
 		let a = document.createElement('a');
-		a.href = canvas.toDataURL('image/jpeg'); //The toDataURL returns a file/format file, with details on the canvas
+		a.href = canvas.toDataURL('image/jpg'); //The toDataURL returns a file/format file, with details on the canvas
 		a.download = `${title}.jpg`;
 		a.click();
 	};
-
+	
+	//Function to remove attributes
+	const removeAttributes=(element,...attr)=>{
+		attr.forEach(attr=>element.removeAttribute(attr))
+	}
 	//INTERNET EXPLORER AND EDGE METHODS... ONLY SAVES AS PNG
 	// const download1=()=>{
 	// 	if(window.navigator.msSaveBlob){
