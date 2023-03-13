@@ -23,10 +23,10 @@ const About = () => {
        <center><h3>Me Contacter?</h3></center>  
        <div className="">
           {/*Whatsapp share link 
-        <a href="whatsapp://send?text=Salut Patrick, je vous contacte depuis votre application."><i class="fab fa-whatsapp" aria-hidden="true"></i></a> */}
-        <a href="https://wa.me/237696950600/?text=Salut Patrick, je vous contacte depuis votre application."><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
-        <a href="https://m.facebook.com/Poésie dans les airs"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-        <a href="https://www.linkedin.com/in/essama-patrick-071806227/"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+        <a href="whatsapp://send?text=Salut Patrick, je vous contacte depuis votre application."><i className="fab fa-whatsapp" aria-hidden="true"></i></a> */}
+        <a href="https://wa.me/237696950600/?text=Salut Patrick, je vous contacte depuis votre application."><i className="fab fa-whatsapp" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com/patrick.nkodo.75/"><i className="fab fa-facebook" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/essama-patrick-071806227/"><i className="fab fa-linkedin" aria-hidden="true"></i></a>
        </div>
        </div>
       </div>

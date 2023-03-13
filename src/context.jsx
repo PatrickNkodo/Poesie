@@ -19,7 +19,7 @@ const AppProvider = ({ children }) => {
 	const [ title, setTitle ] = useState('');
 	const [ text, setText ] = useState('');
 	const [ author, setAuthor ] = useState('');
-	const [ lineHeight, setLineHeight ] = useState('');
+	const [ lineHeight, setLineHeight ] = useState('20');
 	const [ formOpen, setFormOpen ] = useState(false);
 	const [ help, sethelp ] = useState(false);
 	const [ about, setAbout ] = useState(false);
@@ -33,7 +33,7 @@ const AppProvider = ({ children }) => {
 	const [ edition, setEdition ] = useState(false);
 	const [ overlay, setOverlay ] = useState(0);
 	const [ align, setAlign ] = useState('left');
-	const [ size, setSize ] = useState(20);
+	const [ size, setSize ] = useState(60);
 	const [ textColor, setTextColor ] = useState('#ffffff');
 	const [ bgColor, setBgColor ] = useState('#000000');
 	const [ url, setUrl ] = useState('');
@@ -57,6 +57,7 @@ const AppProvider = ({ children }) => {
 	} 
 	const openForm = () => {
 		setFormOpen(true);
+		setChoice(false);
 		setWrite(false);
 		setWelcome(false);
 		setAbout(false);
@@ -174,15 +175,19 @@ const AppProvider = ({ children }) => {
 		setbgImagePresent(true);
 		setgradientPresent(false);
 		const res = await fetch(url);
-		const img = await res.blob();
-		let localUrl = URL.createObjectURL(img);
+		const img = await res.blob(); //res.json for text files
+		let localUrl = URL.createObjectURL(img); //Necessary method to convert url to image
 		changeBg(localUrl);
 	};
 	// .catch((Error)=>console.log(Error))
 
 	useEffect(() => {
 		urlBg();
-	}, []);
+	}, []); 
+	const urlBgHandler=()=>{
+		let img=document.getElementById('bgUrl')
+		changeBg(img.value);
+	}
 	//Bg Color
 	const backgroundColor = (x) => {
 		setBgColor(x);
@@ -293,11 +298,15 @@ const AppProvider = ({ children }) => {
 	const capture = () => {
 		let modalBody = document.querySelector('.modal-body');
 		let canvas = document.querySelector('#canvas');
+		let capture = document.querySelector('#capture');
 		if (canvas) {
 			modalBody.removeChild(canvas);
 		}
-		html2canvas(document.querySelector(`#capture`),
-		// {width:800}
+		html2canvas(capture,
+		{
+		allowtaint:true,
+		useCORS:true
+	}
 		).then((canvas) => {
 			canvas.setAttribute('id', 'canvas'); //add it the id='canvas'
 			// canvas.setAttribute('width',100);
@@ -343,6 +352,7 @@ const AppProvider = ({ children }) => {
 		formData.append(`image`,image)
 		axios.post('url',formData).then((res)=>{console.log(res);})
 	}
+
 	const sendRequest = (e) => {
 		e.preventDefault()
 		let a = document.createElement('a');
@@ -376,6 +386,7 @@ const AppProvider = ({ children }) => {
 				commandMsg,
 				image,
 				setImage,
+				urlBgHandler,
 				prevent,
 				setCommandMsg,
 				commandName,

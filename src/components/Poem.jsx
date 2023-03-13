@@ -37,8 +37,8 @@ const Poem = () => {
 		textAlign: align,
 		fontFamily: font,
 		fontWeight: weight,
-		fontSize: `${size}px`,
-		lineHeight: `${lineHeight}rem`,
+		fontSize: `${size}%`,
+	    lineHeight: lineHeight==20 ?`normal` : `${lineHeight}px` ,
 		textShadow:`2px 2px 3px rgb(0,0,0,${shadow}) `
 	};
 	return (

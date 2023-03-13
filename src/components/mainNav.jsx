@@ -3,7 +3,7 @@ import logo from '../logo.png';
 import { useGlobalContext } from '../context';
 import Command from './Command';
 function Mainnav() {
-	const { helpFxn, aboutFxn, homeFxn, tab, poem, choice, getPoem, changePoem,capture,download,write,commandFxn} = useGlobalContext();
+	const { helpFxn, aboutFxn, homeFxn, tab, poem, choice, getPoem, changePoem,capture,download,write,commandFxn,openForm} = useGlobalContext();
 	return (
 		<header>
 			<nav className="navbar navbar-expand-sm navbar-light bg-light">
@@ -38,8 +38,13 @@ function Mainnav() {
 				{(choice || write) && (
 					<div className="navbar-nav choice-fxns">
 						<li className="nav-item select">
+							<span className={`nav-link`} onClick={openForm}>
+								<i className="fa fa-arrow-circle-left" aria-hidden="true"></i> Catégories
+							</span>
+						</li>
+						<li className="nav-item select">
 							<span className={`nav-link`} onClick={getPoem}>
-								Appliquer
+								<i className="fa fa-check-circle" aria-hidden="true"></i> Appliquer
 							</span>
 						</li>
 					</div>
@@ -49,27 +54,27 @@ function Mainnav() {
 					<div className="navbar-nav poem-fxns">
 						<li className="nav-item poem-fxn1">
 							<span className={`nav-link`} onClick={changePoem}>
-								Editer
+								Re-modifier
 							</span>
 						</li>
 						<li className="nav-item poem-fxn2" data-bs-toggle="modal" data-bs-target="#myModal">
 							<span className={`nav-link`} onClick={capture}>
-								Sauvegarder l'image
+								Télécharger
 							</span>
 						</li>
 
-<div class="modal fade" id="myModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header justify-content-around">
+<div className="modal fade" id="myModal">
+  <div className="modal-dialog">
+    <div className="modal-content">
+      <div className="modal-header justify-content-around">
 	  <button onClick={download} className="btn btn-success" data-bs-dismiss="modal">Télécharger</button>
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fermer</button>
+        <button type="button" className="btn btn-danger" data-bs-dismiss="modal">Fermer</button>
       </div>
 
-      <div class="modal-body">
+      <div className="modal-body">
       </div>
 
-      <div class="modal-footer">
+      <div className="modal-footer">
         {/* <a href={`canvas.${toDataURL()}`} className="btn btn-success" download>Download</a> */}
        
       </div>

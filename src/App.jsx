@@ -47,6 +47,7 @@ function App() {
 		setBgColor,
 		url,
 		setUrl,
+		urlBgHandler,
 		urlBg,
 		backgroundColor,
 		color1,
@@ -76,7 +77,7 @@ function App() {
 				return img.category=='Hbd';
 			}
 			if(category=='Praise' || category=='Louange'){
-				return img.category=='Simple';
+				return img.category=='Praise';
 			}
 			if(category=='Bonne Année' || category=='Happy New Year'){
 				return img.category=='NewYear';
@@ -121,14 +122,16 @@ function App() {
 				{poem && (
 					<div className="backgrounds">
 						{/* <form> */}
-							<input type="file" id="bg" className='form-control' onChange={(e)=>setImage(e.target.files)}   placeholder="Url pour l'arriere plan"/>
-							{/* <label htmlFor="bg" className="btn btn-sm mt-1 btn-dark" onClick={handle}>Mon image</label> */}
-							<label className="btn btn-sm mt-1 btn-dark" onClick={handle}>Definir</label>
+							<div className="bgUrlParent">
+								<input type="text" id="bgUrl" className='form-control' onChange={(e)=>urlBg(e.target.value)}   placeholder="Url d'image d'arriere plan"/>
+								{/* <label htmlFor="bg" className="btn btn-sm mt-1 btn-dark" onClick={handle}>Mon image</label> */}
+								<label className="form-label btn btn-sm mt-1 btn-dark" onClick={(e)=>urlBgHandler()}>Definir</label>
+							</div>
 						{/* </form> */}
 						
 						{filter[0].items.map((item, index) => {
 							return (
-								<div className="img" key={index} onClick={() => changeBg(item.img)}>
+								<div className="img" key={index} onMouseUp={() => changeBg(item.img)}>
 									<img src={item.img} alt={item.img} />
 								</div>
 							);
@@ -158,8 +161,8 @@ function App() {
 							<input
 								type=""
 								type="range"
-								min="5"
-								max="100"
+								min="60"
+								max="300"
 								step="any"
 								onChange={(e) => setSize(e.target.value)}
 								value={size}
@@ -189,17 +192,6 @@ function App() {
 								value={weight}
 							/>
 						</div>
-						<div className="line-height">
-							<span>Espacement:</span>
-							<input
-								type="range"
-								min="0"
-								max="5"
-								step="any"
-								onChange={(e) => setLineHeight(e.target.value)}
-								value={lineHeight}
-							/>
-						</div>
 						<div className="shadow">
 							<span>Ombre de texte:</span>
 							<input
@@ -209,6 +201,17 @@ function App() {
 								step="any"
 								onChange={(e) => setShadow(e.target.value)}
 								value={shadow}
+							/>
+						</div>
+						<div className="line-height">
+							<span>Espacement:</span>
+							<input
+								type="range"
+								min="20"
+								max="50"
+								step="any"
+								onChange={(e) => setLineHeight(e.target.value)}
+								value={lineHeight}
 							/>
 						</div>
 						<div className="align">
