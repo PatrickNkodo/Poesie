@@ -1,26 +1,33 @@
-import { useGlobalContext } from "../context";
-import React, { useEffect, useRef } from "react";
+// import { useGlobalContext } from "../context";
+import React, { useEffect, useState } from "react";
 import categories from "../categories";
 import { useNavigate } from "react-router";
 const Form = () => {
-  const {
-    name,
-    category,
-    setName,
-    setCategory,
-    prevent,
-    getPoem,
-    getChoice,
-    composition,
-    setComposition,
-    what,
-    setWhat,
-  } = useGlobalContext();
+  const [what, setWhat] = useState("");
+  const [name, setName] = useState("");
+  const [category, setCategory] = useState("");
+  const [composition, setComposition] = useState("help");
   const linkTo = useNavigate();
+  const sumbitForm = () => {
+    if (!(name && category && composition && what)) {
+      alert("Veillez remplir tous les champs s'il vous plaît");
+      return;
+    }
+    //User should write the quote in the write-alone editor instead of the help-editor
+    if (what == "quote") {
+      setComposition("alone");
+    }
+    localStorage.setItem("name", name);
+    localStorage.setItem("what", what);
+    localStorage.setItem("category", category);
+    localStorage.setItem("composition", composition);
+    linkTo("/write-poem");
+  };
+
   return (
     <div>
       <h3>Veillez remplir les champs ci-dessous</h3>
-      <form onSubmit={getChoice}>
+      <form>
         <label htmlFor="Your Name">
           Votre Nom
           <span>(Ce nom figurera comme étant l'auteur de vos oeuvres)</span>
@@ -52,7 +59,7 @@ const Form = () => {
           </select>
         </div>
 
-        {what == "poem" && (
+        {what === "poem" && (
           <React.Fragment>
             <label htmlFor="">Catégorie du poème</label>
             <select
@@ -89,7 +96,7 @@ const Form = () => {
             </div>
           </React.Fragment>
         )}
-        {what == "quote" && (
+        {what === "quote" && (
           <React.Fragment>
             <label htmlFor="">Catégorie de la Citation</label>
             <select
@@ -117,9 +124,9 @@ const Form = () => {
           <button
             type="submit"
             className="btn btn-primary mt-2"
-            onClick={() => linkTo("/write-poem")}
+            onClick={sumbitForm}
           >
-            {what == "poem" ? "Ecrire le poème" : "Ecrire la Citation"}
+            {what === "poem" ? "Ecrire le poème" : "Ecrire la Citation"}
           </button>
         )}
       </form>

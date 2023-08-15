@@ -25,11 +25,7 @@ const AppProvider = ({ children }) => {
   const [about, setAbout] = useState(false);
   const [itsPoem, setItsPoem] = useState(false);
   const [poem, setPoem] = useState(false);
-  const [what, setWhat] = useState("");
-  const [name, setName] = useState("");
-  const [composition, setComposition] = useState("help");
   const [write, setWrite] = useState(false);
-  const [category, setCategory] = useState("");
   const [edition, setEdition] = useState(false);
   const [overlay, setOverlay] = useState(0);
   const [align, setAlign] = useState("left");
@@ -46,108 +42,10 @@ const AppProvider = ({ children }) => {
   const [font, setFont] = useState("Arial");
   const [weight, setWeight] = useState(300);
   const [tab, setTab] = useState("Accueil");
-  // useEffect(()=>{
-  // 	// color1='#000000';
-  // 	// color2='#000000'
-  // 	alert(color1)
-  // },[])
+
   const prevent = (e) => {
     alert("stopped");
     e.preventDefault();
-  };
-  const openForm = () => {
-    setFormOpen(true);
-    setChoice(false);
-    setWrite(false);
-    setWelcome(false);
-    setAbout(false);
-    sethelp(false);
-    setPoem(false);
-    setCommand(false);
-  };
-  const homeFxn = (e) => {
-    setTab(e.target.innerText);
-    if (name && what && category && composition) {
-      // setPoem(true)
-      // setWrite(false)
-      // setChoice(false)
-      // sethelp(false)
-      // setWelcome(false);
-      // setFormOpen(false);
-      // setAbout(false)
-      if (composition == "help") {
-        if (!text) {
-          setChoice(true);
-          setWrite(false);
-          setPoem(false);
-          sethelp(false);
-          setWelcome(false);
-          setFormOpen(false);
-          setAbout(false);
-          setCommand(false);
-        } else {
-          setPoem(true);
-          setWrite(false);
-          setChoice(false);
-          sethelp(false);
-          setWelcome(false);
-          setFormOpen(false);
-          setAbout(false);
-          setCommand(false);
-        }
-      } else if (composition == "alone") {
-        if (!text) {
-          setWrite(true);
-          setChoice(false);
-          setPoem(false);
-          sethelp(false);
-          setWelcome(false);
-          setFormOpen(false);
-          setAbout(false);
-          setCommand(false);
-        } else {
-          setPoem(true);
-          setWrite(false);
-          setChoice(false);
-          sethelp(false);
-          setWelcome(false);
-          setFormOpen(false);
-          setAbout(false);
-          setCommand(false);
-        }
-      }
-    } else {
-      setFormOpen(true);
-      setWelcome(false);
-      setWrite(false);
-      setChoice(false);
-      setPoem(false);
-      sethelp(false);
-      setAbout(false);
-      setCommand(false);
-    }
-  };
-  const helpFxn = (e) => {
-    setTab(e.target.innerText);
-    sethelp(true);
-    setWrite(false);
-    setChoice(false);
-    setPoem(false);
-    setWelcome(false);
-    setFormOpen(false);
-    setAbout(false);
-    setCommand(false);
-  };
-  const aboutFxn = (e) => {
-    setTab(e.target.innerText);
-    setAbout(true);
-    setChoice(false);
-    setWrite(false);
-    setPoem(false);
-    sethelp(false);
-    setWelcome(false);
-    setFormOpen(false);
-    setCommand(false);
   };
 
   const display = (ID, category) => {
@@ -194,58 +92,34 @@ const AppProvider = ({ children }) => {
     setbgImagePresent(false);
     setgradientPresent(false);
   };
-  const getPoem = () => {
-    if (!(name && text)) {
-      alert("Veillez remplir tous les champs s'il vous plaît");
-      return;
-    }
-    // else if (!(name && text) && composition == 'alone') {
-    // 	alert("Veillez remplir tous les champs s'il vous plaît");
-    // 	return;
-    // }
-    setPoem(true);
-    setWrite(false);
-    setChoice(false);
-    setFormOpen(false);
-    setWelcome(false);
-    setAbout(false);
-    sethelp(false);
-    setEdition(false);
-    setCommand(false);
-  };
 
-  useEffect(() => {
-    if (what == "quote") {
-      setComposition("alone");
-    }
-  }, [what]);
-  const getChoice = () => {
-    // if (!(name && category && composition && what)) {
-    // 	alert('Veillez remplir tous les champs svp!');
-    // 	return;
-    // }
-    if (composition == "help") {
-      setChoice(true);
-      setWrite(false);
-      setPoem(false);
-      setFormOpen(false);
-      setWelcome(false);
-      setAbout(false);
-      sethelp(false);
-      setEdition(false);
-      setCommand(false);
-    } else if (composition == "alone") {
-      setWrite(true);
-      setChoice(false);
-      setPoem(false);
-      setFormOpen(false);
-      setWelcome(false);
-      setAbout(false);
-      sethelp(false);
-      setEdition(false);
-      setCommand(false);
-    }
-  };
+  // const getChoice = () => {
+  //   // if (!(name && category && composition && what)) {
+  //   // 	alert('Veillez remplir tous les champs svp!');
+  //   // 	return;
+  //   // }
+  //   if (composition == "help") {
+  //     setChoice(true);
+  //     setWrite(false);
+  //     setPoem(false);
+  //     setFormOpen(false);
+  //     setWelcome(false);
+  //     setAbout(false);
+  //     sethelp(false);
+  //     setEdition(false);
+  //     setCommand(false);
+  //   } else if (composition == "alone") {
+  //     setWrite(true);
+  //     setChoice(false);
+  //     setPoem(false);
+  //     setFormOpen(false);
+  //     setWelcome(false);
+  //     setAbout(false);
+  //     sethelp(false);
+  //     setEdition(false);
+  //     setCommand(false);
+  //   }
+  // };
 
   const commandFxn = (e) => {
     setTab(e.target.innerText);
@@ -257,27 +131,27 @@ const AppProvider = ({ children }) => {
     setAbout(false);
     sethelp(false);
   };
-  const changePoem = () => {
-    if (composition == "help") {
-      setChoice(true);
-      setWrite(false);
-      setFormOpen(false);
-      setPoem(false);
-      setWelcome(false);
-      setAbout(false);
-      sethelp(false);
-      setCommand(false);
-    } else {
-      setWrite(true);
-      setChoice(false);
-      setFormOpen(false);
-      setPoem(false);
-      setWelcome(false);
-      setAbout(false);
-      sethelp(false);
-      setCommand(false);
-    }
-  };
+  // const changePoem = () => {
+  //   if (composition == "help") {
+  //     setChoice(true);
+  //     setWrite(false);
+  //     setFormOpen(false);
+  //     setPoem(false);
+  //     setWelcome(false);
+  //     setAbout(false);
+  //     sethelp(false);
+  //     setCommand(false);
+  //   } else {
+  //     setWrite(true);
+  //     setChoice(false);
+  //     setFormOpen(false);
+  //     setPoem(false);
+  //     setWelcome(false);
+  //     setAbout(false);
+  //     sethelp(false);
+  //     setCommand(false);
+  //   }
+  // };
 
   //Bg Gradient
   const gradient = (a, b) => {
@@ -371,8 +245,8 @@ const AppProvider = ({ children }) => {
       value={{
         wrapperBg,
         setWrapperBg,
-        openForm,
-        getPoem,
+        // openForm,
+        // getPoem,
         commandFxn,
         command,
         setCommand,
@@ -393,27 +267,19 @@ const AppProvider = ({ children }) => {
         write,
         choice,
         setChoice,
-        getChoice,
+        // getChoice,
         display,
         title,
         setTitle,
-        what,
-        setWhat,
         text,
         setText,
         author,
         setAuthor,
-        homeFxn,
+        // homeFxn,
         itsPoem,
         setItsPoem,
         poem,
         setPoem,
-        name,
-        setName,
-        category,
-        setCategory,
-        composition,
-        setComposition,
         changeBg,
         welcome,
         bg,
@@ -447,13 +313,12 @@ const AppProvider = ({ children }) => {
         setWeight,
         help,
         about,
-        helpFxn,
-        aboutFxn,
+        // helpFxn,
+        // aboutFxn,
         edition,
         setEdition,
         lineHeight,
         setLineHeight,
-        changePoem,
         capture,
         download,
         urlBg,

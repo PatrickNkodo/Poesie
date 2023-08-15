@@ -1,13 +1,11 @@
-import { useGlobalContext } from './context';
-// const {name}=useGlobalContext()
 export default [
-	{
-		category: 'Bonne Année',
-		items: [
-			{
-				id: 0,
-				title: 'BONNE ANNÉE',
-				text: `Je tiens à vous souhaiter une bonne année,
+  {
+    category: 'Bonne Année',
+    items: [
+      {
+        id: 0,
+        title: 'BONNE ANNÉE',
+        text: `Je tiens à vous souhaiter une bonne année,
 Qui vaudra beaucoup mieux que les années du passé.
 Car le Seigneur entend mes prières quotidiennes,
 Dans lesquelles je n’arrête pas de prier pour qu’il vous protège.
@@ -21,11 +19,11 @@ Mon souhait est de vous voir heureux,
 Danser, célébrer et le succèss chaque jours.
 Alors je ne vous souhaite que le meilleur, 
 Bonne année 2023,`,
-			},
-			{
-				id: 1,
-				title: 'BONNE ANNÉE CHERI',
-				text: `Mon chéri,
+      },
+      {
+        id: 1,
+        title: 'BONNE ANNÉE CHERI',
+        text: `Mon chéri,
 Nous voici devant une année nouvelle.
 Le Créateur nous a épargnés des pires dangers de 2022,
 Tout y est passé :  pandémies, massacres et autres calamités...
@@ -41,11 +39,11 @@ Je te souhaite une merveilleuse année 2023, chéri.
 Année d’émerveillement et de consolidation de nos liens d’amour.
 Que Dieu protège notre couple des tempêtes dévastatrices du siècle présent.
 Je t’aime chéri💖`,
-			},
-			{
-				id: 2,
-				title: 'BONNE ANNÉE CHERS PARENTS',
-				text: `Mon cher papa,
+      },
+      {
+        id: 2,
+        title: 'BONNE ANNÉE CHERS PARENTS',
+        text: `Mon cher papa,
 Ma chère maman.
 C’est de la part de votre enfant,
 Cet œuvre que vous avez merveilleusement crée.
@@ -64,16 +62,16 @@ Ma vie est belle depuis toujours auprès de vous,
 Je n’ai jamais manqué du nécessaire.
 Merci d’être toujours là pour me guider, me protéger,
 Je vous aime tellement.`,
-			}
-		]
-	},
-	{
-		category: 'Happy New Year',
-		items: [
-			{
-				id: 1,
-				title: 'Happy New Year',
-				text: `Today, Dear
+      }
+    ]
+  },
+  {
+    category: 'Happy New Year',
+    items: [
+      {
+        id: 1,
+        title: 'Happy New Year',
+        text: `Today, Dear
  We are in front of a new year.
  God spared us from the worst dangers,
  As well as the heaviest tears.
@@ -90,16 +88,16 @@ Je vous aime tellement.`,
  
  I wish you a wonderful year 2023.
  May God remove storms from your path.`,
-			}
-		]
-	},
-	{
-    category:'Anniversaire',
-		items: [
-			{
-				id: 2,
-				title: 'Joyeux Anniversaire Maman',
-				text: `Pour une maman unique,
+      }
+    ]
+  },
+  {
+    category: 'Anniversaire',
+    items: [
+      {
+        id: 2,
+        title: 'Joyeux Anniversaire Maman',
+        text: `Pour une maman unique,
 Qui a une valeur inestimable à nos yeux,
 Nous nous donnons de tout cœur aujourd’hui,
 Et nous lui souhaitons un merveilleux joyeux anniversaire.
@@ -121,12 +119,12 @@ Prions Dieu qu’il nous donne une vie bénie,
 Et aux yeux des hommes, nous te donnerons l’honneur que tu mérites.
 
 N’oublie jamais que nous t’aimons, chère maman.`
-			},
-			{
-        id:3,
-        title:'',
+      },
+      {
+        id: 3,
+        title: 'HBD mon pote',
         text:
-`Oh ! Mon pote de longue date,
+          `Oh ! Mon pote de longue date,
 C’est bien moi … qui te parle.
 Car pour cette occasion spéciale de ta vie,
 Je ne pouvais manquer à t’écrire quelque-chose de beau.
@@ -151,11 +149,11 @@ Ces … ans passées avec toi,
 Vraiment je ne regrette pas de t’avoir connu.
 `
       },
-			{
-        id:4,
-        title:'HBD ma belle',
+      {
+        id: 4,
+        title: 'HBD ma belle',
         text:
-`Il n’est peut-être le plus beau, 
+          `Il n’est peut-être le plus beau, 
 Mais ce poème est né de mon cœur pour toi. 
 Il n’est peut-être le meilleur, 
 Mais je l’ai écrit pour ton bonheur.   
@@ -175,22 +173,22 @@ Je suis ravi de te connaître jusqu’ici.
 Alors reçois mon profond joyeux anniversaire, 
 Je ne souhaite que le meilleur dans ta vie.`
       },
-		
-			// {
+
+      // {
       //   id:6,
       //   title:'',
       //   category:'Anniversaire'
       // }
-		]
-	},
+    ]
+  },
   {
-    category:'Louange',
-    items:[
+    category: 'Louange',
+    items: [
       {
-        id:1,
-        title:'Dieu est là',
+        id: 1,
+        title: 'Dieu est là',
         text:
-`Ne pleure pas,
+          `Ne pleure pas,
 Dieu ne t’a oublié.
 Il t’ôtera ton fardeau,
 Il essuiera tes larmes.
@@ -210,12 +208,12 @@ Je te prie, ne t’élève pas.
 Car comme il s’est souvenu de toi,
 Souviens-toi de ceux qui coulent des larmes de sang.`
       },
-      	
-      	{
-        id:3,
-        title:'Père',
+
+      {
+        id: 3,
+        title: 'Père',
         text:
-`Père,
+          `Père,
 Souviens-toi de moi.
 Réalise tes promesses,
 Rend ma joie parfaite.
@@ -235,11 +233,11 @@ Merci pour ta présence.
 Merci pour ton amour,
 Et pour ta bonté sans limites.`
       },
-      	{
-        id:4,
-        title:'Oh père',
-          text:
-`Oh père
+      {
+        id: 4,
+        title: 'Oh père',
+        text:
+          `Oh père
 Oh père,
 Aie pitié de moi.
 Elle devient lourde pour moi,
@@ -260,11 +258,11 @@ Je suis à genoux.
 Car ma peine est longue,
 Et toi seul peut me consoler.`
       },
-      	{
-        id:5,
-        title:'Oh mon père',
-          text:
-`Oh père,
+      {
+        id: 5,
+        title: 'Oh mon père',
+        text:
+          `Oh père,
 Je voudrais demeurer bénit.
 Je fuirai le monde et ses œuvres,
 Je voudrais m’attacher à toi.
@@ -284,22 +282,22 @@ Toi qui es l’ami fidèle.
 N’oublie pas ceux qui suivent tes pas, 
 Et par ta grâce, rend notre joie parfaite.`
       },
-//       	{
-//         id:2,
-//         title:'',
-//           text:
-// ``
-//       },
+      //       	{
+      //         id:2,
+      //         title:'',
+      //           text:
+      // ``
+      //       },
     ]
   },
   {
-    category:'Triste',
-    items:[
+    category: 'Triste',
+    items: [
       {
-        id:1,
-        title:'ADIEU GRAND-MÈRE',
+        id: 1,
+        title: 'ADIEU GRAND-MÈRE',
         text:
-`Grand-mère,
+          `Grand-mère,
 Toi aussi qui étais ma mère.
 Une des plus grandes guerrières,
 Mais qui a dû retourner à la poussière.
@@ -319,11 +317,11 @@ Mais tu n’es plus parmi nous.
 Alors que dire, repose en paix, mère du cœur,
 A toi les fleurs, à nous les pleurs.
 `},
-      	{
-        id:2,
-        title:'C’ETAIT SI BEAU',
-          text:
-`J’ouvrais mes yeux dès les premières heures,
+      {
+        id: 2,
+        title: 'C’ETAIT SI BEAU',
+        text:
+          `J’ouvrais mes yeux dès les premières heures,
 Et toi, collé à moi tu me serrais si fort.
 Tu étais merveilleuse, si mignonne quand tu dormais,
 J’y pense encore, c’était si beau.
@@ -343,12 +341,12 @@ Je perds la raison, je perds le nord.
 Tu le sais très bien, toi seule pourrait me consoler,
 Mais tu es partie, et ma joie, tu l’as emportée.
 `
-},
-      	{
-        id:3,
-        title:"Maman m'a quitté",
-          text:
-`Maman,
+      },
+      {
+        id: 3,
+        title: "Maman m'a quitté",
+        text:
+          `Maman,
 Je suis rentré.
 Quelle dure journée,
 Je suis d’ailleurs très affamé.
@@ -369,11 +367,11 @@ Est-ce cela ma destinée ?
 Vivre sans toi à mes côtés.
 `
       },
-      	{
-        id:4,
-        title:'Mon cœur affamé',
-          text:
-`Mon cœur affamé
+      {
+        id: 4,
+        title: 'Mon cœur affamé',
+        text:
+          `Mon cœur affamé
 Je suis tout attristé,
 Et mon cœur est affamé.
 Le bourrer d’amour j’ai toujours rêvé,
@@ -389,11 +387,11 @@ J’ai besoin d’être sauvé.
 Mais la solution, je ne l’ai pas trouvé,
 En ce moment, je suis déboussolé.`
       },
-      	{
-        id:5,
-        title:'Ma vie n’a plus de sens',
-          text:
-`
+      {
+        id: 5,
+        title: 'Ma vie n’a plus de sens',
+        text:
+          `
 De jours, des nuits, sans cesse, je pleurs,  
 Plus rien ne me plait, plus rien ne me fait peur. 
 Mon cœur est submergé, il n’y a que des douleurs,  
@@ -415,11 +413,11 @@ Ainsi un jour, elle changera cette vie de malheur,
 Il n’y aura que joie, et je préserverai mon honneur.          
 `
       },
-            {
-          id:6,
-          title:'Ainsi fût notre histoire',
-          text:
-`Ainsi fût notre histoire,
+      {
+        id: 6,
+        title: 'Ainsi fût notre histoire',
+        text:
+          `Ainsi fût notre histoire,
 Douce et romantique le premier soir.
 Nous avions l’impression d’avoir des super pouvoirs,
 C’était de l’amusement du matin jusqu’au soir.
@@ -440,22 +438,22 @@ Hélas, l’histoire s’est transformée en pathos,
 Elle est désormais tel un corps sans os.
 `
       },
-//             {
-//           id:1,
-//           title:'',
-//           text:
-// ``
-//       },
+      //             {
+      //           id:1,
+      //           title:'',
+      //           text:
+      // ``
+      //       },
     ]
   },
   {
-    category:'Amour',
-    items:[
+    category: 'Amour',
+    items: [
       {
-          id:1,
-          title:'Bébé',
-          text:
-`Bébé,
+        id: 1,
+        title: 'Bébé',
+        text:
+          `Bébé,
 Un jour nous vivrons ensemble. 
 Ensemble nous irons dans les supermarchés, 
 Pour chercher tes aliments préférés.
@@ -476,11 +474,11 @@ Hier, aujourd’hui,
 Et que mon lendemain soit avec toi
 `
       },
-            {
-          id:2,
-          title:'La fille que j’aime',
-          text:
-`La fille que j’aime,
+      {
+        id: 2,
+        title: 'La fille que j’aime',
+        text:
+          `La fille que j’aime,
 Est un ange né d’une reine.
 Elle tient un cœur dans sa main,
 Et son mignon sourire n’est jamais absent.
@@ -500,11 +498,11 @@ Et sa vie est si magnifique.
 Je l’aimais hier, je l’aime aujourd’hui,
 Et ça c’est sûr, je l’aimerais toujours. ❤`
       },
-            {
-          id:3,
-          title:"L'amour pur",
-          text:
-`A y penser, le cœur bat si fort,
+      {
+        id: 3,
+        title: "L'amour pur",
+        text:
+          `A y penser, le cœur bat si fort,
 Plutôt normal, c’est son souhait de chaque jour.
 A voir sa moitié, un sourire d’ange se révèle, 
 Pas besoin de le forcer, le corps réclame cette expression
@@ -524,11 +522,11 @@ Si bien-sûr, personne ne couvre sa lumière.
 Il est unique sur la terre des vivants,
 Le temps passera, mais lui il existera.`
       },
-            {
-          id:4,
-          title:'Mon mignon',
-          text:
-` Mon mignon,
+      {
+        id: 4,
+        title: 'Mon mignon',
+        text:
+          ` Mon mignon,
 Je voudrais t’appartenir.
 Tu es le seul qui compte dans ma vie,
 Le seul qui comptera toujours pour moi.
@@ -548,11 +546,11 @@ Et je compte bien rester avec toi jusqu’au bout.
 Car tu es l’amour de ma vie,
 Et je t’assure je t’aime à la folie.`
       },
-            {
-          id:5,
-          title:'UN POÈME POUR TOI',
-          text:
-`Aujourd’hui tu es là,
+      {
+        id: 5,
+        title: 'UN POÈME POUR TOI',
+        text:
+          `Aujourd’hui tu es là,
 Tout près de moi, me regardant dans les yeux.
 Et moi, à te revoir, mon cœur se réjouit,
 Car tu es important pour moi.
@@ -572,11 +570,11 @@ Et merci pour l’affection que tu m’apportes.
 Je prie l’éternel qu’il conserve notre lien,
 Ainsi, comme deux mignons, Nous serons toujours `
       },
-            {
-          id:6,
-          title:'Tu es mon rêve',
-          text:
-`Aussitôt que je t’ai vue,
+      {
+        id: 6,
+        title: 'Tu es mon rêve',
+        text:
+          `Aussitôt que je t’ai vue,
 Mon cœur se mit à battre plus fort.
 Car te décrire m’étais difficile,
 Je me suis rapproché pour mieux te voir,
@@ -598,22 +596,22 @@ Mon rêve manifesté, ne me lâche pas,
 Car sans toi, ma vie ne serait que ténèbres.
 `
       },
-//             {
-//           id:5,
-//           title:'',
-//           text:
-// ``
-//       },
+      //             {
+      //           id:5,
+      //           title:'',
+      //           text:
+      // ``
+      //       },
     ]
   },
   {
-    category:'Praise',
-    items:[
+    category: 'Praise',
+    items: [
       {
-          id:1,
-          title:'My Saviour',
-          text:
-`How wouldn’t I praise your name,
+        id: 1,
+        title: 'My Saviour',
+        text:
+          `How wouldn’t I praise your name,
 When I have you as my savior.
 How wouldn’t I boast myself,
 When the almighty is my shepherd.
@@ -634,21 +632,21 @@ All my sins will be forgiven,
 Because you died for our salvation.`
       },
       // {
-        //           id:1,
-        //           title:'',
-        //           text:
-        // ``
-        //       },
+      //           id:1,
+      //           title:'',
+      //           text:
+      // ``
+      //       },
     ]
   },
   {
-    category:'Love',
-    items:[
+    category: 'Love',
+    items: [
       {
-        id:1,
-        title:'Life with love',
+        id: 1,
+        title: 'Life with love',
         text:
-`Being loved sounds so nice, 
+          `Being loved sounds so nice, 
 And to love, another beauty. 
 They are all like dreams without end,  
 The feeling wished to last forever.  
@@ -668,12 +666,12 @@ No need to worry for tomorrow.
 Today you’re the happiest of the world, 
 Forget about them, enjoy your love moments. 
 `
-    },
-    {
-                id:2,
-                title:'THE LOVE OF MY LIFE',
-                text:
-`If you’re by my side my life will always shine,
+      },
+      {
+        id: 2,
+        title: 'THE LOVE OF MY LIFE',
+        text:
+          `If you’re by my side my life will always shine,
 When I’m with you I’m feeling so fine.
 I wish my love for you should never die,
 Cause I want to have you forever by my side.
@@ -693,12 +691,12 @@ But searching the love of my heart, I said I’ll never surrender.
 Today I’m a king, with the kingdom we built together,
 And yes, of course, our love will last forever
 `
-            },
-    {
-                id:3,
-                title:'My reason of living',
-                text:
-`You might not be the prettiest in the world
+      },
+      {
+        id: 3,
+        title: 'My reason of living',
+        text:
+          `You might not be the prettiest in the world
 But you are the one that I prefer among all the others.
 You might not be so raised financially,
 But your heart is architecturally rich.
@@ -721,12 +719,12 @@ Never forget this word, from the bowels of my heart,
 
 I Love You Baby!!!
 `
-            },
-    {
-                id:4,
-                title:`You're My Love`,
-                text:
-`My love, 
+      },
+      {
+        id: 4,
+        title: `You're My Love`,
+        text:
+          `My love, 
 The light of my life.
 If you could know the poems in my heart,
 That my love for you decided to write.
@@ -746,12 +744,12 @@ You’re the greatest, most beautiful gift in my life.
 Yesterday, and today, I loved you so much,
 And forever, my love for you will last.
 `
-            },
-    {
-                id:5,
-                title:'Our Story',
-                text:
-`It once started as a love story,
+      },
+      {
+        id: 5,
+        title: 'Our Story',
+        text:
+          `It once started as a love story,
 Who’ll wonder, of course you’re a beauty.
 My thoughts couldn’t be made without you,
 But the story looked long, viewing it as such.
@@ -766,22 +764,22 @@ I believe we’ll always be tight,
 Thanks for the trust and joy brought to me.
 May the lord bless our friendship,
 I wish the story should never end.`
-            },
-//     {
-//                 id:1,
-//                 title:'',
-//                 text:
-// ``
-//             },
+      },
+      //     {
+      //                 id:1,
+      //                 title:'',
+      //                 text:
+      // ``
+      //             },
     ]
   },
   {
-    category:'Happy Birth Day',
-    items:[
+    category: 'Happy Birth Day',
+    items: [
       {
-				id: 1,
-				title: 'Happy Birth Day Friend',
-				text: `Before any best wish,
+        id: 1,
+        title: 'Happy Birth Day Friend',
+        text: `Before any best wish,
 You know you’re my best friend.
 And now for this occasion,
 You know to which extend i wish you the best.
@@ -800,23 +798,23 @@ I thank him for making you attain this age that many children didn’t attained.
 I thank GOD for giving you an angelic heart full of elegant extracts.
 Without forgetting to pray him to continue protecting you from all hellish spirits,
 To guide and assist you in all positive projects you’ll undertake.`,
-			},
-//       {
-//           id:1,
-//           title:'',
-//           text:
-// ``
-//       }, 
+      },
+      //       {
+      //           id:1,
+      //           title:'',
+      //           text:
+      // ``
+      //       }, 
     ]
   },
   {
-    category:'Simple',
-    items:[
+    category: 'Simple',
+    items: [
       {
-          id:1,
-          title:'Tel un grain de poussière',
-          text:
-`Tel un grain de poussière,
+        id: 1,
+        title: 'Tel un grain de poussière',
+        text:
+          `Tel un grain de poussière,
 Ma vie est née du vide.
 Eclairé par une lumière,
 La seule, l’unique venant du ciel.
@@ -836,11 +834,11 @@ Je vis la lumière du soleil au loin.
 Ses doux rayons me donnaient espoir,
 Alors j’ai décidé de suivre la lumière.`
       },
-{
-            id:2,
-            title:'Je suis cet arbre',
-            text:
-`Je suis cet arbre,
+      {
+        id: 2,
+        title: 'Je suis cet arbre',
+        text:
+          `Je suis cet arbre,
 Qui est né de l’orage.
  Elevé dans la tempête,
 Endurci par le sable.
@@ -859,30 +857,30 @@ Je suis cet arbre,
 Unique en son genre.
 Qui apparaît dans les légendes,
 Et demeureras dans l’histoire du désert.`
-        }, 
-// {
-//             id:5,
-//             title:'',
-//             text:
-// ``
-// }, 
+      },
+      // {
+      //             id:5,
+      //             title:'',
+      //             text:
+      // ``
+      // }, 
     ]
   },
-//   {
-//     category:'',
-//     items:[
-//       {
-//           id:1,
-//           title:'',
-//           text:
-// ``
-//       },
-// {
-//             id:1,
-//             title:'',
-//             text:
-//   ``
-//         }, 
-//     ]
-//   },
+  //   {
+  //     category:'',
+  //     items:[
+  //       {
+  //           id:1,
+  //           title:'',
+  //           text:
+  // ``
+  //       },
+  // {
+  //             id:1,
+  //             title:'',
+  //             text:
+  //   ``
+  //         }, 
+  //     ]
+  //   },
 ];
