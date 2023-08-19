@@ -9,12 +9,32 @@ import About from "./components/About";
 import WritePoem from "./components/write";
 import Command from "./components/Command";
 import "./index.css";
-
+import { useEffect, useState } from "react";
+import bg from "./backgrounds";
 function App() {
+  const [backgroundImage, setBackgroundImage] = useState("");
+
+  useEffect(() => {
+    // Select a random category
+    // const randomCategoryIndex = Math.floor(Math.random() * images.length);
+    // const randomCategory = images[3]; //replace with randomCategoryIndex to have a random image from any category
+
+    // Select a random image from the selected category
+    const randomImageIndex = Math.floor(Math.random() * bg[0].items.length);
+    const randomImage = bg[0].items[randomImageIndex].img;
+    console.log(randomImage);
+
+    // Set the random image as the background image
+    setBackgroundImage(randomImage);
+  }, []);
+
   return (
-    <div className="App">
-      <Mainnav />
+    <div
+      className="app"
+      style={{ backgroundImage: `url('${backgroundImage}')` }}
+    >
       <BrowserRouter>
+        <Mainnav />
         <Routes>
           <Route path="/" element={<Welcome />} />
           <Route path="/form" element={<Form />} />
@@ -29,5 +49,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

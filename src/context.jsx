@@ -13,7 +13,10 @@ const AppProvider = ({ children }) => {
   const [commandWhere, setCommandWhere] = useState("");
   const [commandWhat, setCommandWhat] = useState("");
   const [commandMsg, setCommandMsg] = useState("");
+  const [position, setPosition] = useState("left");
   const [bg, setBg] = useState("");
+  const [bgOpacity, setBgOpacity] = useState(0);
+  const [textBg, setTextBg] = useState("#ffffff");
   const [image, setImage] = useState("");
   const [choice, setChoice] = useState(false);
   const [title, setTitle] = useState("");
@@ -26,7 +29,6 @@ const AppProvider = ({ children }) => {
   const [itsPoem, setItsPoem] = useState(false);
   const [poem, setPoem] = useState(false);
   const [write, setWrite] = useState(false);
-  const [edition, setEdition] = useState(false);
   const [overlay, setOverlay] = useState(0);
   const [align, setAlign] = useState("left");
   const [size, setSize] = useState(60);
@@ -79,13 +81,14 @@ const AppProvider = ({ children }) => {
   };
   // .catch((Error)=>console.log(Error))
 
-  useEffect(() => {
-    urlBg();
-  }, []);
   const urlBgHandler = () => {
     let img = document.getElementById("bgUrl");
     changeBg(img.value);
   };
+
+  useEffect(() => {
+    urlBg();
+  }, []);
   //Bg Color
   const backgroundColor = (x) => {
     setBgColor(x);
@@ -125,33 +128,11 @@ const AppProvider = ({ children }) => {
     setTab(e.target.innerText);
     setCommand(true);
     setFormOpen(false);
-    setEdition(false);
     setPoem(false);
     setWelcome(false);
     setAbout(false);
     sethelp(false);
   };
-  // const changePoem = () => {
-  //   if (composition == "help") {
-  //     setChoice(true);
-  //     setWrite(false);
-  //     setFormOpen(false);
-  //     setPoem(false);
-  //     setWelcome(false);
-  //     setAbout(false);
-  //     sethelp(false);
-  //     setCommand(false);
-  //   } else {
-  //     setWrite(true);
-  //     setChoice(false);
-  //     setFormOpen(false);
-  //     setPoem(false);
-  //     setWelcome(false);
-  //     setAbout(false);
-  //     sethelp(false);
-  //     setCommand(false);
-  //   }
-  // };
 
   //Bg Gradient
   const gradient = (a, b) => {
@@ -166,16 +147,51 @@ const AppProvider = ({ children }) => {
     setOverlay(e.target.value);
     console.log(e.target.value);
   };
+
+  // const capture = () => {
+  //   const modalBody = document.querySelector(".modal-body");
+  //   const canvas = document.querySelector("#canvas");
+  //   const captureElement = document.querySelector("#capture");
+
+  //   if (canvas) {
+  //     modalBody.removeChild(canvas);
+  //   }
+
+  //   const A4_WIDTH_PX = 2480; // Adjust based on desired DPI
+  //   const A4_HEIGHT_PX = (A4_WIDTH_PX * 297) / 210; // Calculate height based on A4 aspect ratio
+
+  //   html2canvas(captureElement, {
+  //     allowTaint: true,
+  //     useCORS: true,
+  //     width: A4_WIDTH_PX,
+  //     height: A4_HEIGHT_PX,
+  //   }).then((canvas) => {
+  //     canvas.setAttribute("id", "canvas");
+  //     modalBody.appendChild(canvas);
+  //   });
+  // };
+
+  // const download = () => {
+  //   const canvas = document.getElementById("canvas");
+  //   const a = document.createElement("a");
+  //   a.href = canvas.toDataURL("image/jpeg");
+  //   a.download = `${title}.jpg`;
+  //   a.click();
+  // };
   const capture = () => {
     let modalBody = document.querySelector(".modal-body");
     let canvas = document.querySelector("#canvas");
     let capture = document.querySelector("#capture");
+    const A4_WIDTH_PX = 2480; // Adjust based on desired DPI
+    const A4_HEIGHT_PX = (A4_WIDTH_PX * 297) / 210; // Calculate height based on A4 aspect ratio
     if (canvas) {
       modalBody.removeChild(canvas);
     }
     html2canvas(capture, {
       allowtaint: true,
       useCORS: true,
+      // width: A4_WIDTH_PX,
+      // height: A4_HEIGHT_PX,
     }).then((canvas) => {
       canvas.setAttribute("id", "canvas"); //add it the id='canvas'
       // canvas.setAttribute('width',100);
@@ -194,10 +210,9 @@ const AppProvider = ({ children }) => {
     // canvas.setAttribute('width',2480)
     let a = document.createElement("a");
     a.href = canvas.toDataURL("image/jpeg"); //The toDataURL returns a file/format file, with details on the canvas
-    a.download = `${title}.jpg`;
+    a.download = `${localStorage.getItem("title")}.jpg`;
     a.click();
   };
-
   //INTERNET EXPLORER AND EDGE METHODS... ONLY SAVES AS PNG
   // const download1=()=>{
   // 	if(window.navigator.msSaveBlob){
@@ -245,8 +260,8 @@ const AppProvider = ({ children }) => {
       value={{
         wrapperBg,
         setWrapperBg,
-        // openForm,
-        // getPoem,
+        textBg,
+        setTextBg,
         commandFxn,
         command,
         setCommand,
@@ -267,6 +282,10 @@ const AppProvider = ({ children }) => {
         write,
         choice,
         setChoice,
+        bgOpacity,
+        setBgOpacity,
+        position,
+        setPosition,
         // getChoice,
         display,
         title,
@@ -313,10 +332,6 @@ const AppProvider = ({ children }) => {
         setWeight,
         help,
         about,
-        // helpFxn,
-        // aboutFxn,
-        edition,
-        setEdition,
         lineHeight,
         setLineHeight,
         capture,

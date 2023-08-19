@@ -13,7 +13,9 @@ const Choice = () => {
     name,
     setName,
   } = useGlobalContext();
-  const filter = poems.filter((item) => item.category == category);
+  const filter = poems.filter(
+    (item) => item.category == localStorage.getItem("category")
+  );
   console.log(poems, filter);
   return (
     <div>

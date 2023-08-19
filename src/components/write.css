@@ -7,7 +7,14 @@
 
 .poem-list {
   flex: 1 1 20%;
-  /* max-width: ; */
+  width: 100;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 5px;
+}
+.poem-list > div {
+  height: 80vh;
+  overflow-y: scroll;
 }
 .display {
   flex: 1 1 80%;
@@ -20,6 +27,12 @@
   margin-bottom: 20px;
   border-radius: 5px;
   text-align: center;
+  transition: border, background 0.2s ease;
+}
+.poem-item:hover {
+  border: 1px solid rgba(255, 255, 255, 0.993);
+  background-color: rgb(0, 0, 0);
+  color: white;
 }
 .poem-item h3 {
   font-size: 20px;
@@ -32,8 +45,21 @@
 
 .items {
   background-color: #f5f5f5;
-  padding: 20px;
+  padding: 0.6rem;
   border-radius: 5px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.items textarea {
+  border: 1px solid rgb(212, 212, 212);
+}
+.items textarea:nth-child(2) {
+  flex: 1;
+}
+.items textarea:last-child {
+  margin: 0;
 }
 
 .display-title,

@@ -3,7 +3,8 @@ import { useGlobalContext } from "../context";
 import images from "../images";
 
 const LeftEditorSidebar = () => {
-  const { changeBg, urlBgHandler, urlBg, category } = useGlobalContext();
+  const { changeBg, urlBgHandler, urlBg } = useGlobalContext();
+  const category = localStorage.getItem("category");
   let filter = images.filter((img) => {
     if (category == "Amour" || category == "Love") {
       return img.category == "Love";

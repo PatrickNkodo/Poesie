@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import categories from "../categories";
 import { useGlobalContext } from "../context";
 import poems from "../poems";
 import "./write.css";
 
 const Write = () => {
-  const { title, setTitle, text, setText, name, setName, setWrapperBg } =
-    useGlobalContext();
+  const [name, setName] = useState("");
+  const { title, setTitle, text, setText, setWrapperBg } = useGlobalContext();
 
-  setWrapperBg("/Images/image (43).jpg");
+  // setWrapperBg("/Images/image (43).jpg");
 
   const filter = poems.filter(
     (item) => item.category === localStorage.getItem("category")
@@ -28,26 +28,35 @@ const Write = () => {
     setText(text);
     localStorage.setItem("text", text);
   };
+  const handleName = (name) => {
+    setName(name);
+    localStorage.setItem("name", name);
+  };
 
   useEffect(() => {
     setTitle(localStorage.getItem("title"));
     setText(localStorage.getItem("text"));
+    setName(localStorage.getItem("name"));
   }, []);
   return (
     <div className="write-container">
-      <div className="poem-list">
-        {filter[0].items.map((item, index) => (
-          <div key={index} className="poem-item">
-            <h3>{item.title}</h3>
-            <button
-              className="btn btn-primary"
-              onClick={() => choosePoemTemplate(item.title, item.text)}
-            >
-              View poem template
-            </button>
+      {localStorage.getItem("what") === "poem" && (
+        <div className="poem-list">
+          <div className="">
+            {filter[0].items.map((item, index) => (
+              <div key={index} className="poem-item">
+                <h3>{item.title}</h3>
+                <button
+                  className="btn btn-primary"
+                  onClick={() => choosePoemTemplate(item.title, item.text)}
+                >
+                  View poem template
+                </button>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </div>
+      )}
       <div className="display write">
         <div className="items">
           {localStorage.getItem("what") === "poem" && (
@@ -75,8 +84,8 @@ const Write = () => {
           <textarea
             className="form-control display-author"
             rows="1"
-            onChange={(e) => setName(e.target.value)}
-            value={localStorage.getItem("name")}
+            onChange={(e) => handleName(e.target.value)}
+            value={name}
             placeholder="Entrez votre nom ici"
             required
           >

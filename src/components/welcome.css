@@ -1,0 +1,23 @@
+.welcome {
+  text-align: justify;
+  padding: 1rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.welcome > div p,
+.welcome > div h4 {
+  color: white;
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+.welcome > div {
+  background-color: rgb(0, 0, 0, 0.2);
+  backdrop-filter: blur(2px);
+  padding: 1rem;
+}
+/* .form > div {
+  background-color: rgb(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 15px;
+  margin-top: -5rem;
+} */

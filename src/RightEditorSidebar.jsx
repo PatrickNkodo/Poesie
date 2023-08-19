@@ -19,6 +19,12 @@ const RightEditorSidebar = () => {
     color1,
     color2,
     font,
+    textBg,
+    setTextBg,
+    position,
+    setPosition,
+    bgOpacity,
+    setBgOpacity,
     setFont,
     weight,
     setWeight,
@@ -73,6 +79,40 @@ const RightEditorSidebar = () => {
           onChange={(e) => setShadow(e.target.value)}
           value={shadow}
         />
+      </div>
+      <div className="">
+        <span>Arriere de texte:</span>
+        <input
+          type="color"
+          onChange={(e) => setTextBg(e.target.value)}
+          value={textBg}
+        />
+      </div>
+      <div className="">
+        <span>Opacité d'Arrière :</span>
+        <input
+          type="range"
+          min="0"
+          max="1"
+          step="any"
+          onChange={(e) => setBgOpacity(e.target.value)}
+          value={bgOpacity}
+        />
+      </div>
+      <div className="align">
+        <span>Positioner le texte</span>
+        <br />
+        <select
+          name=""
+          id="position"
+          onChange={(e) => setPosition(e.target.value)}
+          value={position}
+        >
+          <option value="left">Gauche</option>
+          <option value="center">Centre</option>
+          <option value="right">Droite</option>
+          {/* <option value="justify">Justify</option> */}
+        </select>
       </div>
       <div className="line-height">
         <span>Espacement:</span>
