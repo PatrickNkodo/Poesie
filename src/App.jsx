@@ -39,7 +39,6 @@ function App() {
           <Route path="/" element={<Welcome />} />
           <Route path="/form" element={<Form />} />
           <Route path="/write-poem" element={<WritePoem />} />
-          <Route path="/poem-choice" element={<Choice />} />
           <Route path="/poem-editor" element={<Poem />} />
           <Route path="/help" element={<Help />} />
           <Route path="/about" element={<About />} />

@@ -2,21 +2,6 @@
   margin: 0;
 }
 
-.navbar {
-  padding: 0 1rem 0.4rem 0rem;
-  height: 8vh;
-}
-#nav {
-  justify-content: center;
-}
-.nav-item {
-  font-weight: 900;
-}
-.navbar-collapse {
-  justify-content: flex-end;
-  margin-right: 20px;
-}
-
 .bordered {
   border-bottom: 2px solid rgb(8, 112, 153) !important;
   color: rgb(8, 112, 153) !important;
@@ -45,11 +30,13 @@ body {
 .app {
   background-repeat: no-repeat;
   background-size: cover;
-  /* overflow: hidden; */
   height: calc(100vh-8vh);
+  margin-top: 8vh;
   object-fit: cover;
   aspect-ratio: 16/12;
   background-position: center;
+  max-height: 92vh;
+  width: 100%;
 }
 .about > div {
   display: grid;
@@ -244,12 +231,7 @@ form > label > span {
   color: rgb(255, 255, 255) !important;
   transition: all 0.5s ease;
   border-radius: 5px;
-  background: linear-gradient(to right, rgb(55, 145, 103), rgb(42, 176, 238));
-}
-
-.choice-fxns > li span:hover,
-.poem-fxns > li span:hover {
-  background: linear-gradient(to right, rgb(42, 176, 238), rgb(55, 145, 103));
+  /* background: linear-gradient(to right, rgb(55, 145, 103), rgb(42, 176, 238)); */
 }
 
 hr {
@@ -370,23 +352,7 @@ hr {
   .modifications div {
     font-size: 13px;
   }
-  .backgrounds {
-    width: 100%;
-    height: 15%;
-    flex-direction: row;
-    overflow-y: hidden;
-    overflow-x: scroll;
-  }
-  /* .backgrounds>.img{padding: 5px;background-color: red;} */
-  .modifications {
-    width: 100%;
-    height: 15%;
-    flex-direction: row;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    top: unset;
-    bottom: 0;
-  }
+
   .modifications > div > span {
     white-space: pre;
   }
@@ -400,29 +366,20 @@ hr {
   .modifications .gradient > div {
     display: flex;
   }
-  .poem {
-    width: 100%;
-  }
-  .poem .bg {
-    height: 60vh;
-    width: 70%;
-  }
 }
 @media only screen and (max-width: 437px) {
-  .poem-fxns li span,
-  .choice-fxns li span {
-    font-size: 10px;
-    padding: 2px !important;
-  }
   .poem-fxn1,
   .poem-fxn2 {
     margin: 0 1px 0 1px;
+  }
+  .poem-fxns {
+    transform: translateX(-60px);
   }
   .command .command-text {
     font-size: 12px;
   }
   .navbar-toggler {
-    font-size: 60%;
+    /* font-size: 60%; */
   }
   h1,
   h2,
@@ -438,9 +395,9 @@ hr {
   .navbar-brand {
     margin: 0;
   }
-  .navbar-brand img {
+  /* .navbar-brand img {
     width: 3.6rem;
-  }
+  } */
   #bgUrl {
     width: 6rem !important;
   }

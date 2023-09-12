@@ -4,10 +4,12 @@ import logo from "../logo white.png";
 import RightEditorSidebar from "../RightEditorSidebar";
 import LeftEditorSidebar from "./LeftEditorSidebar";
 import "./poem.css";
+import { useNavigate } from "react-router-dom";
 const Poem = () => {
   const [name, setName] = useState(localStorage.getItem("name"));
   const [title, setTitle] = useState(localStorage.getItem("title"));
   const [text, setText] = useState(localStorage.getItem("text"));
+  const linkTo = useNavigate();
   const {
     bg,
     textColor,
@@ -29,6 +31,7 @@ const Poem = () => {
     weight,
     download,
     shadow,
+    capture,
   } = useGlobalContext();
   const hexToRGBA = (hex, alpha) => {
     const hexValue = hex.replace("#", "");
@@ -62,7 +65,7 @@ const Poem = () => {
   };
 
   return (
-    <React.Fragment>
+    <React.Fragment className="poem-parent">
       <div className="modal-parent">
         <div className="modal fade" id="myModal">
           <div className="modal-dialog">
@@ -136,6 +139,18 @@ const Poem = () => {
           </div>
         </div>
         <RightEditorSidebar />
+      </div>
+      <div className="poem-fxns">
+        <li className="modify btn btn-primary btn-sm">
+          <span onClick={() => linkTo("/write-poem")}>Re-modifier</span>
+        </li>
+        <li
+          className="download btn btn-primary btn-sm"
+          data-bs-toggle="modal"
+          data-bs-target="#myModal"
+        >
+          <span onClick={capture}>Télécharger</span>
+        </li>
       </div>
     </React.Fragment>
   );
