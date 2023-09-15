@@ -3,6 +3,15 @@ import { useGlobalContext } from "../context";
 import logo from "../logo white.png";
 import RightEditorSidebar from "../RightEditorSidebar";
 import LeftEditorSidebar from "./LeftEditorSidebar";
+import {
+  FiArrowDownLeft,
+  FiArrowLeftCircle,
+  FiCheck,
+  FiCheckCircle,
+  FiCheckSquare,
+  FiEdit,
+  FiSave,
+} from "react-icons/fi";
 import "./poem.css";
 import { useNavigate } from "react-router-dom";
 const Poem = () => {
@@ -39,7 +48,7 @@ const Poem = () => {
     const green = parseInt(hexValue.substr(2, 2), 16);
     const blue = parseInt(hexValue.substr(4, 2), 16);
     //need to find a way to stop running this function when changing other variables
-    console.log(`rgba(${red}, ${green}, ${blue}, ${alpha})`);
+    //console.log(`rgba(${red}, ${green}, ${blue}, ${alpha})`);
     return `rgba(${red}, ${green}, ${blue}, ${alpha})`;
   };
   let style = {
@@ -65,7 +74,7 @@ const Poem = () => {
   };
 
   return (
-    <React.Fragment className="poem-parent">
+    <div className="poem-parent">
       <div className="modal-parent">
         <div className="modal fade" id="myModal">
           <div className="modal-dialog">
@@ -98,11 +107,7 @@ const Poem = () => {
       </div>
       <div className="poem">
         <LeftEditorSidebar />
-        <div
-          id="capture"
-          className="bg col-lg-10 col-md-10 col-sm-12"
-          style={{ ...style }}
-        >
+        <div id="capture" className="bg" style={{ ...style }}>
           <div className="logo">
             <img src={logo} alt="Logo" width="20%" />
           </div>
@@ -141,18 +146,24 @@ const Poem = () => {
         <RightEditorSidebar />
       </div>
       <div className="poem-fxns">
-        <li className="modify btn btn-primary btn-sm">
-          <span onClick={() => linkTo("/write-poem")}>Re-modifier</span>
+        <li
+          onClick={() => linkTo("/write-poem")}
+          className="modify btn btn-primary btn-sm"
+        >
+          <i className="fa fa-arrow-circle-left"></i>
+          <span>Re-modifier</span>
         </li>
         <li
           className="download btn btn-primary btn-sm"
           data-bs-toggle="modal"
           data-bs-target="#myModal"
+          onClick={capture}
         >
-          <span onClick={capture}>Télécharger</span>
+          <span>Télécharger</span>
+          <i className="fa fa-check-circle"></i>
         </li>
       </div>
-    </React.Fragment>
+    </div>
   );
 };
 

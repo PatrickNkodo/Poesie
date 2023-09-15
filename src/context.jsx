@@ -31,7 +31,8 @@ const AppProvider = ({ children }) => {
   const [write, setWrite] = useState(false);
   const [overlay, setOverlay] = useState(0);
   const [align, setAlign] = useState("left");
-  const [size, setSize] = useState(60);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [size, setSize] = useState(windowWidth < 300 ? 40 : 60);
   const [textColor, setTextColor] = useState("#ffffff");
   const [bgColor, setBgColor] = useState("#000000");
   const [url, setUrl] = useState("");
@@ -178,33 +179,27 @@ const AppProvider = ({ children }) => {
   //   a.download = `${title}.jpg`;
   //   a.click();
   // };
-  const capture = () => {
-    let modalBody = document.querySelector(".modal-body");
-    let canvas = document.querySelector("#canvas");
-    let capture = document.querySelector("#capture");
-    const A4_WIDTH_PX = 2480; // Adjust based on desired DPI
-    const A4_HEIGHT_PX = (A4_WIDTH_PX * 297) / 210; // Calculate height based on A4 aspect ratio
-    if (canvas) {
-      modalBody.removeChild(canvas);
-    }
-    html2canvas(capture, {
-      allowtaint: true,
-      useCORS: true,
-      // width: A4_WIDTH_PX,
-      // height: A4_HEIGHT_PX,
-    }).then((canvas) => {
-      canvas.setAttribute("id", "canvas"); //add it the id='canvas'
-      // canvas.setAttribute('width',100);
-      // canvas.setAttribute('height', 'auto');
-      // removeAttributes(canvas,'height','width')
-      modalBody.appendChild(canvas);
-    });
-  };
+
   //Function to remove attributes
   const removeAttributes = (element, ...attr) => {
     attr.forEach((attr) => element.removeAttribute(attr));
   };
 
+  const capture = () => {
+    let modalBody = document.querySelector(".modal-body");
+    let canvas = document.querySelector("#canvas");
+    let capture = document.querySelector("#capture");
+    if (canvas) {
+      modalBody.innerHTML = "";
+    }
+    html2canvas(capture, {
+      allowtaint: true,
+      useCORS: true,
+    }).then((canvas) => {
+      canvas.setAttribute("id", "canvas"); //add it the id='canvas'
+      modalBody.appendChild(canvas);
+    });
+  };
   const download = () => {
     let canvas = document.getElementById("canvas");
     // canvas.setAttribute('width',2480)
@@ -212,6 +207,21 @@ const AppProvider = ({ children }) => {
     a.href = canvas.toDataURL("image/jpeg"); //The toDataURL returns a file/format file, with details on the canvas
     a.download = `${localStorage.getItem("title")}.jpg`;
     a.click();
+  };
+
+  // Helper function to convert data URL to Blob
+  const dataURLToBlob = (dataUrl) => {
+    let arr = dataUrl.split(",");
+    let mime = arr[0].match(/:(.*?);/)[1];
+    let bstr = atob(arr[1]);
+    let n = bstr.length;
+    let u8arr = new Uint8Array(n);
+
+    while (n--) {
+      u8arr[n] = bstr.charCodeAt(n);
+    }
+
+    return new Blob([u8arr], { type: mime });
   };
   //INTERNET EXPLORER AND EDGE METHODS... ONLY SAVES AS PNG
   // const download1=()=>{
@@ -255,6 +265,18 @@ const AppProvider = ({ children }) => {
     console.log(a.href);
     return;
   };
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setWindowWidth(window.innerWidth);
+  //     console.log(windowWidth);
+  //   };
+
+  //   window.addEventListener("resize", handleResize);
+
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // });
   return (
     <AppContext.Provider
       value={{

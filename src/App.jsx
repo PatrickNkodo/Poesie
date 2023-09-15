@@ -22,7 +22,7 @@ function App() {
     // Select a random image from the selected category
     const randomImageIndex = Math.floor(Math.random() * bg[0].items.length);
     const randomImage = bg[0].items[randomImageIndex].img;
-    console.log(randomImage);
+    // console.log(randomImage);
 
     // Set the random image as the background image
     setBackgroundImage(randomImage);

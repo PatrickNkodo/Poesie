@@ -33,7 +33,6 @@ const RightEditorSidebar = () => {
     shadow,
     setShadow,
   } = useGlobalContext();
-
   return (
     <div className="modifications">
       <div className="font-size">

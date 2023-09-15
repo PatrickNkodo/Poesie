@@ -30,7 +30,7 @@ body {
 .app {
   background-repeat: no-repeat;
   background-size: cover;
-  height: calc(100vh-8vh);
+  height: calc(100vh - 8vh);
   margin-top: 8vh;
   object-fit: cover;
   aspect-ratio: 16/12;
@@ -371,9 +371,6 @@ hr {
   .poem-fxn1,
   .poem-fxn2 {
     margin: 0 1px 0 1px;
-  }
-  .poem-fxns {
-    transform: translateX(-60px);
   }
   .command .command-text {
     font-size: 12px;
