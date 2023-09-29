@@ -349,9 +349,6 @@ hr {
     font-size: 13px;
     padding: 5px !important;
   }
-  .modifications div {
-    font-size: 13px;
-  }
 
   .modifications > div > span {
     white-space: pre;

@@ -1,0 +1,5 @@
+.textSettings div[class] {
+  border: 2px double;
+  padding: 0.3rem;
+  /* background-color: white; */
+}

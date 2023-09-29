@@ -1,8 +1,25 @@
 import React from "react";
-
+import { useGlobalContext } from "../context";
+import "./bgSettings.css";
 const BgSettings = () => {
+  const {
+    overlay,
+    setOverlay,
+    setTextBg,
+    textBg,
+    setBgOpacity,
+    bgOpacity,
+    backgroundColor,
+    setDirection,
+    direction,
+    gradient,
+    color1,
+    color2,
+    bgColor,
+  } = useGlobalContext();
   return (
-    <React.Fragment>
+    <div className="bgSettings">
+      <h6>Modifications d'arrière-plan</h6>
       <div className="overlay">
         <span>Exposure:</span>
         <input
@@ -15,16 +32,14 @@ const BgSettings = () => {
         />
       </div>
       <hr />
-      <div className="">
+      <div className="text-Bg">
         <span>Arriere de texte:</span>
         <input
           type="color"
           onChange={(e) => setTextBg(e.target.value)}
           value={textBg}
         />
-      </div>
-      <hr />
-      <div className="">
+
         <span>Opacité d'Arrière :</span>
         <input
           type="range"
@@ -48,38 +63,34 @@ const BgSettings = () => {
       <hr />
       <div className="gradient">
         <span>Dégradé</span>
-        <div className="">
-          <label htmlFor="">Couleur1 </label>
-          <input
-            type="color"
-            className="form-control"
-            onChange={(e) => gradient(e.target.value, color2)}
-            value={color1}
-          />
-          <label htmlFor="">Couleur2 </label>
-          <input
-            type="color"
-            className="form-control"
-            onChange={(e) => gradient(color1, e.target.value)}
-            value={color2}
-          />
-          <div className="">
-            <span>Direction </span>
-            <select
-              name=""
-              id="direction"
-              onChange={(e) => setDirection(e.target.value)}
-              value={direction}
-            >
-              <option value="left">Droite-Gauche</option>
-              <option value="right">Gauche-Droite</option>
-              <option value="top">Bas-Haut</option>
-              <option value="bottom">Haut-Bas</option>
-            </select>
-          </div>
-        </div>
+        <label htmlFor="">Couleur1 </label>
+        <input
+          type="color"
+          className="form-control"
+          onChange={(e) => gradient(e.target.value, color2)}
+          value={color1}
+        />
+        <label htmlFor="">Couleur2 </label>
+        <input
+          type="color"
+          className="form-control"
+          onChange={(e) => gradient(color1, e.target.value)}
+          value={color2}
+        />
+        <span>Direction </span>
+        <select
+          name=""
+          id="direction"
+          onChange={(e) => setDirection(e.target.value)}
+          value={direction}
+        >
+          <option value="left">Droite-Gauche</option>
+          <option value="right">Gauche-Droite</option>
+          <option value="top">Bas-Haut</option>
+          <option value="bottom">Haut-Bas</option>
+        </select>
       </div>
-    </React.Fragment>
+    </div>
   );
 };
 

@@ -16,7 +16,7 @@ const AppProvider = ({ children }) => {
   const [position, setPosition] = useState("left");
   const [bg, setBg] = useState("");
   const [bgOpacity, setBgOpacity] = useState(0);
-  const [textBg, setTextBg] = useState("#ffffff");
+  const [textBg, setTextBg] = useState("#");
   const [image, setImage] = useState("");
   const [choice, setChoice] = useState(false);
   const [title, setTitle] = useState("");

@@ -1,15 +1,33 @@
 import React from "react";
 import { useGlobalContext } from "../context";
-
+import "./textSettings.css";
 const TextSettings = () => {
-  const { size, setSize } = useGlobalContext();
+  const {
+    size,
+    setSize,
+    setFont,
+    font,
+    setTextColor,
+    textColor,
+    setWeight,
+    weight,
+    setShadow,
+    shadow,
+    setLineHeight,
+    lineHeight,
+    setAlign,
+    align,
+    setPosition,
+    position,
+  } = useGlobalContext();
   return (
-    <React.Fragment>
+    <div className="textSettings">
+      <h6>Modifications de texte</h6>
       <div className="font">
         <span>Police</span>
         <select
           name=""
-          id="aligh"
+          id="align"
           onChange={(e) => setFont(e.target.value)}
           value={font}
         >
@@ -26,6 +44,7 @@ const TextSettings = () => {
           {/* <option value="justify">Justify</option> */}
         </select>
       </div>
+      <hr />
       <div className="font-size">
         <span>Taille de police:</span>
         <input
@@ -37,6 +56,7 @@ const TextSettings = () => {
           value={size}
         />
       </div>
+      <hr />
       <div className="colors">
         <span>Couleur de texte</span>
         <input
@@ -46,6 +66,7 @@ const TextSettings = () => {
           value={textColor}
         />
       </div>
+      <hr />
       <div className="bold">
         <span>Gras:</span>
         <input
@@ -57,6 +78,7 @@ const TextSettings = () => {
           value={weight}
         />
       </div>
+      <hr />
       <div className="shadow">
         <span>Ombre de texte:</span>
         <input
@@ -68,6 +90,7 @@ const TextSettings = () => {
           value={shadow}
         />
       </div>
+      <hr />
       <div className="line-height">
         <span>Espacement:</span>
         <input
@@ -79,6 +102,7 @@ const TextSettings = () => {
           value={lineHeight}
         />
       </div>
+      <hr />
       <div className="align">
         <span>Aligner</span>
         <br />
@@ -94,8 +118,9 @@ const TextSettings = () => {
           {/* <option value="justify">Justify</option> */}
         </select>
       </div>
+      <hr />
       <div className="align">
-        <span>Positioner le texte</span>
+        <span>Positionner</span>
         <br />
         <select
           name=""
@@ -109,7 +134,7 @@ const TextSettings = () => {
           {/* <option value="justify">Justify</option> */}
         </select>
       </div>
-    </React.Fragment>
+    </div>
   );
 };
 export default TextSettings;
