@@ -153,7 +153,7 @@ hr {
 input[type="range"] {
   appearance: none;
   height: 7px;
-  width: 100%;
+  /* width: 100%; */
   border-radius: 10px;
   background: black;
 }
@@ -170,7 +170,7 @@ input[type="color"] {
 select {
   border-radius: 3px;
   padding: 2px;
-  width: 100%;
+  /* width: 100%; */
   outline: 2px solid white;
   border-color: rgb(0, 0, 0);
 }
@@ -186,6 +186,10 @@ select {
 .modifications .tabs {
   display: flex;
   gap: 0.6rem;
+}
+.tabs div {
+  font-size: smaller;
+  padding: 0.2rem;
 }
 .modifications .menu {
   box-sizing: content-box;
@@ -223,7 +227,11 @@ select {
   max-width: 100%;
   /* max-height: 30%; */
 }
-
+div:has(> button.active) {
+  padding: 0.6rem;
+  background-color: white;
+  color: black;
+}
 @media screen and (max-width: 950px) {
   .poem .bg {
     width: 40%;
@@ -247,11 +255,17 @@ select {
     width: 55%;
     max-width: 55%;
   }
+  .backgrounds {
+    max-width: 23%;
+  }
 }
 @media screen and (max-width: 630px) {
   .poem .bg {
-    width: 60%;
-    max-width: 60%;
+    width: 55%;
+    max-width: 55%;
+  }
+  .modifications {
+    max-width: 23%;
   }
 }
 @media screen and (max-width: 576px) {
@@ -266,6 +280,7 @@ select {
   /* .backgrounds>.img{padding: 5px;background-color: red;} */
   .modifications {
     max-width: 100vh;
+    background-color: #dee2e6;
     height: 15vh;
     max-height: 15vh;
     bottom: 0;
@@ -278,7 +293,8 @@ select {
   }
   .modifications .textSettings,
   .modifications .bgSettings {
-    overflow-y: hidden;
+    max-height: 15vh;
+    overflow-y: scroll;
     overflow-x: scroll;
     display: flex;
     flex-direction: row;
@@ -294,7 +310,60 @@ select {
     margin-right: 0.4rem;
     background: #212529;
   }
+  .textSettings div {
+    width: max-content;
+    display: flex;
+    align-items: center;
+  }
+  .textSettings div button,
+  .bgSettings div button {
+    text-wrap: nowrap;
+  }
+  .option-buttons {
+    padding: 0.1rem;
+  }
+  .textSettings .option-buttons {
+    margin-bottom: 0.4rem;
+  }
+  .textSettings button ~ input {
+    z-index: 1000;
+    position: relative;
+  }
+  .overlay,
+  .bgcolors,
+  .textSettings div {
+    flex-direction: column;
+    justify-content: baseline;
+  }
+  .gradient-colors div,
+  .gradient-direction,
+  .text-bg div {
+    flex-direction: column;
+    margin: 0.1rem;
+  }
+  .textSettings div input,
+  .bgSettings div input {
+    vertical-align: middle;
+  }
+  .bgSettings .gradient div {
+    display: flex;
+  }
+  .bgSettings .text-bg > div {
+    display: flex;
+    gap: 0.5rem;
+  }
 
+  .bgSettings .text-bg > div > div {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  input[type="range"] {
+    display: inline-block;
+  }
+  hr {
+    background: white;
+    width: 30%;
+  }
   .poem {
     flex-direction: column;
     flex: 1;
@@ -324,7 +393,7 @@ select {
     /* width: 21cm; */
     height: 29.7cm;
     max-height: 60vh;
-    width: 55%;
+    width: 64%;
     max-width: 80%;
   }
 }
@@ -335,8 +404,8 @@ select {
 }
 @media screen and (max-width: 418px) {
   .poem .bg {
-    width: 21;
-    max-width: 70%;
+    width: 80%;
+    max-width: 90%;
     height: 29cm;
   }
 }

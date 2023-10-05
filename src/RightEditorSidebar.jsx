@@ -7,7 +7,7 @@ const RightEditorSidebar = () => {
   const [menu, setMenu] = useState("bg");
   return (
     <div className="modifications">
-      <h5>Options</h5>
+      {/* <h5>Options</h5> */}
       <div className="tabs">
         {" "}
         <div
@@ -16,7 +16,7 @@ const RightEditorSidebar = () => {
           }`}
           onClick={() => setMenu("text")}
         >
-          Texte
+          Reglages Texte
         </div>
         <div
           className={`btn btn-outline-dark btn-sm ${
@@ -24,7 +24,7 @@ const RightEditorSidebar = () => {
           }`}
           onClick={() => setMenu("bg")}
         >
-          Arriere-plan
+          Reglages Arriere-plan
         </div>
       </div>
       <div className="menu">

@@ -1,5 +1,10 @@
-.textSettings div[class] {
+.textSettings div.border {
   border: 2px double;
   padding: 0.3rem;
   /* background-color: white; */
+}
+@media screen and (max-width: 576px) {
+  .textBg-elements {
+    flex-direction: row !important;
+  }
 }

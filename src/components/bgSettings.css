@@ -1,8 +1,11 @@
-.bgSettings div[class] {
+.bgSettings div.border {
   border: 2px double;
   padding: 0.3rem;
   /* background-color: white; */
 }
 .bgSettings .gradient > span {
   display: block;
+}
+.gradient + div div:nth-child(2) {
+  color: red;
 }
