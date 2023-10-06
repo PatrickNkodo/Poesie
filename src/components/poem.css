@@ -16,6 +16,9 @@
 .poem-fxns .modify.btn {
   /* padding: 0.4rem !important; */
 }
+#bgUrl {
+  width: 9rem !important;
+}
 .poem {
   background-color: rgb(207, 207, 207);
   align-self: center;
@@ -289,6 +292,11 @@ div:has(> button.active) {
   }
   .modifications {
     max-width: 23%;
+  }
+  #bgUrl {
+    font-size: x-small;
+    width: 7rem !important;
+    padding: 0.4rem;
   }
 }
 @media screen and (max-width: 576px) {

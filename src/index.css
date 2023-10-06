@@ -157,9 +157,6 @@ form > label > span {
 .bgUrlParent {
   text-align: center;
 }
-#bgUrl {
-  width: 10rem !important;
-}
 .choice .display {
   display: flex;
   flex-direction: column;
@@ -344,11 +341,6 @@ hr {
   }
   .poem .text {
     margin-top: 2rem;
-  }
-  .poem-fxns li span,
-  .choice-fxns li span {
-    font-size: 13px;
-    padding: 5px !important;
   }
 
   .modifications > div > span {

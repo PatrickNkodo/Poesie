@@ -53,9 +53,9 @@ const Write = () => {
                 <div key={index} className=" poem-item">
                   <h3
                     className={`${
-                      item.length >= 10
+                      item.title.length >= 10
                         ? "longTitle"
-                        : item.length >= 12
+                        : item.title.length >= 12
                         ? "xLongTitle"
                         : null
                     }`}
