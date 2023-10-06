@@ -866,6 +866,49 @@ Et demeureras dans l’histoire du désert.`
       // }, 
     ]
   },
+  {
+    category: 'Sad',
+    items: [
+      {
+        id: 1,
+        title: 'Lonely',
+        text:
+          `It’s so hard for me to cry alone,
+Without getting the least soft word close to me.
+It’s so hard to carry heavy pains in my heart,
+Because no one is there to listen to me.
+All the best I could do in my life is dropping,
+Because I’m feeling lonely.
+
+I get neither a sound of birds nor any other animal trying to visit me,
+Nor friends who want to know if I’m fine.
+My talents are disappearing of my body,
+Due to lack of that desire to continue with life.
+All I try to give a smile to others,
+No one to tell me ‘’wow continue’’.
+That’s why I’m feeling lonely.
+
+All my important life events where I need to be happy are sad,
+Because no one’s there to wish me the best.
+It’s true that life is a single issue where progress shouldn’t depend on others,
+But success every day without encouragements is of no value to me.
+This situation is worsened during moments of sadness,
+Where there’s no one to wipe my tears and tell me ‘’all will be fine soon’’.
+
+I’m just ruminating my pains and crying alone.
+And whether my tears turn to blood or not,
+No one will be available to solace me.
+All I know,
+It’s that I’m lonely.`
+      },
+      // {
+      //   id: 2,
+      //   title: '',
+      //   text:
+      //     ``
+      // },
+    ]
+  },
   //   {
   //     category:'',
   //     items:[

@@ -32,7 +32,7 @@ const AppProvider = ({ children }) => {
   const [overlay, setOverlay] = useState(0);
   const [align, setAlign] = useState("left");
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [size, setSize] = useState(windowWidth < 300 ? 40 : 60);
+  const [size, setSize] = useState(windowWidth < 576 ? 40 : 60);
   const [textColor, setTextColor] = useState("#ffffff");
   const [bgColor, setBgColor] = useState("#000000");
   const [url, setUrl] = useState("");

@@ -42,6 +42,20 @@ const TextSettings = () => {
                 onChange={(e) => setFont(e.target.value)}
                 value={font}
               >
+                <option value="Allura">Allura</option>
+                <option value="Barlow">Barlow</option>
+                <option value="Condiment">Condiment</option>
+                <option value="Dancing Script">Dancing Script</option>
+                <option value="M PLUS Rounded 1c">M PLUS Rounded 1c</option>
+                <option value="Montserrat">Montserrat</option>
+                <option value="Montserrat Alternates">
+                  Montserrat Alternates
+                </option>
+                <option value="Open Sans">Open Sans</option>
+                <option value="Oswald">Oswald</option>
+                <option value="Playfair Display">Playfair Display</option>
+                <option value="Roboto">Roboto</option>
+                <option value="Young Serif">Young Serif</option>
                 <option value="Arial">Arial</option>
                 <option value="Cambria">Cambria</option>
                 <option value="Cursive">Cursive</option>
@@ -51,7 +65,7 @@ const TextSettings = () => {
                 <option value="monospace">Monospace</option>
                 <option value="Times New Roman">Times New Roman</option>
                 <option value="Trebuchet Ms">Trebuchet Ms</option>
-                <option value="verdana">Verdana</option>
+                <option value="Verdana">Verdana</option>
               </select>
             </div>
             <div className="font-size">
