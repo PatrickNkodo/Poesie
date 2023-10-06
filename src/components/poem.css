@@ -232,6 +232,27 @@ div:has(> button.active) {
   background-color: white;
   color: black;
 }
+.form-control {
+  box-shadow: none !important;
+  outline: none;
+}
+.modifications .form-control {
+  background-color: #e9ecef !important;
+}
+.modifications .form-control {
+  padding: 0.1rem;
+  outline: none;
+  box-shadow: none;
+  border: 1px solid;
+  text-align: center;
+}
+.modifications .form-control:focus {
+  outline: none;
+  box-shadow: none;
+}
+.form-control option:active {
+  background-color: #0d6efd !important; /* Replace with your desired background color */
+}
 @media screen and (max-width: 950px) {
   .poem .bg {
     width: 40%;
@@ -249,6 +270,8 @@ div:has(> button.active) {
     width: 50%;
     max-width: 50%;
   }
+}
+@media screen and (max-width: 640px) {
 }
 @media screen and (max-width: 692px) {
   .poem .bg {
@@ -345,9 +368,11 @@ div:has(> button.active) {
   .bgSettings div input {
     vertical-align: middle;
   }
-  .bgSettings .gradient div {
+  .bgSettings .gradient div,
+  .font-elements {
     display: flex;
   }
+
   .bgSettings .text-bg > div {
     display: flex;
     gap: 0.5rem;
@@ -376,7 +401,7 @@ div:has(> button.active) {
     top: -0.2rem;
     left: 52%;
     transform: translateX(-40px);
-    z-index: 100;
+    z-index: 10001;
   }
   .poem-fxns li.download i {
     margin: 0;

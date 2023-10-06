@@ -40,6 +40,9 @@ const Write = () => {
     setText(localStorage.getItem("text"));
     setName(localStorage.getItem("name"));
   }, []);
+
+  const itemLength = filter[0]?.items.length;
+
   return (
     <div className="">
       <div className="write-container">
@@ -47,8 +50,18 @@ const Write = () => {
           <div className="poem-list">
             <div className="">
               {filter[0].items.map((item, index) => (
-                <div key={index} className="poem-item">
-                  <h3>{item.title}</h3>
+                <div key={index} className=" poem-item">
+                  <h3
+                    className={`${
+                      item.length >= 10
+                        ? "longTitle"
+                        : item.length >= 12
+                        ? "xLongTitle"
+                        : null
+                    }`}
+                  >
+                    {item.title}
+                  </h3>
                   <button
                     className="btn btn-primary"
                     onClick={() => choosePoemTemplate(item.title, item.text)}
@@ -60,7 +73,11 @@ const Write = () => {
             </div>
           </div>
         )}
-        <div className="display write">
+        <div
+          className={`display write ${
+            itemLength >= 12 ? "x-small" : itemLength >= 8 ? "smaller" : ""
+          }`}
+        >
           <div className="items">
             {localStorage.getItem("what") === "poem" && (
               <textarea

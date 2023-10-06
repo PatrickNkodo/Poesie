@@ -33,34 +33,39 @@ const TextSettings = () => {
     switch (option) {
       case "font":
         return (
-          <select
-            name=""
-            id="align"
-            onChange={(e) => setFont(e.target.value)}
-            value={font}
-          >
-            <option value="Arial">Arial</option>
-            <option value="Cambria">Cambria</option>
-            <option value="Cursive">Cursive</option>
-            <option value="Fantasy">Fantasy</option>
-            <option value="Georgia">Georgia</option>
-            <option value="Impact">Impact</option>
-            <option value="monospace">Monospace</option>
-            <option value="Times New Roman">Times New Roman</option>
-            <option value="Trebuchet Ms">Trebuchet Ms</option>
-            <option value="verdana">Verdana</option>
-          </select>
-        );
-      case "size":
-        return (
-          <input
-            type="range"
-            min="60"
-            max="300"
-            step="any"
-            onChange={(e) => setSize(e.target.value)}
-            value={size}
-          />
+          <div className="font-elements">
+            <div className="font-name">
+              <span>Police</span>
+              <select
+                name=""
+                id="align"
+                onChange={(e) => setFont(e.target.value)}
+                value={font}
+              >
+                <option value="Arial">Arial</option>
+                <option value="Cambria">Cambria</option>
+                <option value="Cursive">Cursive</option>
+                <option value="Fantasy">Fantasy</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Impact">Impact</option>
+                <option value="monospace">Monospace</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Trebuchet Ms">Trebuchet Ms</option>
+                <option value="verdana">Verdana</option>
+              </select>
+            </div>
+            <div className="font-size">
+              <span>Taille de police</span>
+              <input
+                type="range"
+                min="60"
+                max="300"
+                step="any"
+                onChange={(e) => setSize(e.target.value)}
+                value={size}
+              />
+            </div>
+          </div>
         );
       case "textColor":
         return (
@@ -107,7 +112,7 @@ const TextSettings = () => {
       case "align":
         return (
           <select
-            className="align"
+            className="align form-control"
             onChange={(e) => setAlign(e.target.value)}
             value={align}
           >
@@ -120,7 +125,7 @@ const TextSettings = () => {
         return (
           <select
             name=""
-            className="position"
+            className="position form-control"
             onChange={(e) => setPosition(e.target.value)}
             value={position}
           >
@@ -145,22 +150,11 @@ const TextSettings = () => {
             selectedOption === "font" ? "active" : ""
           }`}
         >
-          Modifier police
+          Modifier la police
         </button>
         {selectedOption === "font" && renderInput("font")}
       </div>
-      <hr />
-      <div className="font-size border">
-        <button
-          onClick={() => handleOptionClick("size")}
-          className={`btn btn-dark btn-sm option-buttons ${
-            selectedOption === "size" ? "active" : ""
-          }`}
-        >
-          Modifier taille de police
-        </button>
-        {selectedOption === "size" && renderInput("size")}
-      </div>
+      {/* <hr /> */}
       <hr />
       <div className="colors border">
         <button
@@ -181,7 +175,7 @@ const TextSettings = () => {
             selectedOption === "weight" ? "active" : ""
           }`}
         >
-          Modifier épaisseur de police
+          Modifier l'épaisseur (Gras)
         </button>
         {selectedOption === "weight" && renderInput("weight")}
       </div>

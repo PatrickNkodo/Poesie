@@ -1,10 +1,21 @@
 .textSettings div.border {
   border: 2px double;
   padding: 0.3rem;
+  margin: auto;
   /* background-color: white; */
+}
+.font-elements div {
+  display: flex;
+  flex-direction: column;
+  margin: 0.1rem;
 }
 @media screen and (max-width: 576px) {
   .textBg-elements {
     flex-direction: row !important;
+  }
+  .font-elements {
+    display: flex;
+    flex-direction: row !important;
+    column-gap: 0.4rem !important;
   }
 }

@@ -1,10 +1,10 @@
 .navbar {
-  padding: 0 1rem 0.4rem 0rem;
+  padding: 0 1.2rem 0.4rem 0rem;
   height: 8vh;
   position: fixed;
   top: 0;
-  width: 100%;
-  z-index: 100;
+  width: 105.2%;
+  z-index: 1000;
 }
 #nav {
   justify-content: center;

@@ -1,6 +1,7 @@
 .bgSettings div.border {
   border: 2px double;
   padding: 0.3rem;
+  margin: auto;
   /* background-color: white; */
 }
 .bgSettings .gradient > span {
