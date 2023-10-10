@@ -15,7 +15,13 @@ function RootComponent() {
 			setIsLoading(false);
 		};
 
-		window.addEventListener('load', handleLoad);
+		// Check if the document has already loaded
+		if (document.readyState === 'complete') {
+			handleLoad();
+		} else {
+			// Add the event listener to handle the load event
+			window.addEventListener('load', handleLoad);
+		}
 
 		return () => {
 			window.removeEventListener('load', handleLoad);

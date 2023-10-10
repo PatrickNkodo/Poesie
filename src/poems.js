@@ -799,6 +799,32 @@ I thank GOD for giving you an angelic heart full of elegant extracts.
 Without forgetting to pray him to continue protecting you from all hellish spirits,
 To guide and assist you in all positive projects you’ll undertake.`,
       },
+      {
+        id: 2,
+        title: 'Happy Birthday!',
+        text:
+          `On this special day, let's celebrate your birth,
+A day filled with joy and endless mirth.
+Another year older, another chapter begun,
+May your journey be bright, filled with laughter and fun.
+
+With each passing year, you shine even more,
+Spreading love and kindness, right to the core.
+May your dreams take flight, reaching new heights,
+Guided by courage, and your inner lights.
+
+As you blow out the candles, make a wish so true,
+Know that you're cherished, and loved through and through.
+May your heart be filled with love, peace, and delight,
+And may your birthday bring you pure delight.
+
+Happy birthday to you, a wonderful soul,
+May your days be blessed, and your heart be whole.
+Celebrate this day, surrounded by loved ones dear,
+Sending you warm wishes for a fantastic year!
+
+Happy Birthday! 🎉🎂`
+      },
       //       {
       //           id:1,
       //           title:'',

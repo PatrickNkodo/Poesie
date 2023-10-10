@@ -9,7 +9,8 @@ const Form = () => {
   const [category, setCategory] = useState("");
   const [composition, setComposition] = useState("help");
   const linkTo = useNavigate();
-  const sumbitForm = () => {
+  const sumbitForm = (e) => {
+    e.preventDefault();
     if (!(name && category && composition && what)) {
       alert("Veillez remplir tous les champs s'il vous plaît");
       return;
@@ -25,10 +26,26 @@ const Form = () => {
     linkTo("/write-poem");
   };
   useEffect(() => {
-    setName(localStorage.getItem("name"));
-    setWhat(localStorage.getItem("what"));
-    setCategory(localStorage.getItem("category"));
-    setComposition(localStorage.getItem("composition"));
+    const nameFromLocalStorage = localStorage.getItem("name");
+    const whatFromLocalStorage = localStorage.getItem("what");
+    const categoryFromLocalStorage = localStorage.getItem("category");
+    const compositionFromLocalStorage = localStorage.getItem("composition");
+
+    if (nameFromLocalStorage) {
+      setName(nameFromLocalStorage);
+    }
+
+    if (whatFromLocalStorage) {
+      setWhat(whatFromLocalStorage);
+    }
+
+    if (categoryFromLocalStorage) {
+      setCategory(categoryFromLocalStorage);
+    }
+
+    if (compositionFromLocalStorage) {
+      setComposition(compositionFromLocalStorage);
+    }
   }, []);
   return (
     <div className="form">
@@ -46,7 +63,6 @@ const Form = () => {
             placeholder="Entrez votre nom"
             onChange={(e) => setName(e.target.value)}
             value={name}
-            required
           />
 
           <div className="form-group">
@@ -58,7 +74,6 @@ const Form = () => {
               className="form-control"
               onChange={(e) => setWhat(e.target.value)}
               value={what}
-              required
             >
               <option value="">Veillez faire un choix</option>
               <option value="poem">Poème</option>
@@ -76,7 +91,6 @@ const Form = () => {
                 placeholder="Choose"
                 onChange={(e) => setCategory(e.target.value)}
                 value={category}
-                required
               >
                 <option value="">Veillez faire un choix...</option>
                 {categories.map((x, i) => {
@@ -113,7 +127,6 @@ const Form = () => {
                 placeholder="Choose"
                 onChange={(e) => setCategory(e.target.value)}
                 value={category}
-                required
               >
                 <option value="">Veillez faire un choix...</option>
                 {categories.map((x, i) => {
