@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "Playfair";
+  src: url("../public/PlayfairDisplay-VariableFont_wght.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../public/Poppins-SemiBold.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Ysabeau";
+  src: url("../public/YsabeauSC-VariableFont_wght.ttf");
+  font-weight: 500;
+}
 * {
   margin: 0;
 }
@@ -27,6 +42,14 @@ body {
   box-sizing: border-box;
   font-size: 20px;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "playfair";
+}
 .app {
   background-repeat: no-repeat;
   background-size: cover;
@@ -39,49 +62,7 @@ body {
   width: 100%;
   overflow-y: scroll;
 }
-.about > div {
-  display: grid;
-  grid: auto auto/47% 47%;
-  grid-gap: 5px 30px;
-  justify-content: center;
-}
-.part3 {
-  grid-area: 2/1 / span 1 / span 2;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.socials {
-  color: black;
-}
-.socials div {
-  display: flex;
-  justify-content: space-around;
-}
-.part2 .socials {
-  background-color: white;
-  padding: 10px;
-  border-radius: 5px;
-}
-.part2 .fab {
-  font-size: 160%;
-  /* background-color: blue; */
-  color: white;
-  width: fit-content;
-}
-.part2 .fa-whatsapp {
-  color: green;
-  border-radius: 5px;
-}
-.part2 .fa-facebook {
-  color: blue;
-  border-radius: 5px;
-}
-.part2 .fa-linkedin {
-  color: blue;
-  border-radius: 5px;
-  padding: 0;
-}
+
 .help,
 .about {
   overflow-y: scroll;
@@ -235,6 +216,14 @@ form > label > span {
 hr {
   border: 2px solid rgb(0, 0, 0);
   width: 100%;
+}
+.command {
+  height: 92vh;
+  background-color: white;
+  width: 80%;
+  display: flex;
+  margin: auto;
+  overflow-y: auto;
 }
 .command textarea {
   white-space: normal;

@@ -14,7 +14,7 @@ const BgSettings = () => {
     backgroundColor,
     setDirection,
     direction,
-    setGradient,
+    gradient,
     color1,
     color2,
   } = useGlobalContext();
@@ -95,7 +95,7 @@ const BgSettings = () => {
         {activeButton === "backgroundColor" && (
           <input
             type="color"
-            onChange={(e) => setBackgroundColor(e.target.value)}
+            onChange={(e) => backgroundColor(e.target.value)}
             value={backgroundColor}
           />
         )}
@@ -118,7 +118,7 @@ const BgSettings = () => {
                 <input
                   type="color"
                   className="form-control"
-                  onChange={(e) => setGradient(e.target.value, color2)}
+                  onChange={(e) => gradient(e.target.value, color2)}
                   value={color1}
                 />
               </div>
@@ -127,7 +127,7 @@ const BgSettings = () => {
                 <input
                   type="color"
                   className="form-control"
-                  onChange={(e) => setGradient(color1, e.target.value)}
+                  onChange={(e) => gradient(color1, e.target.value)}
                   value={color2}
                 />
               </div>

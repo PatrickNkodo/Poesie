@@ -62,6 +62,85 @@ Ma vie est belle depuis toujours auprès de vous,
 Je n’ai jamais manqué du nécessaire.
 Merci d’être toujours là pour me guider, me protéger,
 Je vous aime tellement.`,
+      },
+      {
+        "id": 3,
+        "title": "Éclatante Aurore",
+        "text": "Éclatante Aurore\n\nNouvelle année qui se déploie\nDans les cieux comme une promesse\nDe bonheur et de joie\n\nÉveil des espoirs les plus fous\nLueur d'amour dans notre existence\nQue cette année soit le début\nD'une belle et longue romance\n\nLes jours à venir sont vierges\nComme une toile à peindre ensemble\nQue nos rêves deviennent réalité\nDans l'union qui nous assemble\n\nQue chaque instant soit précieux\nQue notre amour grandisse en intensité\nBonne année, mon cher amour\nVers une éternelle félicité"
+      },
+      {
+        "id": 4,
+        "title": "Chant de l'Espérance",
+        "text": "Chant de l'Espérance\n\nMélodie douce et vibrante\nDans nos cœurs elle résonne\nEn cette année naissante\n\nLa vie nous offre une symphonie\nAccord parfait de nos âmes\nQue cette année soit empreinte\nDe bonheur et de flammes\n\nDansons sur la mélodie du temps\nVers un futur rempli d'éclat\nQue notre amour soit notre guide\nDans les pas d'une valse à deux\n\nQue les jours soient doux et sereins\nQue nos rêves prennent leur envol\nBonne année, mon tendre amour\nÀ jamais liés, corps et âme, en vol"
+      },
+      {
+        "id": 5,
+        "title": "Lueur d'Espoir",
+        "text": "Lueur d'Espoir\n\nDans le ciel qui s'éclaire\nNouvelle année s'annonce\nPorteuse de lumière\n\nÉtoiles scintillantes dans la nuit\nGuides célestes de notre destin\nQue cette année soit bénie\nDe moments précieux sans fin\n\nLe passé est derrière nous\nRegardons vers l'avenir avec foi\nQue notre amour grandisse toujours\nDans cette nouvelle année qui commence en émoi\n\nQue chaque jour soit une aventure\nQue nos cœurs ne connaissent que bonheur\nBonne année, mon amour éternel\nUnis pour toujours dans notre ardeur"
+      },
+      {
+        "id": 6,
+        "title": "Aube de Promesses",
+        "text": "Aube de Promesses\n\nLe soleil se lève avec éclat\nNouvelle année se dévoile\nOffrant un chemin écarlate\n\nLes jours à venir sont des pages\nÀ écrire ensemble avec passion\nQue cette année soit le présage\nD'une belle et longue relation\n\nDansons au rythme de nos rêves\nVers un horizon rempli d'amour\nQue notre lien se renforce sans trêve\nDans chaque instant, chaque jour\n\nQue la vie nous sourie à chaque pas\nQue notre bonheur soit infini\nBonne année, mon amour précieux\nUne éternité à tes côtés, je le dis"
+      },
+      {
+        "id": 7,
+        "title": "Mélodie du Cœur",
+        "text": "Mélodie du Cœur\n\nDans nos âmes elle résonne\nChant doux de l'amour éternel\nEn cette nouvelle aventure qui s'entonne\nDansons ensemble vers un ciel\n\nLes étoiles sont nos témoins\nDe notre passion grandissante\nQue cette année soit le témoin\nD'une union toujours éclatante\n\nLes jours à venir sont des promesses\nDes instants précieux à partager\nQue nos vies se tissent en tresse\nSur le chemin de l'éternité\n\nQue chaque battement de notre cœur\nSoit une symphonie de bonheur\nBonne année, mon amour sincère\nVers une vie emplie de lumière"
+      },
+      {
+        "id": 8,
+        "title": "Rêves Éternels",
+        "text": "Rêves Éternels\n\nDans l'horizon de nos vies\nSe dessine une nouvelle aurore\nEmbrassons cette année qui s'enfuit\nEt déployons nos ailes d'or\n\nLes mots se font mélodie\nSur les pages de notre destinée\nQue cette année soit la poésie\nD'un amour sans fin, d'une éternité\n\nLes strophes se tissent avec soin\nQuatre vers, un souffle d'émotion\nQue chaque instant soit un refrain\nDe bonheur, d'amour et de passion\n\nQue nos rêves se réalisent en chœur\nBonne année, mon amour, mon cœur"
+      },
+      {
+        "id": 9,
+        "title": "Échos de l'Amour",
+        "text": "Échos de l'Amour\n\nRésonnent dans le silence de nos cœurs\nUne symphonie d'amour qui s'élève\nEn cette nouvelle année, douceur\nQue notre lien se fortifie, qu'il s'achève\n\nLes saisons passent, les années défilent\nMais notre amour reste inébranlable\nQue cette année soit fertile\nEn moments précieux, inoubliables\n\nLes strophes s'écrivent avec émotion\nUn quatrain, une déclaration\nQue notre histoire trouve sa résonance\nDans chaque vers, chaque romance\n\nQue l'amour soit notre guide suprême\nBonne année, mon amour, je t'aime"
+      },
+      {
+        "id": 10,
+        "title": "Douce Harmonie",
+        "text": "Douce Harmonie\n\nDans la symphonie de nos vies\nRésonne l'amour qui nous unit\nEn cette nouvelle année qui s'enfuit\nContinuons notre chemin, à l'infini\n\nLes mots s'entrelacent avec délicatesse\nDans les strophes de notre histoire\nQue cette année soit une caresse\nUn hymne à notre amour, sans déboire\n\nLes quatre vers dansent en cadence\nComme nos cœurs battent à l'unisson\nQue chaque strophe soit une chance\nDe vivre ensemble, dans la passion\n\nQue notre harmonie se prolonge sans fin\nBonne année, mon amour, mon destin"
+      },
+      {
+        "id": 11,
+        "title": "Étoiles Filantes",
+        "text": "Étoiles Filantes\n\nDans la voûte céleste, elles traversent\nDes éclats de lumière dans la nuit\nEn cette nouvelle année qui se dessine, s'offrent\nDes vœux d'amour infini, à l'infini\n\nLes constellations témoignent de notre histoire\nUn ciel parsemé d'étoiles qui scintillent\nQue cette année soit une traînée d'espoir\nUn voyage céleste où nos cœurs s'entremêlent\n\nLes vers se dessinent comme des comètes\nTraversant le ciel avec grâce et magie\nQue chaque mot soit une promesse concrète\nDe vivre ensemble, en douce harmonie\n\nQue nos vœux les plus chers se réalisent\nBonne année, mon amour, étoile qui brille"
+      },
+      {
+        "id": 12,
+        "title": "Souffle de Liberté",
+        "text": "Souffle de Liberté\n\nDans l'air pur de cette nouvelle année\nUne brise légère caresse nos visages\nEnsemble, nous avançons, sans regrets, sans chaînes\n\nLes jours à venir sont une toile vierge\nOù nous pouvons peindre nos plus beaux rêves\nQue cette année soit le souffle d'une aventure\nUne danse enivrante, où rien ne nous élève\n\nLes mots s'envolent, libres comme l'oiseau\nChantant la symphonie de notre amour\nQue chaque vers soit un écho\nDe nos vies qui se tissent, chaque jour\n\nQue notre amour respire la liberté\nBonne année, mon cher amour, en toute sincérité"
+      },
+      {
+        "id": 13,
+        "title": "Reflets d'Éternité",
+        "text": "Reflets d'Éternité\n\nDans le miroir du temps qui s'écoule\nSe reflète notre amour, éternel\nEn cette nouvelle année qui se déroule\nSillonnons le chemin de l'amour, tel un appel\n\nLes saisons passent, mais notre lien persiste\nUn amour qui grandit, jour après jour\nQue cette année soit la liste\nDe moments précieux, d'amour toujours\n\nLes mots s'entremêlent comme des reflets\nDans le miroir de nos âmes enlacées\nQue chaque mot soit un secret\nDe notre amour, à jamais embrasé\n\nQue notre histoire brille d'une lueur infinie\nBonne année, mon amour, éternel compagnon de vie"
+      },
+      {
+        "id": 14,
+        "title": "Éclats de Bonheur",
+        "text": "Éclats de Bonheur\n\nDans nos regards, ils se reflètent\nDes éclats de bonheur, des étincelles\nEn cette nouvelle année qui naît, projettent\nDes moments précieux, des merveilles\n\nLes sourires illuminent nos visages\nUn écho de joie, de complicité\nQue cette année soit un langage\nD'amour partagé, d'éternité\n\nLes vers s'écrivent avec allégresse\nComme nos cœurs qui dansent en cadence\nQue chaque mot soit une caresse\nUne symphonie d'amour, une romance\n\nQue notre bonheur éclate en mille couleurs\nBonne année, mon amour, source de douceur"
+      }, {
+        "id": 15,
+        "title": "Nouvelle Année Radieuse",
+        "text": "Nouvelle Année Radieuse\n\nDans le miroir du temps, une page se tourne\nUne année nouvelle, une chance qui s'offre\nEn cette occasion spéciale, mes vœux retentissent\nQue cette année soit radieuse, remplie de bonheur immense\n\nQue chaque jour soit empli de joie et de succès\nQue tes rêves se réalisent, que tes projets avancent\nQue l'amitié t'entoure, te comble de tendresse\nBonne année, mon ami(e), que ta vie s'embellisse\n\nQue les épreuves se dissipent, laissant place à la lumière\nQue les soucis s'envolent, comme des feuilles légères\nPuisses-tu être entouré(e) de bonheur et de prospérité\nEn cette nouvelle année, que tous tes désirs soient exaucés\n\nQue notre amitié perdure, solide et sincère\nBonne année, mon ami(e), que cette année soit une prière"
+      },
+      {
+        "id": 16,
+        "title": "Éclats de Réussite",
+        "text": "Éclats de Réussite\n\nDans l'horizon de cette nouvelle année\nSe dessinent des horizons de possibilités\nEn cette période de renouveau, je souhaite t'adresser\nMes vœux sincères de réussite et de prospérité\n\nQue chaque pas que tu feras soit un pas vers ton succès\nQue chaque jour soit une occasion de grandir et de progresser\nPuisses-tu atteindre tes objectifs avec détermination\nBonne année, mon ami(e), que tu connaisses l'accomplissement\n\nQue les défis que tu rencontreras soient des tremplins\nTe propulsant vers de nouveaux sommets sans fin\nQue ton chemin soit parsemé de moments précieux\nEn cette nouvelle année, que tes rêves deviennent radieux\n\nQue notre amitié continue de briller, solide et vraie\nBonne année, mon ami(e), que cette année soit une réussite parfaite"
+      },
+      {
+        "id": 17,
+        "title": "Harmonie et Bonheur",
+        "text": "Harmonie et Bonheur\n\nAu seuil de cette nouvelle année qui s'annonce\nJe t'envoie mes vœux les plus chaleureux, mes pensées prononcent\nQue cette année soit emplie d'harmonie et de bonheur\nQue chaque jour soit une symphonie de douceur\n\nQue les sourires illuminent ton chemin chaque matin\nQue l'amitié t'entoure, te guide vers ton destin\nPuisses-tu trouver la paix et l'épanouissement\nBonne année, mon ami(e), que ta vie soit un enchantement\n\nQue les moments de joie se multiplient, en abondance\nQue les instants précieux tissent une belle existence\nQue tu trouves l'amour et la sérénité dans chaque saison\nEn cette nouvelle année, que règne la plus belle des résonances\n\nQue notre amitié grandisse, solide comme un roc\nBonne année, mon ami(e), que cette année soit un élixir de vie et de bonheur"
+      },
+      {
+        "id": 18,
+        "title": "Étoiles de Bonne Fortune",
+        "text": "Étoiles de Bonne Fortune\n\nSous le ciel étoilé de cette nouvelle année\nJe t'adresse mes vœux les plus sincères, sans délai\nQue les étoiles te guident vers un avenir radieux\nQue chaque instant soit béni, rempli de vœux\n\nQue la chance te sourie à chaque tournant\nQue le succès soit ton compagnon constant\nPuisses-tu réaliser tes rêves les plus profonds\nBonne année, mon ami(e), que ton bonheur soit fécond\n\nQue les épreuves se transforment en opportunités\nQue les difficultés se dissipent sans complexité\nQue tu avances avec confiance et détermination\nEn cette nouvelle année, que règne la prospérité\n\nQue notre amitié perdure, solide et éternVoici quelques poèmes amicaux qui souhaitent une bonne année :"
       }
     ]
   },

@@ -1,0 +1,16 @@
+.help {
+  background-color: rgb(219, 219, 219);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.help .flex {
+  margin-bottom: 5rem;
+}
+@media screen and (max-width: 1000px) {
+  .help .flex {
+    flex-direction: column;
+    margin-bottom: 10rem;
+  }
+}
+/*  */

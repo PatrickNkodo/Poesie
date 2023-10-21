@@ -156,7 +156,7 @@ hr {
 input[type="range"] {
   appearance: none;
   height: 7px;
-  /* width: 100%; */
+  width: 100%;
   border-radius: 10px;
   background: black;
 }
@@ -189,13 +189,22 @@ select {
 .modifications .tabs {
   display: flex;
   gap: 0.6rem;
+  flex-direction: column;
+  background: #20c997;
+  /* overflow-y: scroll; */
+  padding: 0.3rem;
+  border-radius: 5px;
+  /* height: 18vh; */
 }
+
 .tabs div {
   font-size: smaller;
   padding: 0.2rem;
 }
 .modifications .menu {
   box-sizing: content-box;
+  width: 70%;
+  /* flex: 1; */
   padding: 5px;
   background-color: #0d6efd;
   color: white;
@@ -316,6 +325,7 @@ div:has(> button.active) {
     max-height: 15vh;
     bottom: 0;
     left: 0;
+    padding: 0.3rem 0;
     flex-direction: row;
     top: unset;
     bottom: 0;
@@ -397,6 +407,16 @@ div:has(> button.active) {
     background: white;
     width: 30%;
   }
+  .modifications .tabs {
+    padding: 0.5rem;
+    height: 13vh;
+    /* width: 35vw; */
+    flex: auto;
+    overflow: scroll;
+  }
+  .modifications .tabs select {
+    width: 100%;
+  }
   .poem {
     flex-direction: column;
     flex: 1;
@@ -434,6 +454,10 @@ div:has(> button.active) {
   .poem .bg {
     width: 65%;
   }
+  .modifications .tabs .div {
+    word-wrap: none;
+    text-wrap: nowrap;
+  }
 }
 @media screen and (max-width: 418px) {
   .poem .bg {
@@ -441,8 +465,19 @@ div:has(> button.active) {
     max-width: 90%;
     height: 29cm;
   }
+  .modifications .tabs {
+    flex: none;
+    width: 30vw;
+  }
+  .modifications .menu {
+    flex: none;
+    width: 80vw;
+  }
 }
 @media screen and (max-width: 360px) {
+  .modifications .tabs {
+    width: 30vw;
+  }
   .poem .bg {
     width: 80%;
     max-width: 100%;

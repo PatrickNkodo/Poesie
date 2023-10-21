@@ -1,0 +1,51 @@
+.about {
+  background-color: white;
+  height: 92vh;
+  overflow: hidden;
+}
+.about > div {
+  padding: 10px;
+}
+.part1 img {
+  float: left;
+}
+.part1 div {
+  padding: 0 10px;
+}
+
+.socials {
+  color: black;
+}
+.socials div {
+  display: flex;
+  justify-content: space-around;
+}
+/* .part2 .socials {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+} */
+.part2 .fab {
+  font-size: 190%;
+  width: fit-content;
+}
+
+.part2 .fa-whatsapp {
+  color: green;
+  border-radius: 5px;
+}
+.part2 .fa-facebook {
+  color: blue;
+  border-radius: 5px;
+}
+.part2 .fa-linkedin {
+  color: blue;
+  border-radius: 5px;
+  padding: 0;
+}
+
+@media screen and (max-width: 576px) {
+  .about img {
+    width: -webkit-fill-available;
+  }
+}

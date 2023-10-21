@@ -25,6 +25,7 @@ const Form = () => {
     localStorage.setItem("composition", composition);
     linkTo("/write-poem");
   };
+  console.log(name);
   useEffect(() => {
     const nameFromLocalStorage = localStorage.getItem("name");
     const whatFromLocalStorage = localStorage.getItem("what");

@@ -16,7 +16,8 @@ const AppProvider = ({ children }) => {
   const [position, setPosition] = useState("left");
   const [bg, setBg] = useState("");
   const [bgOpacity, setBgOpacity] = useState(0);
-  const [textBg, setTextBg] = useState("#");
+  const [textBg, setTextBg] = useState("#000000");
+  const [fontStyle, setFontStyle] = useState("normal");
   const [image, setImage] = useState("");
   const [choice, setChoice] = useState(false);
   const [title, setTitle] = useState("");
@@ -29,6 +30,12 @@ const AppProvider = ({ children }) => {
   const [itsPoem, setItsPoem] = useState(false);
   const [poem, setPoem] = useState(false);
   const [write, setWrite] = useState(false);
+  const [poemBodyStyles, setPoemBodyStyles] = useState({}); // Store styles for the text section
+  const [poemTitleStyles, setPoemTitleStyles] = useState({}); // Store styles for the poem title section
+  const [completeStyle, setCompleteStyle] = useState({});
+  const [poemAuthorStyles, setPoemAuthorStyles] = useState({});
+  const [selectedSection, setSelectedSection] = useState("all"); // Track the selected section
+  const [lastSelectedSection, setLastSelectedSection] = useState("all");
   const [overlay, setOverlay] = useState(0);
   const [align, setAlign] = useState("left");
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -149,6 +156,87 @@ const AppProvider = ({ children }) => {
     console.log(e.target.value);
   };
 
+  const changeSection = (value) => {
+    setLastSelectedSection(selectedSection);
+    setSelectedSection(value);
+  };
+  const setStateValues = (obj) => {
+    setAlign(obj.textAlign);
+    setFont(obj.fontFamily);
+    setFontStyle(obj.fontStyle);
+    setWeight(obj.fontWeight);
+    setSize(() => {
+      let fontSize;
+      if (obj?.fontSize?.includes("%")) {
+        fontSize = obj.fontSize.replace("%", "");
+      }
+      return fontSize;
+    });
+    setLineHeight(obj.lineHeight);
+    setShadow(obj.textShadow);
+    setTextColor(obj.color);
+  };
+
+  let textStyle = {
+    textAlign: align,
+    color: textColor,
+    fontFamily: font,
+    fontStyle,
+    fontWeight: weight,
+    fontSize: `${size}%`,
+    lineHeight: lineHeight == 20 ? `normal` : `${lineHeight}px`,
+    textShadow: `2px 2px 3px rgb(0,0,0,${shadow}) `,
+  };
+  let defaultStyle = {
+    textAlign: "left",
+    color: "#ffffff",
+    fontFamily: "Arial",
+    fontStyle: "normal",
+    fontWeight: "300",
+    fontSize: `${windowWidth < 576 ? 40 : 60}%`,
+    lineHeight: "20px",
+    textShadow: `2px 2px 3px rgb(0,0,0,0) `,
+  };
+
+  //to save the styles of the last section on which one was, before choosing the current section
+  const lastSelectedSectionConditions = () => {
+    if (lastSelectedSection === "all") {
+      setCompleteStyle((prevStyle) =>
+        prevStyle ? { ...prevStyle, ...textStyle } : defaultStyle
+      );
+    } else if (lastSelectedSection === "poem") {
+      setPoemBodyStyles((prevStyle) => ({ ...prevStyle, ...textStyle }));
+    } else if (lastSelectedSection === "author") {
+      setPoemAuthorStyles((prevStyle) => ({ ...prevStyle, ...textStyle }));
+    } else if (lastSelectedSection === "title") {
+      setPoemTitleStyles((prevStyle) => ({ ...prevStyle, ...textStyle }));
+    }
+  };
+  //to apply the styles of the current section, and keep the styles in their corresponding style variables
+  const selectedSectionConditions = () => {
+    console.log(poemTitleStyles.color ? poemTitleStyles : "its not");
+    let sectionStyles;
+    if (selectedSection === "all") {
+      sectionStyles = completeStyle.color ? completeStyle : defaultStyle;
+    } else if (selectedSection === "title") {
+      sectionStyles = poemTitleStyles.color ? poemTitleStyles : defaultStyle;
+    } else if (selectedSection === "poem") {
+      sectionStyles = poemBodyStyles.color ? poemBodyStyles : defaultStyle;
+    } else if (selectedSection === "author") {
+      sectionStyles = poemAuthorStyles.color ? poemAuthorStyles : defaultStyle;
+    }
+    //to Set back the values of the style variables according to the corresponding section variable's styles
+    setStateValues(sectionStyles);
+  };
+  const restoreStyles = () => {
+    setAlign("left");
+    setFont("Arial");
+    setFontStyle("normal");
+    setWeight(300);
+    setSize(windowWidth < 576 ? 40 : 60);
+    setLineHeight("20");
+    setShadow(0);
+  };
   // const capture = () => {
   //   const modalBody = document.querySelector(".modal-body");
   //   const canvas = document.querySelector("#canvas");
@@ -210,19 +298,20 @@ const AppProvider = ({ children }) => {
   };
 
   // Helper function to convert data URL to Blob
-  const dataURLToBlob = (dataUrl) => {
-    let arr = dataUrl.split(",");
-    let mime = arr[0].match(/:(.*?);/)[1];
-    let bstr = atob(arr[1]);
-    let n = bstr.length;
-    let u8arr = new Uint8Array(n);
+  // const dataURLToBlob = (dataUrl) => {
+  //   let arr = dataUrl.split(",");
+  //   let mime = arr[0].match(/:(.*?);/)[1];
+  //   let bstr = atob(arr[1]);
+  //   let n = bstr.length;
+  //   let u8arr = new Uint8Array(n);
 
-    while (n--) {
-      u8arr[n] = bstr.charCodeAt(n);
-    }
+  //   while (n--) {
+  //     u8arr[n] = bstr.charCodeAt(n);
+  //   }
 
-    return new Blob([u8arr], { type: mime });
-  };
+  //   return new Blob([u8arr], { type: mime });
+  // };
+
   //INTERNET EXPLORER AND EDGE METHODS... ONLY SAVES AS PNG
   // const download1=()=>{
   // 	if(window.navigator.msSaveBlob){
@@ -261,6 +350,7 @@ const AppProvider = ({ children }) => {
     if (commandWhere == "LinkedIn") {
       a.href = `https://LinkedIn/?text=${commandName} sent a message:<br/> ${commandMsg}`; //The toDataURL returns a file/format file, with details on the canvas
     }
+    a.target = "_blank";
     a.click();
     console.log(a.href);
     return;
@@ -294,6 +384,8 @@ const AppProvider = ({ children }) => {
         commandMsg,
         image,
         setImage,
+        fontStyle,
+        setFontStyle,
         urlBgHandler,
         prevent,
         setCommandMsg,
@@ -303,6 +395,8 @@ const AppProvider = ({ children }) => {
         setFormOpen,
         write,
         choice,
+        selectedSection,
+        setSelectedSection,
         setChoice,
         bgOpacity,
         setBgOpacity,
@@ -326,6 +420,19 @@ const AppProvider = ({ children }) => {
         bg,
         tab,
         setBg,
+        lastSelectedSection,
+        setLastSelectedSection,
+        poemAuthorStyles,
+        setPoemAuthorStyles,
+        poemTitleStyles,
+        setPoemTitleStyles,
+        poemBodyStyles,
+        setPoemBodyStyles,
+        completeStyle,
+        setCompleteStyle,
+        selectedSectionConditions,
+        lastSelectedSectionConditions,
+        textStyle,
         size,
         setSize,
         shadow,
@@ -333,6 +440,8 @@ const AppProvider = ({ children }) => {
         overlay,
         setOverlay,
         overlayHandler,
+        changeSection,
+        setStateValues,
         align,
         setAlign,
         textColor,
@@ -358,11 +467,13 @@ const AppProvider = ({ children }) => {
         setLineHeight,
         capture,
         download,
+        restoreStyles,
         urlBg,
         url,
         setUrl,
         sendRequest,
         handle,
+        windowWidth,
       }}
     >
       {children}

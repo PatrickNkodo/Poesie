@@ -3,15 +3,6 @@ import { useGlobalContext } from "../context";
 import logo from "../logo white.png";
 import RightEditorSidebar from "../RightEditorSidebar";
 import LeftEditorSidebar from "./LeftEditorSidebar";
-import {
-  FiArrowDownLeft,
-  FiArrowLeftCircle,
-  FiCheck,
-  FiCheckCircle,
-  FiCheckSquare,
-  FiEdit,
-  FiSave,
-} from "react-icons/fi";
 import "./poem.css";
 import { useNavigate } from "react-router-dom";
 const Poem = () => {
@@ -27,7 +18,7 @@ const Poem = () => {
     overlay,
     align,
     size,
-    edition,
+    windowWidth,
     color1,
     color2,
     bgOpacity,
@@ -37,10 +28,32 @@ const Poem = () => {
     bgImagePresent,
     lineHeight,
     font,
+    fontStyle,
     weight,
     download,
     shadow,
     capture,
+    lastSelectedSectionConditions,
+    selectedSectionConditions,
+    textStyle,
+    poemAuthorStyles,
+    setPoemAuthorStyles,
+    poemTitleStyles,
+    setPoemTitleStyles,
+    poemBodyStyles,
+    setPoemBodyStyles,
+    completeStyle,
+    setCompleteStyle,
+    selectedSection,
+    restoreStyles,
+    setStateValues,
+    setAlign,
+    setFont,
+    setSize,
+    setFontStyle,
+    setWeight,
+    setLineHeight,
+    setShadow,
   } = useGlobalContext();
   const hexToRGBA = (hex, alpha) => {
     const hexValue = hex.replace("#", "");
@@ -52,8 +65,7 @@ const Poem = () => {
     return `rgba(${red}, ${green}, ${blue}, ${alpha})`;
   };
   let style = {
-    color: `${textColor}`,
-    backgroundColor: `${bgColor}`,
+    backgroundColor: bgColor,
   };
   if (gradientPresent) {
     style = {
@@ -64,15 +76,11 @@ const Poem = () => {
   if (bgImagePresent) {
     style = { ...style, backgroundImage: `url('${bg}')` };
   }
-  let textStyle = {
-    textAlign: align,
-    fontFamily: font,
-    fontWeight: weight,
-    fontSize: `${size}%`,
-    lineHeight: lineHeight == 20 ? `normal` : `${lineHeight}px`,
-    textShadow: `2px 2px 3px rgb(0,0,0,${shadow}) `,
-  };
 
+  useEffect(() => {
+    lastSelectedSectionConditions();
+    selectedSectionConditions();
+  }, [selectedSection]);
   return (
     <div className="poem-parent">
       <div className="modal-parent">
@@ -112,7 +120,10 @@ const Poem = () => {
             <img src={logo} alt="Logo" width="20%" />
           </div>
           <div className="overlay-bg" style={{ opacity: `${overlay}` }} />
-          <div className="text" style={textStyle}>
+          <div
+            className="text"
+            style={selectedSection === "all" ? textStyle : completeStyle}
+          >
             <div
               className="text-bg"
               style={{
@@ -130,15 +141,33 @@ const Poem = () => {
               <div className="">
                 {title && (
                   <React.Fragment>
-                    <span>
+                    <span
+                      style={
+                        selectedSection === "title"
+                          ? textStyle
+                          : poemTitleStyles
+                      }
+                    >
                       {title}
                       <br />
                     </span>
                   </React.Fragment>
                 )}
-                <p>{text}</p>
+                <p
+                  style={
+                    selectedSection === "poem" ? textStyle : poemBodyStyles
+                  }
+                >
+                  {text}
+                </p>
                 <br />
-                <span>~{name}</span>
+                <span
+                  style={
+                    selectedSection === "author" ? textStyle : poemAuthorStyles
+                  }
+                >
+                  ~{name}
+                </span>
               </div>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useGlobalContext } from "../context";
 import ProgressLine from "./progressionLine";
 import "./textSettings.css";
@@ -9,6 +9,8 @@ const TextSettings = () => {
     setSize,
     setFont,
     font,
+    fontStyle,
+    setFontStyle,
     setTextColor,
     textColor,
     setWeight,
@@ -21,6 +23,7 @@ const TextSettings = () => {
     align,
     setPosition,
     position,
+    selectedSection,
   } = useGlobalContext();
 
   const [selectedOption, setSelectedOption] = useState("");
@@ -28,7 +31,7 @@ const TextSettings = () => {
   const handleOptionClick = (option) => {
     setSelectedOption(option);
   };
-
+  //option's content to display as we click on a given option button
   const renderInput = (option) => {
     switch (option) {
       case "font":
@@ -46,7 +49,6 @@ const TextSettings = () => {
                 <option value="Barlow">Barlow</option>
                 <option value="Condiment">Condiment</option>
                 <option value="Dancing Script">Dancing Script</option>
-                <option value="M PLUS Rounded 1c">M PLUS Rounded 1c</option>
                 <option value="Montserrat">Montserrat</option>
                 <option value="Montserrat Alternates">
                   Montserrat Alternates
@@ -89,6 +91,17 @@ const TextSettings = () => {
             onChange={(e) => setTextColor(e.target.value)}
             value={textColor}
           />
+        );
+      case "fontStyle":
+        return (
+          <select
+            className="fontStyle form-control"
+            onChange={(e) => setFontStyle(e.target.value)}
+            value={fontStyle}
+          >
+            <option value="normal">Normal</option>
+            <option value="italic">Italique</option>
+          </select>
         );
       case "weight":
         return (
@@ -152,7 +165,9 @@ const TextSettings = () => {
         return null;
     }
   };
-
+  useEffect(() => {
+    renderInput(selectedOption);
+  }, [selectedSection]);
   return (
     <div className="textSettings">
       {/* <h6>Modifications de texte</h6> */}
@@ -182,6 +197,17 @@ const TextSettings = () => {
         {selectedOption === "textColor" && renderInput("textColor")}
       </div>
       <hr />
+      <div className="fontStyle border">
+        <button
+          onClick={() => handleOptionClick("fontStyle")}
+          className={`btn btn-dark btn-sm option-buttons ${
+            selectedOption === "fontStyle" ? "active" : ""
+          }`}
+        >
+          Modifier le style de police
+        </button>
+        {selectedOption === "fontStyle" && renderInput("fontStyle")}
+      </div>
       <div className="font-weight border">
         <button
           onClick={() => handleOptionClick("weight")}

@@ -4,7 +4,8 @@ import TextSettings from "./components/TextSettings";
 import BgSettings from "./components/BgSettings";
 
 const RightEditorSidebar = () => {
-  const [menu, setMenu] = useState("bg");
+  const { selectedSection, changeSection } = useGlobalContext();
+  const [menu, setMenu] = useState("text");
   return (
     <div className="modifications">
       {/* <h5>Options</h5> */}
@@ -25,6 +26,23 @@ const RightEditorSidebar = () => {
           onClick={() => setMenu("bg")}
         >
           Reglages Arriere-plan
+        </div>
+        <div
+          className={`btn btn-outline-dark btn-sm ${
+            menu === "section" ? "active" : ""
+          }`}
+        >
+          <label style={{ display: "block" }}>Appliquer sur</label>
+          <select
+            className="sectionSelect"
+            onChange={(e) => changeSection(e.target.value)}
+            value={selectedSection}
+          >
+            <option value="title">Titre uniquement</option>
+            <option value="poem">Poème uniquement</option>
+            <option value="author">Auteur uniquement</option>
+            <option value="all">Tout</option>
+          </select>
         </div>
       </div>
       <div className="menu">

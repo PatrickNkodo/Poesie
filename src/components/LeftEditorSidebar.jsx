@@ -48,7 +48,7 @@ const LeftEditorSidebar = () => {
       {filter[0].items.map((item, index) => {
         return (
           <div className="img" key={index} onMouseUp={() => changeBg(item.img)}>
-            <img src={item.img} alt={item.img} />
+            <img src={item.img} alt={`img${index + 1}`} />
           </div>
         );
       })}
